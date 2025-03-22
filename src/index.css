@@ -31,13 +31,15 @@ h2 {
   font-size: 2.2rem;
   position: relative;
   padding-bottom: 15px;
+  text-align: center; /* Ensure headings are centered */
 }
 
 h2:after {
   content: '';
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
   background: #FF4655; /* Changed to Valorant Red */

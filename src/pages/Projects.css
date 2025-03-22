@@ -23,6 +23,8 @@
   height: 3px;
   background: #FF4655; /* Changed to Valorant Red */
   margin: 15px auto 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
 }
 
 .projects-header p {

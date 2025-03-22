@@ -68,7 +68,7 @@ function Contact() {
   return (
     <section id="contact" className="contact-page">
       <Helmet>
-        <title>Contact Us - Metal Fabrication Services | AAXI</title>
+        <title>aaxi.ca</title>
         <meta name="description" content="Contact AAXI for custom metal fabrication services. Reach out to our expert team for quotes, consultations, and custom metal solutions." />
         <meta name="keywords" content="contact metal fabrication, metal fabrication quotes, custom metal solutions, AAXI contact" />
         <link rel="canonical" href="https://aaxi.ca/contact" />

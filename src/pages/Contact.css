@@ -21,14 +21,15 @@
   position: relative;
   display: inline-block;
   padding-bottom: 15px;
+  text-align: center; /* Ensure heading is centered */
 }
 
 .contact-header h1:after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
   background: #FF4655; /* Changed to Valorant Red */
@@ -53,11 +54,13 @@
 }
 
 .contact-info {
-  background-color: #ece8e1; /* Changed to Valorant Navy */
-  color: #292929; /* Changed text color to dark gray */
-  padding: 50px;
+  background-color: transparent; /* Remove the white block */
+  color: #FFFFFF; /* Change text color to white for better contrast */
+  padding: 20px 40px; /* Add padding to center the content horizontally */
+  margin: 0 auto; /* Center the content within the parent container */
+  max-width: 600px; /* Limit the width for better alignment */
   position: relative;
-  text-align: center; /* Center align text */
+  text-align: left; /* Align content to the left */
 }
 
 .contact-info-content {
@@ -71,13 +74,15 @@
   margin-bottom: 30px;
   position: relative;
   padding-bottom: 15px;
+  text-align: center; /* Center the heading */
 }
 
 .contact-info h3:after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
   width: 50px;
   height: 2px;
   background: #FF4655; /* Changed to Valorant Red */
@@ -86,7 +91,7 @@
 .contact-detail {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 25px;
+  margin-bottom: 20px; /* Adjust spacing between items */
 }
 
 .contact-icon {
@@ -109,7 +114,7 @@
 }
 
 .contact-text p, .contact-text a {
-  color: #292929; /* Changed text color to dark gray */
+  color: #FFFFFF; /* Ensure text is visible on dark background */
   transition: color 0.3s;
 }
 
@@ -166,7 +171,8 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
   width: 50px;
   height: 2px;
   background: #FF4655; /* Changed to Valorant Red */

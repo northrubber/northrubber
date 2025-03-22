@@ -125,6 +125,8 @@
   height: 3px;
   background: #FF4655; /* Valorant Red accent */
   margin: 15px auto 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
 }
 
 .services-grid {
@@ -270,6 +272,8 @@
   height: 3px;
   background: #FF4655; /* Valorant Red accent */
   margin: 15px auto 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
 }
 
 .projects-grid {
@@ -342,6 +346,8 @@
   height: 3px;
   background: #FF4655; /* Valorant Red accent */
   margin: 15px auto 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
 }
 
 .testimonial-slider {
