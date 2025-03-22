@@ -1,0 +1,39 @@
+.about {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  width: 100%; /* Make the image responsive */
+  max-width: 400px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px auto; /* Center the image */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about h1 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    max-width: 300px;
+  }
+}
