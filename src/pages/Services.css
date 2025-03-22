@@ -15,9 +15,9 @@
 }
 
 .service-card {
-  background-color: #f4f4f4;
+  background-color: #292929; /* Changed to Valorant dark gray */
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #ece8e1; /* Changed to Valorant navy */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 

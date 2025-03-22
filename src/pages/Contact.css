@@ -1,5 +1,5 @@
 .contact-page {
-  background-color: #000000; /* Changed from #0B192C */
+  background-color: #ece8e1; /* Changed to Valorant Navy */
   padding: 80px 0;
 }
 
@@ -16,7 +16,7 @@
 
 .contact-header h1 {
   font-size: 2.8rem;
-  color: #FF6500;
+  color: #FF4655; /* Changed to Valorant Red */
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
@@ -31,12 +31,12 @@
   transform: translateX(-50%);
   width: 70px;
   height: 3px;
-  background: #FF6500;
+  background: #FF4655; /* Changed to Valorant Red */
 }
 
 .contact-header p {
   font-size: 1.1rem;
-  color: #b0b0b0;
+  color: #8B978F; /* Changed to Valorant light gray */
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
@@ -46,29 +46,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  background-color: #1E3E62;
+  background-color: #292929; /* Changed to Valorant dark gray */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
-  background-color: #000000;
-  color: #fff;
+  background-color: #ece8e1; /* Changed to Valorant Navy */
+  color: #292929; /* Changed text color to dark gray */
   padding: 50px;
   position: relative;
-}
-
-.contact-info:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -50px;
-  width: 100px;
-  height: 100%;
-  background-color: #000000;
-  transform: skewX(-10deg);
-  z-index: 0;
+  text-align: center; /* Center align text */
 }
 
 .contact-info-content {
@@ -78,7 +67,7 @@
 
 .contact-info h3 {
   font-size: 1.8rem;
-  color: #FF6500;
+  color: #FF4655; /* Changed to Valorant Red */
   margin-bottom: 30px;
   position: relative;
   padding-bottom: 15px;
@@ -91,7 +80,7 @@
   left: 0;
   width: 50px;
   height: 2px;
-  background: #FF6500;
+  background: #FF4655; /* Changed to Valorant Red */
 }
 
 .contact-detail {
@@ -103,29 +92,29 @@
 .contact-icon {
   font-size: 1.3rem;
   margin-right: 15px;
-  background: rgba(255, 101, 0, 0.2);
+  background: rgba(255, 70, 85, 0.2); /* Changed to Valorant Red with opacity */
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #FF6500;
+  color: #FF4655; /* Changed to Valorant Red */
 }
 
 .contact-text h4 {
   font-size: 1.1rem;
-  color: #fff;
+  color: #FF4655; /* Changed to Valorant Red for headings */
   margin-bottom: 5px;
 }
 
 .contact-text p, .contact-text a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #292929; /* Changed text color to dark gray */
   transition: color 0.3s;
 }
 
 .contact-text a:hover {
-  color: #FF6500;
+  color: #FF4655; /* Changed to Valorant Red */
 }
 
 .social-links {
@@ -149,14 +138,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 101, 0, 0.2);
-  color: #FF6500;
+  background: rgba(255, 70, 85, 0.2); /* Changed to Valorant Red with opacity */
+  color: #FF4655; /* Changed to Valorant Red */
   border-radius: 50%;
   transition: all 0.3s;
 }
 
 .social-icons a:hover {
-  background: #FF6500;
+  background: #FF4655; /* Changed to Valorant Red */
   color: #fff;
   transform: translateY(-3px);
 }
@@ -167,7 +156,7 @@
 
 .contact-form-wrapper h3 {
   font-size: 1.8rem;
-  color: #FF6500;
+  color: #FF4655; /* Changed to Valorant Red */
   margin-bottom: 30px;
   position: relative;
   padding-bottom: 15px;
@@ -180,7 +169,7 @@
   left: 0;
   width: 50px;
   height: 2px;
-  background: #FF6500;
+  background: #FF4655; /* Changed to Valorant Red */
 }
 
 .contact-form {
@@ -196,7 +185,7 @@
 .form-group label {
   display: block;
   font-size: 0.9rem;
-  color: #d0d0d0;
+  color: #8B978F; /* Changed to Valorant light gray */
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -205,19 +194,19 @@
 .form-group textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #000000; /* Changed from #0B192C */
+  border: 1px solid #ece8e1; /* Changed to Valorant Navy */
   border-radius: 5px;
   font-size: 1rem;
   transition: all 0.3s;
-  background-color: #000000; /* Changed from #0B192C */
-  color: #fff;
+  background-color: #292929; /* Changed to Valorant dark gray */
+  color: #FFFFFF;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #FF6500;
-  box-shadow: 0 0 0 3px rgba(255, 101, 0, 0.1);
+  border-color: #FF4655; /* Changed to Valorant Red */
+  box-shadow: 0 0 0 3px rgba(255, 70, 85, 0.1); /* Changed to Valorant Red with opacity */
 }
 
 .form-group textarea {
@@ -232,7 +221,7 @@
 }
 
 .submit-btn {
-  background-color: #FF6500;
+  background-color: #FF4655; /* Changed to Valorant Red */
   color: #fff;
   border: none;
   padding: 14px 30px;
@@ -247,9 +236,9 @@
 }
 
 .submit-btn:hover {
-  background-color: #e05a00;
+  background-color: #ff6e7a; /* Lighter Valorant Red */
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn:active {

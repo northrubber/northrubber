@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Montserrat', 'Roboto', sans-serif;
-  background-color: #000000;
-  color: #e0e0e0;
+  background-color: #ece8e1;
+  color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.8;
@@ -11,12 +11,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  color: #FF6500; /* Changed to orange accent */
+  color: #FF4655; /* Changed to Valorant Red */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #FF6500; /* Changed to orange accent */
+  color: #FF4655; /* Changed to Valorant Red */
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 1rem;
 }
@@ -40,7 +40,7 @@ h2:after {
   bottom: 0;
   width: 70px;
   height: 3px;
-  background: #FF6500; /* Changed to orange accent */
+  background: #FF4655; /* Changed to Valorant Red */
 }
 
 .text-center h2:after {
@@ -51,17 +51,17 @@ h2:after {
 p {
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
-  color: #b0b0b0;
+  color: #8B978F;
 }
 
 a {
-  color: #FF6500; /* Changed to orange accent */
+  color: #FF4655; /* Changed to Valorant Red */
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
-  color: #ff8533; /* Lighter orange for hover effect */
+  color: #ff6e7a; /* Lighter Valorant Red */
 }
 
 .btn {
@@ -96,28 +96,28 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #FF6500;
-  border: 2px solid #FF6500;
+  background-color: #FF4655;
+  border: 2px solid #FF4655;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background-color: #e05a00;
-  border-color: #e05a00;
+  background-color: #ff6e7a;
+  border-color: #ff6e7a;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 101, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(255, 70, 85, 0.2);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #FF6500;
-  color: #FF6500;
+  border: 2px solid #FF4655;
+  color: #FF4655;
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 101, 0, 0.1);
+  background-color: rgba(255, 70, 85, 0.1);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 101, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(255, 70, 85, 0.1);
 }
 
 .section-title {
@@ -148,27 +148,27 @@ a:hover {
 
 /* Dark theme backgrounds */
 .bg-primary {
-  background-color: #000000;
+  background-color: #ece8e1;
 }
 
 .bg-secondary {
-  background-color: #000000; /* Changed from #060e1a */
+  background-color: #292929; /* Changed to Valorant dark gray */
 }
 
 .bg-accent {
-  background-color: #1E3E62;
+  background-color: #292929;
 }
 
 .text-light {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .text-muted {
-  color: #b0b0b0;
+  color: #8B978F;
 }
 
 .text-accent {
-  color: #FF6500;
+  color: #FF4655;
 }
 
 @media (max-width: 768px) {

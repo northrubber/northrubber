@@ -33,7 +33,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(to right, rgba(31, 35, 38, 0.9), rgba(15, 25, 35, 0.7));
   z-index: 1;
 }
 
@@ -47,19 +47,19 @@
 .hero h1 {
   font-size: 3.8rem;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 30px;
-  color: #d0d0d0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #8B978F;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -74,7 +74,7 @@
 .hero button, .btn-primary {
   padding: 14px 30px;
   font-size: 1rem;
-  background: #FF6500; /* Updated to orange accent */
+  background: #FF4655; /* Updated to Valorant Red */
   border: none;
   color: #fff;
   cursor: pointer;
@@ -88,9 +88,9 @@
 }
 
 .hero button:hover, .btn-primary:hover {
-  background: #e05a00; /* Darker orange */
+  background: #ff6e7a; /* Lighter Valorant Red */
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(255, 101, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 70, 85, 0.3);
 }
 
 .btn-secondary {
@@ -106,15 +106,15 @@
 /* Services Overview Section */
 .services-overview {
   padding: 100px 20px;
-  background-color: #000000; /* Changed from #0B192C */
-  color: #e0e0e0;
+  background-color: #ece8e1; /* Changed to Valorant Navy */
+  color: #FFFFFF;
 }
 
 .services-overview h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
   position: relative;
 }
 
@@ -123,7 +123,7 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #FF6500; /* Orange accent */
+  background: #FF4655; /* Valorant Red accent */
   margin: 15px auto 0;
 }
 
@@ -136,10 +136,10 @@
 }
 
 .service-item {
-  background: #1E3E62; /* Dark blue */
+  background: #292929; /* Valorant dark gray */
   padding: 40px 30px;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
   text-align: center;
   border-bottom: 4px solid transparent;
@@ -147,26 +147,26 @@
 
 .service-item:hover {
   transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border-bottom: 4px solid #FF6500;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #FF4655;
 }
 
 .service-icon {
   font-size: 3rem;
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
   margin-bottom: 25px;
   transition: all 0.3s;
 }
 
 .service-item:hover .service-icon {
   transform: scale(1.1);
-  color: #ff8533; /* Lighter orange */
+  color: #FF4655; /* Valorant Red */
 }
 
 .service-item h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #FFFFFF;
   position: relative;
   padding-bottom: 15px;
 }
@@ -179,11 +179,11 @@
   transform: translateX(-50%);
   width: 40px;
   height: 2px;
-  background: #FF6500;
+  background: #FF4655;
 }
 
 .service-item p {
-  color: #b0b0b0;
+  color: #8B978F;
   line-height: 1.8;
 }
 
@@ -216,7 +216,7 @@
   left: -20px;
   width: 100%;
   height: 100%;
-  border: 3px solid #FF6500;
+  border: 3px solid #FF4655;
   z-index: -1;
 }
 
@@ -230,7 +230,7 @@
 .about-preview h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
   position: relative;
 }
 
@@ -239,27 +239,27 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #FF6500; /* Orange accent */
+  background: #FF4655; /* Valorant Red accent */
   margin: 15px 0 0;
 }
 
 .about-preview p {
   margin-bottom: 25px;
   line-height: 1.8;
-  color: #b0b0b0;
+  color: #8B978F;
 }
 
 /* Featured Projects Section */
 .featured-projects {
   padding: 100px 20px;
-  background-color: #000000; /* Changed from #0B192C */
+  background-color: #ece8e1; /* Changed to Valorant Navy */
 }
 
 .featured-projects h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
   position: relative;
 }
 
@@ -268,7 +268,7 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #FF6500; /* Orange accent */
+  background: #FF4655; /* Valorant Red accent */
   margin: 15px auto 0;
 }
 
@@ -281,10 +281,10 @@
 }
 
 .project-card {
-  background-color: #1E3E62; /* Dark blue */
+  background-color: #292929; /* Valorant dark gray background */
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
 
@@ -306,11 +306,11 @@
 .project-content h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .project-content p {
-  color: #b0b0b0;
+  color: #8B978F;
   margin-bottom: 15px;
 }
 
@@ -324,14 +324,14 @@
 .testimonials {
   padding: 100px 20px;
   text-align: center;
-  background-color: #1E3E62; /* Dark blue background */
-  color: #ffffff;
+  background-color: #ece8e1; /* Valorant Navy background */
+  color: #FFFFFF;
 }
 
 .testimonials h2 {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
   position: relative;
 }
 
@@ -340,7 +340,7 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #FF6500; /* Orange accent */
+  background: #FF4655; /* Valorant Red accent */
   margin: 15px auto 0;
 }
 
@@ -350,14 +350,14 @@
 }
 
 .testimonial-item {
-  background: #000000; /* Changed from #0B192C */
+  background: #292929; /* Valorant dark gray */
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin: 20px;
   text-align: left;
   position: relative;
-  border-left: 4px solid #FF6500;
+  border-left: 4px solid #FF4655;
 }
 
 .testimonial-item:before {
@@ -366,14 +366,14 @@
   top: 20px;
   left: 20px;
   font-size: 4rem;
-  color: #344964;
+  color: #ece8e1;
   font-family: Georgia, serif;
 }
 
 .testimonial-text {
   font-style: italic;
   margin-bottom: 25px;
-  color: #b0b0b0;
+  color: #8B978F;
   line-height: 1.8;
   position: relative;
   z-index: 1;
@@ -381,12 +381,12 @@
 
 .testimonial-author {
   font-weight: bold;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 1.1rem;
 }
 
 .testimonial-company {
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
   font-size: 0.9rem;
 }
 
@@ -396,7 +396,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/images/cta-background.jpg') no-repeat center center;
   background-size: cover;
   text-align: center;
-  color: #ffffff;
+  color: #FFFFFF;
   position: relative;
 }
 
@@ -410,14 +410,14 @@
 .cta-section h2 {
   font-size: 2.8rem;
   margin-bottom: 25px;
-  color: #FF6500; /* Orange accent */
+  color: #FF4655; /* Valorant Red accent */
 }
 
 .cta-section p {
   font-size: 1.3rem;
   margin-bottom: 35px;
   line-height: 1.8;
-  color: #d0d0d0;
+  color: #8B978F;
 }
 
 @keyframes fadeIn {

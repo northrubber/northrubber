@@ -8,12 +8,14 @@
 .about h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #FF4655; /* Changed to Valorant Red */
 }
 
 .about p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
+  color: #8B978F; /* Changed to Valorant light gray */
 }
 
 .about-image {
@@ -22,6 +24,8 @@
   height: auto; /* Maintain aspect ratio */
   margin: 20px auto; /* Center the image */
   display: block;
+  border: 3px solid #FF4655; /* Added Valorant Red border for emphasis */
+  border-radius: 8px; /* Added rounded corners */
 }
 
 @media (max-width: 768px) {

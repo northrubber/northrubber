@@ -1,6 +1,6 @@
 .footer {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #292929;
+  color: #FFFFFF;
   padding: 60px 20px 30px;
 }
 
@@ -15,7 +15,7 @@
 .footer-column h3 {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #FFFFFF;
   position: relative;
   padding-bottom: 10px;
 }
@@ -27,12 +27,12 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #c4161c;
+  background-color: #FF4655;
 }
 
 .footer-column p {
   margin-bottom: 15px;
-  color: #bbb;
+  color: #8B978F;
   line-height: 1.6;
 }
 
@@ -46,11 +46,11 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: #bbb;
+  color: #8B978F;
 }
 
 .contact-item i {
-  color: #c4161c;
+  color: #FF4655;
   margin-top: 5px;
 }
 
@@ -67,13 +67,13 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #333;
-  color: #fff;
+  background-color: #ece8e1; /* Changed to Valorant Navy */
+  color: #FFFFFF;
   transition: all 0.3s;
 }
 
 .social-links a:hover {
-  background-color: #c4161c;
+  background-color: #FF4655;
   transform: translateY(-3px);
 }
 
@@ -88,12 +88,12 @@
 }
 
 .footer-links a {
-  color: #bbb;
+  color: #8B978F;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #c4161c;
+  color: #FF4655;
 }
 
 .subscribe-form {
@@ -104,15 +104,15 @@
 
 .subscribe-form input {
   padding: 10px;
-  border: 1px solid #333;
-  background-color: #222;
-  color: #fff;
+  border: 1px solid #ece8e1;
+  background-color: #292929;
+  color: #FFFFFF;
   border-radius: 3px;
 }
 
 .subscribe-form button {
   padding: 10px;
-  background-color: #c4161c;
+  background-color: #FF4655;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -121,16 +121,16 @@
 }
 
 .subscribe-form button:hover {
-  background-color: #8a0f15;
+  background-color: #ff6e7a;
 }
 
 .footer-bottom {
   max-width: 1200px;
   margin: 40px auto 0;
   padding-top: 20px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #ece8e1;
   text-align: center;
-  color: #888;
+  color: #8B978F;
   font-size: 0.9rem;
 }
 
