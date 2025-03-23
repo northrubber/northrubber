@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #292929; /* Changed to Valorant dark gray */
-  color: #FFFFFF;
+  background-color: #F5F5F5; /* Changed to white/primary background */
+  color: #121212; /* Changed text color for contrast */
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
 
 .header.scrolled {
   padding: 10px 40px;
-  background-color: rgba(31, 35, 38, 0.95); /* Changed to Valorant dark gray with opacity */
+  background-color: rgba(245, 245, 245, 0.95); /* Changed to white with opacity */
   backdrop-filter: blur(10px);
 }
 
@@ -35,23 +35,31 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
-  color: #FF4655;
+  color: #30475E;
   margin-left: 10px;
   letter-spacing: -1px;
   text-transform: lowercase;
-  background: linear-gradient(45deg, #FF4655, #ff6e7a);
+  background: linear-gradient(45deg, #30475E, #4a6683);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.logo a:hover .logo-text {
+  background: linear-gradient(45deg, #F05454, #f37676);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .logo-image {
   height: 60px;
   width: auto;
   transition: all 0.3s ease;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(7303%) hue-rotate(344deg) brightness(100%) contrast(100%);
-  /* This filter combination changes the image color to #FF4655 (Valorant Red) */
+  filter: brightness(0) saturate(100%) invert(100%); /* Keep white */
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); /* Enhanced shadow for contrast on light background */
 }
 
 .scrolled .logo-image {
@@ -73,7 +81,7 @@
 .nav-links li a {
   text-decoration: none;
   font-weight: 600;
-  color: #8B978F;
+  color: #30475E; /* Changed to secondary accent color */
   text-transform: uppercase;
   transition: all 0.3s;
   font-size: 0.9rem;
@@ -89,7 +97,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #FF4655;
+  background-color: #F05454;
   transition: width 0.3s ease;
 }
 
@@ -100,7 +108,7 @@
 
 .nav-links li a:hover, 
 .nav-links li a.active {
-  color: #FF4655;
+  color: #F05454;
 }
 
 .hamburger {
@@ -117,13 +125,13 @@
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #d0d0d0;
+  background-color: #121212; /* Changed to dark for visibility on white background */
   transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
 }
 
 .hamburger.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
-  background-color: #FF4655;
+  background-color: #F05454;
 }
 
 .hamburger.open span:nth-child(2) {
@@ -132,12 +140,12 @@
 
 .hamburger.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-  background-color: #FF4655;
+  background-color: #F05454;
 }
 
 .header-cta {
   display: none;
-  background-color: #FF4655;
+  background-color: #F05454;
   color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
@@ -149,9 +157,9 @@
 }
 
 .header-cta:hover {
-  background-color: #ff6e7a;
+  background-color: #f37676;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(240, 84, 84, 0.2);
 }
 
 @media (min-width: 992px) {
@@ -174,7 +182,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #292929; /* Changed to Valorant dark gray */
+    background-color: #F5F5F5; /* Changed to match header */
     width: 300px;
     height: 100vh;
     transform: translateX(100%);

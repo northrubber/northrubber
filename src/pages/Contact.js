@@ -24,11 +24,11 @@ function Contact() {
   return (
     <section id="contact" className="contact-page">
       <Helmet>
-        <title>Contact Us - AAXI</title>
+        <title>aaxi.ca</title>
         <meta name="description" content="Contact AAXI for custom metal fabrication services." />
       </Helmet>
       <div className="contact-container">
-        <h1>Contact</h1>
+        <h1>Contact Us</h1>
         <div className="contact-info-grid">
           <div className="contact-info-item">
             <i className="fas fa-map-marker-alt"></i>

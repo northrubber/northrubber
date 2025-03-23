@@ -8,14 +8,14 @@
 .about h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #FF4655; /* Changed to Valorant Red */
+  color: #F05454; /* Changed to new accent color */
 }
 
 .about p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: #8B978F; /* Changed to Valorant light gray */
+  color: #30475E; /* Changed to secondary accent color */
 }
 
 .about-image {
@@ -24,8 +24,124 @@
   height: auto; /* Maintain aspect ratio */
   margin: 20px auto; /* Center the image */
   display: block;
-  border: 3px solid #FF4655; /* Added Valorant Red border for emphasis */
+  border: 3px solid #F05454; /* Changed to new accent color */
   border-radius: 8px; /* Added rounded corners */
+}
+
+.about-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background-color: #F5F5F5;
+  position: relative;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #F05454;
+  position: relative;
+  display: inline-block;
+}
+
+.about-hero h1:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: #F05454;
+}
+
+.about-overview, .about-approach {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.about-approach {
+  background-color: #F5F5F5;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #F05454;
+  position: relative;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.about-content h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background: #F05454;
+  margin: 0;
+  transform: none;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #30475E;
+}
+
+.about-image-container {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.main-image {
+  border: 3px solid #F05454;
+}
+
+.secondary-image {
+  position: relative;
+}
+
+.secondary-image:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #F05454;
+  z-index: -1;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -39,5 +155,42 @@
 
   .about-image {
     max-width: 300px;
+  }
+
+  .about-hero {
+    padding: 100px 20px 40px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-overview, .about-approach {
+    padding: 60px 20px;
+    flex-direction: column;
+  }
+
+  .about-approach {
+    flex-direction: column-reverse;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-content h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 350px;
+    margin: 0 auto;
   }
 }

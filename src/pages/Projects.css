@@ -12,7 +12,7 @@
 .projects-header h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #FF4655; /* Changed to Valorant Red */
+  color: #F05454; /* Changed to new accent color */
   position: relative;
 }
 
@@ -21,7 +21,7 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #FF4655; /* Changed to Valorant Red */
+  background: #F05454; /* Changed to new accent color */
   margin: 15px auto 0;
   left: 50%; /* Center the line */
   transform: translateX(-50%); /* Adjust for centering */
@@ -31,7 +31,7 @@
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #8B978F; /* Changed to Valorant light gray */
+  color: #30475E; /* Changed to secondary accent color */
 }
 
 .project-filters {
@@ -45,8 +45,8 @@
 .filter-btn {
   padding: 8px 15px;
   background: transparent;
-  border: 1px solid #ece8e1; /* Changed to Valorant navy */
-  color: #8B978F; /* Changed to Valorant light gray */
+  border: 1px solid #30475E; /* Changed to secondary accent color */
+  color: #30475E; /* Changed to secondary accent color */
   cursor: pointer;
   transition: all 0.3s;
   font-size: 0.9rem;
@@ -54,9 +54,9 @@
 }
 
 .filter-btn:hover, .filter-btn.active {
-  background: #FF4655; /* Changed to Valorant Red */
+  background: #F05454; /* Changed to new accent color */
   color: #fff;
-  border-color: #FF4655; /* Changed to Valorant Red */
+  border-color: #F05454; /* Changed to new accent color */
 }
 
 .projects-grid {
@@ -65,8 +65,55 @@
   gap: 30px;
 }
 
+.projects-grid .project-item {
+  background: #F5F5F5; /* Match "Featured Projects" background */
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Match "Featured Projects" shadow */
+  transition: all 0.4s;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+}
+
+.projects-grid .project-item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Match hover shadow */
+  border-bottom: 4px solid #F05454; /* Match accent color */
+}
+
+.projects-grid .project-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #121212; /* Match "Featured Projects" text color */
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.projects-grid .project-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #F05454; /* Match accent color */
+}
+
+.projects-grid .project-item p {
+  color: #30475E; /* Match secondary font color */
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.projects-grid .project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 .project-item {
-  background: #292929; /* Changed to Valorant dark gray */
+  background: #121212; /* Changed to secondary background */
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -105,14 +152,14 @@
 }
 
 .project-details p {
-  color: #8B978F; /* Changed to Valorant light gray */
+  color: #30475E; /* Changed to secondary accent color */
   margin-bottom: 15px;
   line-height: 1.6;
 }
 
 .project-category {
   display: inline-block;
-  background: #ece8e1; /* Changed to Valorant navy */
+  background: #30475E; /* Changed to secondary accent color */
   color: #ffffff;
   font-size: 0.8rem;
   padding: 4px 10px;
@@ -121,7 +168,7 @@
 }
 
 .view-project {
-  color: #FF4655; /* Changed to Valorant Red */
+  color: #F05454; /* Changed to new accent color */
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -140,7 +187,7 @@
 }
 
 .view-project:hover {
-  color: #ff6e7a; /* Lighter Valorant Red */
+  color: #f37676; /* Lighter accent color */
 }
 
 .view-project:hover i {
@@ -163,7 +210,7 @@
 }
 
 .modal-content {
-  background: #292929; /* Changed to Valorant dark gray */
+  background: #121212; /* Changed to secondary background */
   border-radius: 5px;
   max-width: 900px;
   width: 100%;
@@ -178,7 +225,7 @@
   right: 15px;
   background: transparent;
   border: none;
-  color: #FF4655; /* Changed to Valorant Red */
+  color: #F05454; /* Changed to new accent color */
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 10;
@@ -203,7 +250,7 @@
 }
 
 .modal-description {
-  color: #8B978F; /* Changed to Valorant light gray */
+  color: #30475E; /* Changed to secondary accent color */
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -216,7 +263,7 @@
 }
 
 .detail-item {
-  border-left: 3px solid #FF4655; /* Changed to Valorant Red */
+  border-left: 3px solid #F05454; /* Changed to new accent color */
   padding-left: 15px;
 }
 
@@ -227,7 +274,7 @@
 }
 
 .detail-value {
-  color: #8B978F; /* Changed to Valorant light gray */
+  color: #30475E; /* Changed to secondary accent color */
 }
 
 @media (max-width: 768px) {

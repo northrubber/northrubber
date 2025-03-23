@@ -10,20 +10,27 @@
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
   gap: 20px;
 }
 
 .service-card {
-  background-color: #292929; /* Changed to Valorant dark gray */
+  background-color: #F5F5F5; /* Changed to white/primary background from dark */
   padding: 20px;
-  border: 1px solid #ece8e1; /* Changed to Valorant navy */
+  border: none; /* Removed border in favor of shadow */
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  border-radius: 8px; /* Added rounded corners for consistency */
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.service-card p {
+  color: #30475E; /* Reverted to secondary accent color for paragraph text */
+  font-weight: 500; /* Kept the font weight for better readability */
 }
 
 .service-card img {

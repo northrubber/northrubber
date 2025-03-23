@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import './Home.css';
-import aboutImage from '../assets/images/about-preview.jpg';
 import project1 from '../assets/images/project1.jpg';
 import project2 from '../assets/images/project2.jpg';
 import project3 from '../assets/images/project3.jpg';
@@ -110,37 +109,7 @@ function Home() {
         </div>
       </motion.section>
       
-      {/* About Preview Section */}
-      <motion.section 
-        className="about-preview"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="about-preview-content">
-          <h2>About aaxi</h2>
-          <p>
-            With over 20 years of experience in the metal fabrication industry, aaxi has established itself 
-            as a leading provider of high-quality metal fabrication and manufacturing services.
-          </p>
-          <p>
-            We specialize in precision fabrication, welding, cutting, and machining services for various 
-            industries, including construction, automotive, aerospace, and more.
-          </p>
-          <motion.a 
-            href="#about" 
-            className="btn-primary"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Learn More About Us
-          </motion.a>
-        </div>
-        <div className="about-preview-image">
-          <img src={aboutImage} alt="About aaxi" width="400" height="300" />
-        </div>
-      </motion.section>
+      {/* Removed About Preview Section */}
       
       {/* Featured Projects Section */}
       <motion.section 
