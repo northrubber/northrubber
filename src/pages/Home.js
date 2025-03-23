@@ -20,7 +20,7 @@ function Home() {
       
       {/* Hero Section */}
       <section className="hero">
-        <video className="hero-video" autoPlay muted loop playsInline>
+        <video className="hero-video" autoPlay muted loop playsInline width="1920" height="1080">
           <source src={locationVideo} type="video/mp4" />
         </video>
         <div className="hero-content">
@@ -138,7 +138,7 @@ function Home() {
           </motion.a>
         </div>
         <div className="about-preview-image">
-          <img src={aboutImage} alt="About aaxi" />
+          <img src={aboutImage} alt="About aaxi" width="400" height="300" />
         </div>
       </motion.section>
       
@@ -175,7 +175,7 @@ function Home() {
               whileHover={{ y: -10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt={project.title} width="300" height="200" />
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>

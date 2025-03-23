@@ -156,7 +156,7 @@ function Projects() {
               onClick={() => openProject(project)}
             >
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title} width="300" height="250" />
               </div>
               <div className="project-details">
                 <span className="project-category">
@@ -205,6 +205,8 @@ function Projects() {
                 src={selectedProject.image} 
                 alt={selectedProject.title}
                 className="modal-image"
+                width="900"
+                height="400"
               />
               
               <div className="modal-body">

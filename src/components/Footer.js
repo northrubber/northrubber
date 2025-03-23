@@ -8,7 +8,7 @@ function Footer() {
     <footer className="footer" role="contentinfo">
       <div className="footer-content">
         <div className="footer-column">
-          <img src={logo} alt="aaxi Logo" className="footer-logo" style={{ height: '60px', marginBottom: '15px' }} />
+          <img src={logo} alt="aaxi Logo" className="footer-logo" width="60" height="60" />
           <p>
             aaxi is a leading provider of high-quality metal fabrication and manufacturing services with over 20 years of experience in the industry.
           </p>

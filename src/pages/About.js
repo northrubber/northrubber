@@ -23,6 +23,8 @@ function About() {
         src={aboutImage}
         alt="About aaxi team"
         className="about-image"
+        width="400"
+        height="300"
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true }}

@@ -63,7 +63,7 @@ function Header() {
     >
       <div className="logo">
         <a href="#home" aria-label="Home" onClick={closeMenu}>
-          <img src={logo} alt="AAXI Logo" className="logo-image" />
+          <img src={logo} alt="AAXI Logo" className="logo-image" width="60" height="60" />
           <span className="logo-text">aaxi</span>
         </a>
       </div>
