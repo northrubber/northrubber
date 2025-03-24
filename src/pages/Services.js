@@ -2,19 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'; // Import Framer Motion
 import './Services.css';
-import weldingImage from '../assets/images/welding.jpg';
-import cuttingImage from '../assets/images/cutting.jpg';
-import assemblyImage from '../assets/images/assembly.jpg';
-import finishingImage from '../assets/images/finishing.jpg';
 
 function Services() {
-  const services = [
-    { img: weldingImage, title: 'Welding' },
-    { img: cuttingImage, title: 'Cutting' },
-    { img: assemblyImage, title: 'Assembly' },
-    { img: finishingImage, title: 'Finishing' }
-  ];
-
   return (
     <div className="services">
       <Helmet>

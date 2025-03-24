@@ -4,12 +4,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
 import FeaturedProjects from './pages/FeaturedProjects';
 import Testimonials from './pages/Testimonials';
 import CallToAction from './pages/CallToAction';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
