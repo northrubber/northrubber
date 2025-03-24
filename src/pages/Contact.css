@@ -1,5 +1,5 @@
 .contact-page {
-  padding: 100px 20px; /* Increased padding for better spacing */
+  padding: 100px 10px; /* Reduced padding from 20px to 10px on left/right */
   background-color: #F5F5F5;
   display: flex;
   flex-wrap: wrap;
@@ -13,14 +13,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  gap: 40px;
-  max-width: 1400px; /* Increased max width */
+  gap: 30px; /* Reduced gap from 40px to 30px */
+  max-width: 1600px; /* Increased max width from 1400px */
   margin: 0 auto;
+  width: 95%; /* Added width property to make container take up more space */
 }
 
 .contact-form-section {
   flex: 1;
-  max-width: 600px; /* Reduced max width for better alignment */
+  max-width: 700px; /* Increased from 600px */
   background: #FFFFFF;
   padding: 40px; /* Increased padding for more space around form elements */
   border-radius: 8px;
@@ -166,9 +167,9 @@
 
 .map-container {
   flex: 1;
-  max-width: 700px; /* Increased max width */
+  max-width: 800px; /* Increased from 700px */
   height: auto;
-  min-height: 600px; /* Increased height */
+  min-height: 650px; /* Increased from 600px */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -211,14 +212,17 @@
 @media (max-width: 768px) {
   .contact-page {
     flex-direction: column;
+    padding: 80px 5px; /* Reduced padding further on mobile */
   }
 
   .contact-container {
     flex-direction: column;
+    width: 98%; /* Make almost full width on mobile */
   }
 
   .contact-form-section {
-    padding: 30px 20px; /* Reduced padding on mobile for more content space */
+    padding: 30px 15px; /* Reduced padding on mobile for more content space */
+    max-width: 100%; /* Take full width on mobile */
   }
 
   .contact-form {
@@ -240,5 +244,10 @@
 
   .contact-form textarea {
     height: 120px; /* Slightly reduced height on mobile */
+  }
+
+  .map-container {
+    min-height: 400px; /* Adjust height for mobile */
+    max-width: 100%; /* Take full width on mobile */
   }
 }
