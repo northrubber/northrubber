@@ -85,7 +85,7 @@ function Header() {
             { label: 'Home', href: '#home' },
             { label: 'About', href: '#about' },
             { label: 'Services', href: '#services' },
-            { label: 'Projects', href: '#projects' },
+            { label: 'Projects', href: '#featured-projects' }, // Updated to reference featured-projects
             { label: 'Contact', href: '#contact' },
           ].map((item, index) => (
             <motion.li

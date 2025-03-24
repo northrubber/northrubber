@@ -41,6 +41,91 @@
   border-radius: 5px; /* Add slight rounding for a polished look */
 }
 
+.services-overview {
+  padding: 100px 20px;
+  background-color: #F5F5F5; /* Match "Our Services" background */
+  color: #121212;
+}
+
+.services-overview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #F05454; /* Changed to new accent color */
+  position: relative;
+}
+
+.services-overview h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #F05454; /* Changed to new accent color */
+  margin: 15px auto 0;
+  left: 50%; /* Center the line */
+  transform: translateX(-50%); /* Adjust for centering */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background: #F5F5F5; /* Changed from #121212 to white */
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  transition: all 0.4s;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+}
+
+.service-item:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Adjusted shadow for lighter background */
+  border-bottom: 4px solid #F05454;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #F05454; /* Changed to new accent color */
+  margin-bottom: 25px;
+  transition: all 0.3s;
+}
+
+.service-item:hover .service-icon {
+  transform: scale(1.1);
+  color: #F05454; /* Changed to new accent color */
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #121212; /* Changed from white to dark text */
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.service-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #F05454;
+}
+
+.service-item p {
+  color: #30475E; /* Changed from #30475E to dark color for better contrast on white */
+  line-height: 1.8;
+}
+
 @media (max-width: 768px) {
   .services h1 {
     font-size: 1.8rem;

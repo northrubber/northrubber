@@ -1,5 +1,5 @@
 .projects {
-  padding: 80px 20px;
+  padding: 100px 20px; /* Increased padding for better spacing */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -10,9 +10,9 @@
 }
 
 .projects-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #F05454; /* Changed to new accent color */
+  font-size: 2.8rem; /* Increased font size for better visibility */
+  margin-bottom: 20px; /* Reduced margin for balanced spacing */
+  color: #F05454; /* Accent color for better contrast */
   position: relative;
 }
 
@@ -66,18 +66,18 @@
 }
 
 .projects-grid .project-item {
-  background: #F5F5F5; /* Match "Featured Projects" background */
-  padding: 40px 30px;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Match "Featured Projects" shadow */
-  transition: all 0.4s;
+  background: #F5F5F5; /* Changed to white for better contrast */
+  padding: 30px; /* Adjusted padding for uniform spacing */
+  border-radius: 10px; /* Increased border radius for a modern look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
   border-bottom: 4px solid transparent;
 }
 
 .projects-grid .project-item:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Match hover shadow */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   border-bottom: 4px solid #F05454; /* Match accent color */
 }
 
@@ -146,13 +146,12 @@
 }
 
 .project-details h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #FFFFFF;
+  font-size: 1.6rem; /* Increased font size for better readability */
+  color: #121212; /* Dark text for better contrast */
 }
 
 .project-details p {
-  color: #30475E; /* Changed to secondary accent color */
+  color: #30475E; /* Secondary color for better readability */
   margin-bottom: 15px;
   line-height: 1.6;
 }

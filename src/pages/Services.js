@@ -12,12 +12,8 @@ function Services() {
     { img: weldingImage, title: 'Welding' },
     { img: cuttingImage, title: 'Cutting' },
     { img: assemblyImage, title: 'Assembly' },
-    { img: finishingImage, title: 'Finishing' },
-    { img: weldingImage, title: 'Maintenance' }, // Added new service with placeholder image
-    { img: cuttingImage, title: 'Custom Design' }, // Added new service with placeholder image
+    { img: finishingImage, title: 'Finishing' }
   ];
-
-  console.log(services); // Debugging: Ensure the array is correct
 
   return (
     <div className="services">
@@ -27,29 +23,60 @@ function Services() {
         <meta name="keywords" content="metal fabrication services, welding, cutting, assembly, finishing" />
         <link rel="canonical" href="https://aaxi.ca/services" />
       </Helmet>
-      <h1>Our Services</h1>
-      <motion.div
-        className="service-cards"
+      <motion.section 
+        className="services-overview"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        {services.map((service, index) => {
-          console.log(service); // Debugging: Ensure each service is being rendered
-          return (
-            <motion.div
-              key={index}
-              className="service-card"
-              whileHover={{ scale: 1.05 }}
+        <h2>Our Services</h2>
+        <div className="services-grid">
+          {[
+            { 
+              icon: 'fas fa-fire', 
+              title: 'Welding', 
+              description: 'High-quality welding services, including MIG, TIG, and stick welding for various metals.' 
+            },
+            { 
+              icon: 'fas fa-cut', 
+              title: 'Cutting', 
+              description: 'Precision cutting with laser, plasma, and waterjet cutting for complex shapes and designs.' 
+            },
+            { 
+              icon: 'fas fa-tools', 
+              title: 'Fabrication', 
+              description: 'Custom metal fabrication for industrial, commercial, and residential applications.' 
+            },
+            { 
+              icon: 'fas fa-cogs', 
+              title: 'Machining', 
+              description: 'CNC machining and turning with high precision for your specific requirements.' 
+            },
+            { 
+              icon: '', 
+              title: 'Assembly', 
+              description: 'Expert assembly services for complex metal structures and components.' 
+            },
+            { 
+              icon: '', 
+              title: 'Finishing', 
+              description: 'Professional finishing services, including polishing and coating for a refined look.' 
+            }
+          ].map((service, index) => (
+            <motion.div 
+              key={index} 
+              className="service-item"
+              whileHover={{ y: -10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <img src={service.img} alt={service.title} />
-              <p>{service.title}</p>
+              {service.icon && <i className={`${service.icon} service-icon`}></i>}
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
             </motion.div>
-          );
-        })}
-      </motion.div>
+          ))}
+        </div>
+      </motion.section>
     </div>
   );
 }

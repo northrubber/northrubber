@@ -35,11 +35,11 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
-  color: #30475E;
+  color: #121212;
   margin-left: 10px;
   letter-spacing: -1px;
   text-transform: lowercase;
-  background: linear-gradient(45deg, #30475E, #4a6683);
+  background: linear-gradient(45deg, #121212, #97a0a9);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -48,7 +48,7 @@
 }
 
 .logo a:hover .logo-text {
-  background: linear-gradient(45deg, #F05454, #f37676);
+  background: linear-gradient(45deg, #F05454, #e02b2b);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -58,7 +58,6 @@
   height: 60px;
   width: auto;
   transition: all 0.3s ease;
-  filter: brightness(0) saturate(100%) invert(100%); /* Keep white */
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); /* Enhanced shadow for contrast on light background */
 }
 

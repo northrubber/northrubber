@@ -103,6 +103,7 @@ main section:not(#home) {
 
 .button:hover {
   background-color: #f37676;
+  color: #fff; /* Ensure text remains white */
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(240, 84, 84, 0.2);
 }
@@ -115,7 +116,7 @@ main section:not(#home) {
 
 .button.button-outline:hover {
   background-color: rgba(240, 84, 84, 0.1);
-  color: #121212;
+  color: #F05454; /* Ensure text remains contrasting */
 }
 
 /* Dark theme specific classes */

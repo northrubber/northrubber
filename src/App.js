@@ -7,6 +7,9 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import FeaturedProjects from './pages/FeaturedProjects';
+import Testimonials from './pages/Testimonials';
+import CallToAction from './pages/CallToAction';
 import './App.css';
 
 function App() {
@@ -23,6 +26,15 @@ function App() {
           </section>
           <section id="services">
             <Services />
+          </section>
+          <section id="featured-projects">
+            <FeaturedProjects />
+          </section>
+          <section id="testimonials">
+            <Testimonials />
+          </section>
+          <section id="cta">
+            <CallToAction />
           </section>
           <section id="projects">
             <Projects />
