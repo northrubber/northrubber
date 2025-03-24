@@ -84,7 +84,7 @@
   margin-bottom: 25px;
   color: #F05454;
   position: relative;
-  text-align: left;
+  text-align: center; /* Center the text */
   padding-bottom: 15px;
 }
 
@@ -92,12 +92,11 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%; /* Start at the center */
+  transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
   background: #F05454;
-  margin: 0;
-  transform: none;
 }
 
 .about-content p {

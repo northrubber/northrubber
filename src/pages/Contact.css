@@ -22,7 +22,7 @@
   flex: 1;
   max-width: 600px; /* Reduced max width for better alignment */
   background: #FFFFFF;
-  padding: 30px; /* Adjusted padding for balanced spacing */
+  padding: 40px; /* Increased padding for more space around form elements */
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -34,6 +34,19 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #121212;
+  text-align: center; /* Center the text */
+  position: relative;
+}
+
+.contact-form-section h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%; /* Start at the center */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 70px;
+  height: 3px;
+  background: #F05454; /* Accent color */
 }
 
 .contact-form-section p {
@@ -71,29 +84,36 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: center; /* Ensure proper alignment */
+  justify-content: center; /* Center the form elements */
+  margin-top: 20px; /* Added top margin for better spacing from heading */
 }
 
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
   width: 100%;
-  padding: 15px; /* Increased padding for better usability */
-  border: 1px solid #ccc;
+  padding: 15px; /* Slightly reduced padding for better proportions */
+  border: 1px solid #e0e0e0; /* Lighter border color */
   border-radius: 6px; /* Slightly rounded corners for modern design */
   font-size: 1rem;
   background-color: #FFFFFF;
   color: #121212;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Reduced shadow intensity */
+  box-sizing: border-box; /* Ensure padding doesn't increase element width */
 }
 
 .contact-form textarea {
-  grid-column: span 2;
+  grid-column: span 2; /* Ensure textarea spans the full width */
   resize: none;
-  height: 100px;
+  height: 150px; /* Increased height for message box */
+  margin-top: 10px; /* Added top margin for separation */
 }
 
 .contact-form button {
-  grid-column: span 2;
+  grid-column: span 2; /* Ensure button spans the full width */
   padding: 15px; /* Increased padding for better clickability */
+  margin-top: 10px; /* Added top margin for separation */
   background: #F05454;
   color: #FFFFFF;
   border: none;
@@ -167,6 +187,18 @@
   color: #F05454;
   width: 100%; /* Ensure it spans the full width */
   display: block; /* Ensure proper alignment */
+  position: relative;
+}
+
+.contact-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%; /* Start at the center */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 70px;
+  height: 3px;
+  background: #F05454; /* Accent color */
 }
 
 .form-title {
@@ -185,15 +217,28 @@
     flex-direction: column;
   }
 
+  .contact-form-section {
+    padding: 30px 20px; /* Reduced padding on mobile for more content space */
+  }
+
   .contact-form {
     grid-template-columns: 1fr;
+    gap: 15px; /* Reduced gap on mobile */
+  }
+
+  .contact-form textarea,
+  .contact-form button {
+    grid-column: span 1;
+    margin-top: 5px; /* Less margin needed on mobile */
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    padding: 12px; /* Slightly smaller padding on mobile */
   }
 
   .contact-form textarea {
-    grid-column: span 1;
-  }
-
-  .contact-form button {
-    grid-column: span 1;
+    height: 120px; /* Slightly reduced height on mobile */
   }
 }

@@ -14,6 +14,7 @@
   margin-bottom: 20px; /* Reduced margin for balanced spacing */
   color: #F05454; /* Accent color for better contrast */
   position: relative;
+  text-align: center; /* Center the text */
 }
 
 .projects-header h1::after {
@@ -23,7 +24,9 @@
   height: 3px;
   background: #F05454; /* Changed to new accent color */
   margin: 15px auto 0;
-  left: 50%; /* Center the line */
+  position: absolute;
+  bottom: -10px;
+  left: 50%; /* Start at the center */
   transform: translateX(-50%); /* Adjust for centering */
 }
 
