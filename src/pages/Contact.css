@@ -1,5 +1,5 @@
 .contact-page {
-  padding: 100px 10px; /* Reduced padding from 20px to 10px on left/right */
+  padding: 40px 10px; /* Reduced from 100px to 40px (60% reduction) */
   background-color: #171717; /* Changed from #EDEDED */
   display: flex;
   flex-wrap: wrap;
@@ -213,7 +213,7 @@
 @media (max-width: 768px) {
   .contact-page {
     flex-direction: column;
-    padding: 80px 5px; /* Reduced padding further on mobile */
+    padding: 32px 5px; /* Reduced from 80px to 32px (60% reduction) */
   }
 
   .contact-container {

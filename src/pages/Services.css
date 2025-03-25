@@ -44,7 +44,7 @@
 }
 
 .services-overview {
-  padding: 100px 20px;
+  padding: 40px 20px; /* Reduced from 100px to 40px (60% reduction) */
   background-color: #171717; /* Changed from #F5F5F5 */
 }
 

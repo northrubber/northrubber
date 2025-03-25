@@ -53,7 +53,7 @@ main section {
 }
 
 main section:not(#home) {
-  padding: 80px 20px;
+  padding: 32px 20px; /* Reduced from 80px to 32px (60% reduction) */
 }
 
 /* Add fade-in animation for sections */
@@ -159,11 +159,11 @@ main section:not(#home) {
 
 /* Section spacing utility */
 .section-padding {
-  padding: 100px 0;
+  padding: 40px 0; /* Reduced from 100px to 40px (60% reduction) */
 }
 
 .section-margin {
-  margin: 100px 0;
+  margin: 40px 0; /* Reduced from 100px to 40px (60% reduction) */
 }
 
 /* Container width control */
@@ -176,14 +176,14 @@ main section:not(#home) {
 
 @media (max-width: 768px) {
   main section:not(#home) {
-    padding: 60px 15px;
+    padding: 24px 15px; /* Reduced from 60px to 24px (60% reduction) */
   }
   
   .section-padding {
-    padding: 60px 0;
+    padding: 24px 0; /* Reduced from 60px to 24px (60% reduction) */
   }
   
   .section-margin {
-    margin: 60px 0;
+    margin: 24px 0; /* Reduced from 60px to 24px (60% reduction) */
   }
 }

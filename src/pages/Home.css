@@ -107,7 +107,7 @@
 
 /* Featured Projects Section */
 .featured-projects {
-  padding: 100px 20px;
+  padding: 40px 20px; /* Reduced from 100px to 40px (60% reduction) */
   background-color: #171717; /* Changed from #EDEDED */
 }
 
@@ -197,7 +197,7 @@
 
 /* Testimonials Section */
 .testimonials {
-  padding: 100px 20px;
+  padding: 40px 20px; /* Reduced from 100px to 40px (60% reduction) */
   text-align: center;
   background-color: #171717; /* Changed to primary background */
   color: #EDEDED; /* Changed from #171717 */
@@ -291,7 +291,7 @@
 
 /* Call to Action Section */
 .cta-section {
-  padding: 100px 20px;
+  padding: 40px 20px; /* Reduced from 100px to 40px (60% reduction) */
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/images/cta-background.jpg') no-repeat center center;
   background-size: cover;
   text-align: center;
@@ -352,6 +352,6 @@
   .featured-projects,
   .testimonials,
   .cta-section {
-    padding: 70px 20px;
+    padding: 28px 20px; /* Reduced from 70px to 28px (60% reduction) */
   }
 }

@@ -11,7 +11,7 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       // Handle scroll events to determine active section
-      const sections = ['home', 'about', 'services', 'projects', 'contact'];
+      const sections = ['home', 'about', 'services', 'featured-projects', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -19,7 +19,12 @@ function Header() {
         if (element) {
           const { offsetTop, offsetHeight } = element;
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
+            // Special handling for projects sections
+            if (section === 'featured-projects' || section === 'projects') {
+              setActiveSection('projects');
+            } else {
+              setActiveSection(section);
+            }
             break;
           }
         }
@@ -85,7 +90,7 @@ function Header() {
             { label: 'Home', href: '#home' },
             { label: 'About', href: '#about' },
             { label: 'Services', href: '#services' },
-            { label: 'Projects', href: '#featured-projects' }, // Updated to reference featured-projects
+            { label: 'Projects', href: '#featured-projects' },
             { label: 'Contact', href: '#contact' },
           ].map((item, index) => (
             <motion.li
@@ -97,7 +102,8 @@ function Header() {
                 href={item.href} 
                 aria-label={item.label} 
                 onClick={closeMenu}
-                className={activeSection === item.href.substring(1) ? 'active' : ''}
+                className={activeSection === item.href.substring(1) || 
+                  (item.href === '#featured-projects' && activeSection === 'projects') ? 'active' : ''}
               >
                 {item.label}
               </a>
