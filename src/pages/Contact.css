@@ -96,11 +96,11 @@
 .contact-form select {
   width: 100%;
   padding: 15px; /* Slightly reduced padding for better proportions */
-  border: 1px solid #e0e0e0; /* Lighter border color */
+  border: 1px solid #bbbbbb; /* Lighter border color */
   border-radius: 6px; /* Slightly rounded corners for modern design */
   font-size: 1rem;
-  background-color: #FFFFFF;
-  color: #171717;
+  background-color: #444444;
+  color: #FFFFFF;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Reduced shadow intensity */
   box-sizing: border-box; /* Ensure padding doesn't increase element width */
 }

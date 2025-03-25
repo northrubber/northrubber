@@ -71,7 +71,7 @@
 }
 
 .projects-grid .project-item {
-  background: #EDEDED; /* Changed from #F5F5F5 */
+  background: #222222; /* Changed from #F5F5F5 */
   padding: 30px; /* Adjusted padding for uniform spacing */
   border-radius: 10px; /* Increased border radius for a modern look */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@
 .projects-grid .project-item h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #171717; /* Changed from #121212 */
+  color: #EDEDED; /* Changed from #121212 */
   position: relative;
   padding-bottom: 15px;
 }
@@ -106,7 +106,7 @@
 }
 
 .projects-grid .project-item p {
-  color: #444444; /* Changed from #30475E */
+  color: #bbbbbb; /* Changed from #30475E */
   line-height: 1.8;
   margin-bottom: 15px;
 }
