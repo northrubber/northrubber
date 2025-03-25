@@ -1,11 +1,12 @@
 .contact-page {
   padding: 100px 10px; /* Reduced padding from 20px to 10px on left/right */
-  background-color: #F5F5F5;
+  background-color: #171717; /* Changed from #EDEDED */
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Centered content for alignment */
   align-items: stretch;
   gap: 40px;
+  color: #EDEDED; /* Added for explicit text color */
 }
 
 .contact-container {
@@ -22,10 +23,10 @@
 .contact-form-section {
   flex: 1;
   max-width: 700px; /* Increased from 600px */
-  background: #FFFFFF;
+  background: #222222; /* Changed from #FFFFFF to dark gray */
   padding: 40px; /* Increased padding for more space around form elements */
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increased shadow opacity */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +35,7 @@
 .contact-form-section h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #121212;
+  color: #EDEDED; /* Changed from #171717 */
   text-align: center; /* Center the text */
   position: relative;
 }
@@ -47,13 +48,13 @@
   transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
-  background: #F05454; /* Accent color */
+  background: #DA0037; /* Accent color */
 }
 
 .contact-form-section p {
   font-size: 1rem;
   margin-bottom: 30px;
-  color: #30475E;
+  color: #bbbbbb; /* Lightened from #444444 for better visibility */
 }
 
 .contact-links {
@@ -68,13 +69,13 @@
   align-items: center;
   gap: 10px;
   font-size: 1rem;
-  color: #F05454;
+  color: #DA0037;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .contact-links a:hover {
-  color: #f37676;
+  color: #ff1a4f;
 }
 
 .contact-links a i {
@@ -99,7 +100,7 @@
   border-radius: 6px; /* Slightly rounded corners for modern design */
   font-size: 1rem;
   background-color: #FFFFFF;
-  color: #121212;
+  color: #171717;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Reduced shadow intensity */
   box-sizing: border-box; /* Ensure padding doesn't increase element width */
 }
@@ -115,7 +116,7 @@
   grid-column: span 2; /* Ensure button spans the full width */
   padding: 15px; /* Increased padding for better clickability */
   margin-top: 10px; /* Added top margin for separation */
-  background: #F05454;
+  background: #DA0037;
   color: #FFFFFF;
   border: none;
   border-radius: 4px;
@@ -126,7 +127,7 @@
 }
 
 .contact-form button:hover {
-  background: #f37676;
+  background: #ff1a4f;
   transform: translateY(-3px);
 }
 
@@ -144,7 +145,7 @@
 .contact-info-section h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #121212;
+  color: #171717;
 }
 
 .contact-info-section a {
@@ -152,7 +153,7 @@
   align-items: center;
   gap: 10px;
   font-size: 1rem;
-  color: #F05454;
+  color: #DA0037;
   text-decoration: none;
   margin-bottom: 15px;
 }
@@ -185,7 +186,7 @@
   text-align: center; /* Center the title */
   font-size: 2.8rem;
   margin-bottom: 40px;
-  color: #F05454;
+  color: #DA0037;
   width: 100%; /* Ensure it spans the full width */
   display: block; /* Ensure proper alignment */
   position: relative;
@@ -199,13 +200,13 @@
   transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
-  background: #F05454; /* Accent color */
+  background: #DA0037; /* Accent color */
 }
 
 .form-title {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #30475E;
+  color: #DA0037;
   text-align: center;
 }
 

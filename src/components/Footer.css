@@ -1,11 +1,11 @@
 /* Footer Container */
 .footer-container {
-  background-color: #f9f9f9; /* Light background for contrast */
-  color: #333;
-  font-family: 'Montserrat', 'Roboto', sans-serif; /* Updated to match codebase font */
+  background-color: #1c1c1c; /* Changed from #f9f9f9 to slightly lighter than main bg */
+  color: #EDEDED; /* Changed from #171717 */
+  font-family: 'Montserrat', 'Roboto', sans-serif;
   padding: 40px 20px;
   margin-top: 40px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #333; /* Darkened border */
 }
 
 /* Top Section Layout */
@@ -28,18 +28,21 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #EDEDED; /* Added color to ensure visibility */
 }
 
 .footer-subtitle {
   font-size: 1.1rem;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #EDEDED; /* Added color to ensure visibility */
 }
 
 .footer-description {
   font-size: 0.9rem;
   line-height: 1.5;
   margin-bottom: 20px;
+  color: #bbbbbb; /* Lightened for readability */
 }
 
 /* Links */
@@ -55,12 +58,12 @@
 
 .footer-links a {
   text-decoration: none;
-  color: #333;
+  color: #bbbbbb; /* Lightened for better visibility on dark bg */
   transition: color 0.2s ease-in-out;
 }
 
 .footer-links a:hover {
-  color: #0077c8; /* Example hover color */
+  color: #DA0037; /* Remains unchanged */
 }
 
 /* Form */
@@ -71,15 +74,17 @@
 
 .footer-input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   margin-bottom: 10px;
   border-radius: 4px;
   font-size: 0.9rem;
+  background-color: #222; /* Darkened for contrast */
+  color: #EDEDED; /* Changed text color */
 }
 
 .footer-button {
-  background-color: #0077c8; /* Button color */
-  color: #fff;
+  background-color: #DA0037; /* Remains unchanged */
+  color: #EDEDED; /* Changed from #fff */
   padding: 10px;
   font-size: 0.9rem;
   border: none;
@@ -88,7 +93,7 @@
 }
 
 .footer-button:hover {
-  background-color: #005da8; /* Darker on hover */
+  background-color: #b5002e; /* Remains unchanged */
 }
 
 /* Bottom Section */
@@ -99,10 +104,12 @@
   align-items: center;
   padding-top: 20px;
   font-size: 0.85rem;
+  border-top: 1px solid #333; /* Changed from default to darker */
 }
 
 .footer-bottom p {
   margin: 0;
+  color: #bbbbbb; /* Lightened for readability */
 }
 
 .footer-bottom-links {
@@ -114,13 +121,13 @@
 }
 
 .footer-bottom-links li a {
-  color: #333;
+  color: #bbbbbb; /* Lightened for visibility */
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
 .footer-bottom-links li a:hover {
-  color: #0077c8;
+  color: #DA0037; /* Remains unchanged */
 }
 
 /* Responsive adjustments */

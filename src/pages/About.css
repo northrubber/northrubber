@@ -3,19 +3,20 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  background-color: #171717; /* Added explicit background */
 }
 
 .about h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Remains unchanged */
 }
 
 .about p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 15px;
-  color: #30475E; /* Changed to secondary accent color */
+  color: #bbbbbb; /* Lightened from #444444 for better visibility */
 }
 
 .about-image {
@@ -24,26 +25,27 @@
   height: auto; /* Maintain aspect ratio */
   margin: 20px auto; /* Center the image */
   display: block;
-  border: 3px solid #F05454; /* Changed to new accent color */
+  border: 3px solid #DA0037; /* Changed from #F05454 */
   border-radius: 8px; /* Added rounded corners */
 }
 
 .about-page {
   width: 100%;
   overflow: hidden;
+  background-color: #171717; /* Added explicit background */
 }
 
 .about-hero {
   text-align: center;
   padding: 120px 20px 60px;
-  background-color: #F5F5F5;
+  background-color: #171717; /* Changed from #EDEDED */
   position: relative;
 }
 
 .about-hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #F05454;
+  color: #DA0037; /* Remains unchanged */
   position: relative;
   display: inline-block;
 }
@@ -56,7 +58,7 @@
   transform: translateX(-50%);
   width: 70px;
   height: 3px;
-  background: #F05454;
+  background: #DA0037; /* Remains unchanged */
 }
 
 .about-overview, .about-approach {
@@ -71,7 +73,7 @@
 }
 
 .about-approach {
-  background-color: #F5F5F5;
+  background-color: #171717; /* Changed from #EDEDED to be slightly lighter than main bg */
 }
 
 .about-content {
@@ -82,9 +84,9 @@
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 25px;
-  color: #F05454;
+  color: #DA0037; /* Remains unchanged */
   position: relative;
-  text-align: center; /* Center the text */
+  text-align: center;
   padding-bottom: 15px;
 }
 
@@ -96,14 +98,14 @@
   transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
-  background: #F05454;
+  background: #DA0037; /* Remains unchanged */
 }
 
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 20px;
-  color: #30475E;
+  color: #bbbbbb; /* Lightened from #444444 for better visibility */
 }
 
 .about-image-container {
@@ -124,7 +126,7 @@
 }
 
 .main-image {
-  border: 3px solid #F05454;
+  border: 3px solid #DA0037; /* Changed from #F05454 */
 }
 
 .secondary-image {
@@ -138,7 +140,7 @@
   left: -20px;
   width: 100%;
   height: 100%;
-  border: 3px solid #F05454;
+  border: 3px solid #DA0037; /* Changed from #F05454 */
   z-index: -1;
   border-radius: 8px;
 }

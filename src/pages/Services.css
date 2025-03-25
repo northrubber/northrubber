@@ -1,11 +1,13 @@
 .services {
   padding: 20px;
   text-align: center;
+  background-color: #171717; /* Added explicit background */
 }
 
 .services h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #DA0037; /* Added explicit color */
 }
 
 .service-cards {
@@ -15,21 +17,21 @@
 }
 
 .service-card {
-  background-color: #F5F5F5; /* Changed to white/primary background from dark */
+  background-color: #222222; /* Changed from #EDEDED, slightly lighter than main bg */
   padding: 20px;
   border: none; /* Removed border in favor of shadow */
   transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Increased shadow opacity */
   border-radius: 8px; /* Added rounded corners for consistency */
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Increased shadow depth */
 }
 
 .service-card p {
-  color: #30475E; /* Reverted to secondary accent color for paragraph text */
+  color: #bbbbbb; /* Lightened from #444444 for visibility */
   font-weight: 500; /* Kept the font weight for better readability */
 }
 
@@ -43,15 +45,14 @@
 
 .services-overview {
   padding: 100px 20px;
-  background-color: #F5F5F5; /* Match "Our Services" background */
-  color: #121212;
+  background-color: #171717; /* Changed from #F5F5F5 */
 }
 
 .services-overview h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
   position: relative;
 }
 
@@ -60,7 +61,7 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #F05454; /* Changed to new accent color */
+  background: #DA0037; /* Changed from #F05454 */
   margin: 15px auto 0;
   left: 50%; /* Center the line */
   transform: translateX(-50%); /* Adjust for centering */
@@ -75,7 +76,7 @@
 }
 
 .service-item {
-  background: #F5F5F5; /* Changed from #121212 to white */
+  background: #222222; /* Changed from #F5F5F5 */
   padding: 40px 30px;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
@@ -87,25 +88,25 @@
 .service-item:hover {
   transform: translateY(-15px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Adjusted shadow for lighter background */
-  border-bottom: 4px solid #F05454;
+  border-bottom: 4px solid #DA0037; /* Changed from #F05454 */
 }
 
 .service-icon {
   font-size: 3rem;
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
   margin-bottom: 25px;
   transition: all 0.3s;
 }
 
 .service-item:hover .service-icon {
   transform: scale(1.1);
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
 }
 
 .service-item h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #121212; /* Changed from white to dark text */
+  color: #EDEDED; /* Changed from #121212 */
   position: relative;
   padding-bottom: 15px;
 }
@@ -118,11 +119,11 @@
   transform: translateX(-50%);
   width: 40px;
   height: 2px;
-  background: #F05454;
+  background: #DA0037; /* Changed from #F05454 */
 }
 
 .service-item p {
-  color: #30475E; /* Changed from #30475E to dark color for better contrast on white */
+  color: #EDEDED; /* Changed from #30475E to dark color for better contrast on white */
   line-height: 1.8;
 }
 

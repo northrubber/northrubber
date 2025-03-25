@@ -2,6 +2,8 @@
   padding: 100px 20px; /* Increased padding for better spacing */
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #171717; /* Added explicit background */
+  color: #EDEDED; /* Added explicit text color */
 }
 
 .projects-header {
@@ -12,7 +14,7 @@
 .projects-header h1 {
   font-size: 2.8rem; /* Increased font size for better visibility */
   margin-bottom: 20px; /* Reduced margin for balanced spacing */
-  color: #F05454; /* Accent color for better contrast */
+  color: #DA0037; /* Changed from #F05454 */
   position: relative;
   text-align: center; /* Center the text */
 }
@@ -22,7 +24,7 @@
   display: block;
   width: 70px;
   height: 3px;
-  background: #F05454; /* Changed to new accent color */
+  background: #DA0037; /* Changed from #F05454 */
   margin: 15px auto 0;
   position: absolute;
   bottom: -10px;
@@ -34,7 +36,7 @@
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
-  color: #30475E; /* Changed to secondary accent color */
+  color: #bbbbbb; /* Lightened from #444444 for better visibility */
 }
 
 .project-filters {
@@ -48,8 +50,8 @@
 .filter-btn {
   padding: 8px 15px;
   background: transparent;
-  border: 1px solid #30475E; /* Changed to secondary accent color */
-  color: #30475E; /* Changed to secondary accent color */
+  border: 1px solid #bbbbbb; /* Changed from #30475E */
+  color: #bbbbbb; /* Changed from #30475E */
   cursor: pointer;
   transition: all 0.3s;
   font-size: 0.9rem;
@@ -57,9 +59,9 @@
 }
 
 .filter-btn:hover, .filter-btn.active {
-  background: #F05454; /* Changed to new accent color */
+  background: #DA0037; /* Changed from #F05454 */
   color: #fff;
-  border-color: #F05454; /* Changed to new accent color */
+  border-color: #DA0037; /* Changed from #F05454 */
 }
 
 .projects-grid {
@@ -69,7 +71,7 @@
 }
 
 .projects-grid .project-item {
-  background: #F5F5F5; /* Changed to white for better contrast */
+  background: #EDEDED; /* Changed from #F5F5F5 */
   padding: 30px; /* Adjusted padding for uniform spacing */
   border-radius: 10px; /* Increased border radius for a modern look */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -81,13 +83,13 @@
 .projects-grid .project-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-bottom: 4px solid #F05454; /* Match accent color */
+  border-bottom: 4px solid #DA0037; /* Changed from #F05454 */
 }
 
 .projects-grid .project-item h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #121212; /* Match "Featured Projects" text color */
+  color: #171717; /* Changed from #121212 */
   position: relative;
   padding-bottom: 15px;
 }
@@ -100,11 +102,11 @@
   transform: translateX(-50%);
   width: 40px;
   height: 2px;
-  background: #F05454; /* Match accent color */
+  background: #DA0037; /* Changed from #F05454 */
 }
 
 .projects-grid .project-item p {
-  color: #30475E; /* Match secondary font color */
+  color: #444444; /* Changed from #30475E */
   line-height: 1.8;
   margin-bottom: 15px;
 }
@@ -116,7 +118,7 @@
 }
 
 .project-item {
-  background: #121212; /* Changed to secondary background */
+  background: #171717; /* Changed from #121212 */
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -150,18 +152,18 @@
 
 .project-details h3 {
   font-size: 1.6rem; /* Increased font size for better readability */
-  color: #121212; /* Dark text for better contrast */
+  color: #171717; /* Changed from #121212 */
 }
 
 .project-details p {
-  color: #30475E; /* Secondary color for better readability */
+  color: #444444; /* Changed from #30475E */
   margin-bottom: 15px;
   line-height: 1.6;
 }
 
 .project-category {
   display: inline-block;
-  background: #30475E; /* Changed to secondary accent color */
+  background: #444444; /* Changed from #30475E */
   color: #ffffff;
   font-size: 0.8rem;
   padding: 4px 10px;
@@ -170,7 +172,7 @@
 }
 
 .view-project {
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -189,7 +191,7 @@
 }
 
 .view-project:hover {
-  color: #f37676; /* Lighter accent color */
+  color: #ff1a4f; /* Changed from #f37676 */
 }
 
 .view-project:hover i {
@@ -212,7 +214,7 @@
 }
 
 .modal-content {
-  background: #121212; /* Changed to secondary background */
+  background: #171717; /* Changed from #121212 */
   border-radius: 5px;
   max-width: 900px;
   width: 100%;
@@ -227,7 +229,7 @@
   right: 15px;
   background: transparent;
   border: none;
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 10;
@@ -252,7 +254,7 @@
 }
 
 .modal-description {
-  color: #30475E; /* Changed to secondary accent color */
+  color: #444444; /* Changed from #30475E */
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -265,7 +267,7 @@
 }
 
 .detail-item {
-  border-left: 3px solid #F05454; /* Changed to new accent color */
+  border-left: 3px solid #DA0037; /* Changed from #F05454 */
   padding-left: 15px;
 }
 
@@ -276,7 +278,7 @@
 }
 
 .detail-value {
-  color: #30475E; /* Changed to secondary accent color */
+  color: #444444; /* Changed from #30475E */
 }
 
 @media (max-width: 768px) {

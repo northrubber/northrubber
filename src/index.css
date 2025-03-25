@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Montserrat', 'Roboto', sans-serif;
-  background-color: #F5F5F5;
-  color: #121212;
+  background-color: #171717; /* Changed from #EDEDED */
+  color: #EDEDED; /* Changed from #171717 */
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,12 +11,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 1rem;
 }
@@ -42,7 +42,7 @@ h2:after {
   transform: translateX(-50%); /* Adjust for centering */
   width: 70px;
   height: 3px;
-  background: #F05454; /* Changed to new accent color */
+  background: #DA0037; /* Changed from #F05454 */
 }
 
 .text-center h2:after {
@@ -53,17 +53,17 @@ h2:after {
 p {
   margin-bottom: 1.5rem;
   font-size: 1.05rem;
-  color: #30475E; /* Changed to new secondary accent color */
+  color: #bbbbbb; /* Lightened from #444444 for better visibility on dark background */
 }
 
 a {
-  color: #F05454; /* Changed to new accent color */
+  color: #DA0037; /* Changed from #F05454 */
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
-  color: #f37676; /* Lighter version of accent color */
+  color: #ff1a4f; /* Changed from #f37676 */
 }
 
 .btn {
@@ -98,33 +98,33 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #F05454;
-  border: 2px solid #F05454;
-  color: #fff;
+  background-color: #DA0037; /* Changed from #F05454 */
+  border: 2px solid #DA0037; /* Changed from #F05454 */
+  color: #EDEDED; /* Changed from #fff */
   padding: 12px 30px;
   border-radius: 4px;
   transition: background 0.3s, transform 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #f37676;
-  border-color: #f37676;
-  color: #fff; /* Ensure text remains white */
+  background-color: #ff1a4f; /* Changed from #f37676 */
+  border-color: #ff1a4f; /* Changed from #f37676 */
+  color: #EDEDED; /* Changed from #fff */
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(240, 84, 84, 0.2);
+  box-shadow: 0 10px 20px rgba(218, 0, 55, 0.2); /* Changed from rgba(240, 84, 84, 0.2) */
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 2px solid #F05454;
-  color: #F05454;
+  border: 2px solid #DA0037; /* Changed from #F05454 */
+  color: #DA0037; /* Changed from #F05454 */
 }
 
 .btn-secondary:hover {
-  background-color: rgba(240, 84, 84, 0.1);
-  color: #F05454; /* Ensure text remains contrasting */
+  background-color: rgba(218, 0, 55, 0.1); /* Changed from rgba(240, 84, 84, 0.1) */
+  color: #DA0037; /* Changed from #F05454 */
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(240, 84, 84, 0.1);
+  box-shadow: 0 10px 20px rgba(218, 0, 55, 0.1); /* Changed from rgba(240, 84, 84, 0.1) */
 }
 
 .section-title {
@@ -155,27 +155,27 @@ a:hover {
 
 /* Dark theme backgrounds */
 .bg-primary {
-  background-color: #F5F5F5;
+  background-color: #171717; /* Changed from #EDEDED */
 }
 
 .bg-secondary {
-  background-color: #121212; /* Changed to new secondary background */
+  background-color: #222222; /* Lightened slightly from #171717 */
 }
 
 .bg-accent {
-  background-color: #30475E; /* Changed to new secondary accent color */
+  background-color: #444444; /* Changed from #30475E */
 }
 
 .text-light {
-  color: #FFFFFF;
+  color: #EDEDED; /* Changed from #FFFFFF */
 }
 
 .text-muted {
-  color: #30475E;
+  color: #bbbbbb; /* Lightened from #444444 for better visibility */
 }
 
 .text-accent {
-  color: #F05454;
+  color: #DA0037; /* Changed from #F05454 */
 }
 
 @media (max-width: 768px) {
