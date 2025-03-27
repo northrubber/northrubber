@@ -42,8 +42,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            With over 20 years of experience in the metal fabrication industry, aaxi has established itself 
-            as a leading provider of high-quality metal fabrication and manufacturing services.
+            At Aaxi Inc., we are more than just a metal fabrication company—we are a team of skilled engineers dedicated to delivering precision-engineered solutions. With a strong network of trusted fabricators and suppliers, we specialize in sourcing and providing high-quality metal fabricated parts at competitive prices.
           </motion.p>
           <motion.p
             initial={{ x: 50, opacity: 0 }}
@@ -51,8 +50,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            We are a team of skilled mechanical engineers specializing in metal fabrication services. 
-            Our mission is to deliver high-quality, precision-engineered solutions for our clients.
+            Our expertise spans across precision fabrication, welding, cutting, and machining services, catering to industries such as construction, automotive, aerospace, and beyond. We take pride in our commitment to excellence, ensuring that every component we deliver meets the highest standards of quality and durability.
           </motion.p>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
@@ -60,8 +58,7 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            We specialize in precision fabrication, welding, cutting, and machining services for various 
-            industries, including construction, automotive, aerospace, and more.
+            Driven by innovation and craftsmanship, our mission is to support our clients with reliable, high-performance solutions that bring their visions to life. At Aaxi Inc., we don’t just fabricate metal—we build lasting partnerships.
           </motion.p>
         </div>
         <div className="about-image-container">
@@ -108,9 +105,9 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            At aaxi, we combine traditional craftsmanship with cutting-edge technology to deliver 
-            exceptional results. Our team of experienced professionals is dedicated to providing 
-            innovative solutions tailored to meet your specific requirements.
+            At Aaxi Inc., we blend traditional craftsmanship with state-of-the-art technology to deliver
+            superior results. Our team of experienced professionals is committed to providing
+            innovative, tailored solutions that meet your unique requirements.
           </motion.p>
           <motion.p
             initial={{ x: 50, opacity: 0 }}
@@ -118,9 +115,18 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            We pride ourselves on our attention to detail, commitment to quality, and customer-centric 
-            approach. Each project is handled with the utmost care and precision, ensuring that the 
-            final product exceeds your expectations.
+            We focus on delivering cost-effective solutions with short lead times, ensuring efficiency
+            without compromising quality. With meticulous attention to detail and a strong
+            commitment to excellence, every project is handled with precision and care.
+          </motion.p>
+          <motion.p
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            At Aaxi Inc., our customer-centric approach drives us to exceed expectations, providing
+            reliable, high-performance solutions that stand the test of time.
           </motion.p>
         </div>
       </motion.div>

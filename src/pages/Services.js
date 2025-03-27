@@ -43,12 +43,12 @@ function Services() {
               description: 'CNC machining and turning with high precision for your specific requirements.' 
             },
             { 
-              icon: '', 
+              icon: 'fas fa-arrows-to-dot', 
               title: 'Assembly', 
               description: 'Expert assembly services for complex metal structures and components.' 
             },
             { 
-              icon: '', 
+              icon: 'fas fa-paint-roller', 
               title: 'Finishing', 
               description: 'Professional finishing services, including polishing and coating for a refined look.' 
             }

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-top">
         {/* Left Column: Brand/Theme Info */}
         <div className="footer-col">
-          <h2 className="footer-title">aaxi</h2>
+          <h2 className="footer-title">AAXI</h2>
           <p className="footer-description">
           High-quality precision metal fabrication services for all your industrial needs
           </p>
@@ -57,7 +57,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>Copyright © 2025. <span>Your Site Name</span>. All Rights Reserved.</p>
+        <p>Copyright © 2025. <span>AAXI</span>. All Rights Reserved.</p>
         <ul className="footer-bottom-links">
           <li><a href="#privacy">Privacy</a></li>
           <li><a href="#terms">Terms of Use</a></li>

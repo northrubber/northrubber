@@ -34,14 +34,14 @@ function Contact() {
           <p>We’re here to help. Chat to our friendly team 24/7 and get set up and ready to go in just 5 minutes.</p>
           <div className="contact-links">
             <a href="tel:+11234567890">
-              <i className="fas fa-phone-alt"></i> Start a live chat
+              <i className="fas fa-phone-volume"></i> Call us now
             </a>
             <a href="mailto:info@aaxi.ca">
               <i className="fas fa-envelope"></i> Shoot us an email
             </a>
-            <a href="https://twitter.com/aaxi" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://twitter.com/aaxi" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i> Message us on Twitter
-            </a>
+            </a> */}
           </div>
           <h2 className="form-title">Send us a message now!</h2>
           <form className="contact-form" onSubmit={handleSubmit}>

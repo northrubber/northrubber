@@ -5,6 +5,9 @@ import './Projects.css';
 import project1 from '../assets/images/project1.jpg';
 import project2 from '../assets/images/project2.jpg';
 import project3 from '../assets/images/project3.jpg';
+import project4 from '../assets/images/project4.jpg';
+import project5 from '../assets/images/project5.jpg';
+import project6 from '../assets/images/project6.jpg';
 
 function Projects() {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -47,10 +50,10 @@ function Projects() {
     },
     {
       id: 4,
-      title: 'Stainless Steel Kitchen Equipment',
+      title: 'High-Quality Metal Parts',
       category: 'custom',
-      image: project1,
-      description: 'Fabrication of stainless steel kitchen equipment for commercial restaurants, meeting food safety standards.',
+      image: project4,
+      description: 'Reliable and precise metal parts manufactured to the highest standards..',
       client: 'Restaurant Supply Co.',
       completionDate: 'July 2023',
       location: 'Montreal, QC',
@@ -58,10 +61,10 @@ function Projects() {
     },
     {
       id: 5,
-      title: 'Aluminum Railing Systems',
+      title: 'Welding Services',
       category: 'architectural',
-      image: project2,
-      description: 'Custom designed and fabricated aluminum railing systems for residential and commercial properties.',
+      image: project5,
+      description: 'Expert welding solutions for strong and durable metal structures for residential and commercial properties.',
       client: 'Architectural Designs Ltd.',
       completionDate: 'August 2023',
       location: 'Ottawa, ON',
@@ -69,10 +72,10 @@ function Projects() {
     },
     {
       id: 6,
-      title: 'Heavy Equipment Parts',
+      title: 'Automotive Manufacturing',
       category: 'industrial',
-      image: project3,
-      description: 'Manufacturing of replacement parts for heavy equipment used in mining and construction industries.',
+      image: project6,
+      description: 'Precision-fabricated parts for automotive manufacturing needs and High-performance metal components designed for aerospace industry standards.',
       client: 'Mining Operations Inc.',
       completionDate: 'October 2023',
       location: 'Edmonton, AB',

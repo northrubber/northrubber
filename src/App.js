@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import FeaturedProjects from './pages/FeaturedProjects';
-import Testimonials from './pages/Testimonials';
+//import Testimonials from './pages/Testimonials';
 import CallToAction from './pages/CallToAction';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
@@ -30,9 +30,9 @@ function App() {
           <section id="featured-projects">
             <FeaturedProjects />
           </section>
-          <section id="testimonials">
+          {/* <section id="testimonials">
             <Testimonials />
-          </section>
+          </section> */}
           <section id="cta">
             <CallToAction />
           </section>
