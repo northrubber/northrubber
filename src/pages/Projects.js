@@ -117,7 +117,6 @@ function Projects() {
   return (
     <div className="projects" id="projects">
       <Helmet>
-        <title>Our Projects - Metal Fabrication Portfolio</title>
         <meta name="description" content="View our portfolio of metal fabrication projects showcasing our expertise in industrial, structural, and custom metal work." />
         <meta name="keywords" content="metal fabrication projects, portfolio, industrial equipment, structural steel, custom components" />
         <link rel="canonical" href="https://aaxi.ca/projects" />

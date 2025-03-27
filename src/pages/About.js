@@ -9,7 +9,6 @@ function About() {
   return (
     <div className="about-page">
       <Helmet>
-        <title>About aaxi - Metal Fabrication Services</title>
         <meta name="description" content="Learn about our skilled mechanical engineers specializing in metal fabrication services." />
         <meta name="keywords" content="metal fabrication, mechanical engineers, company history" />
         <link rel="canonical" href="https://aaxi.ca/about" />

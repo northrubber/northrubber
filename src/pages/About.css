@@ -21,11 +21,11 @@
 
 .about-image {
   width: 100%; /* Make the image responsive */
-  max-width: 400px; /* Limit the maximum width */
+  max-width: 500px; /* Increased maximum width for better visuals */
   height: auto; /* Maintain aspect ratio */
   margin: 20px auto; /* Center the image */
   display: block;
-  border: 3px solid #DA0037; /* Changed from #F05454 */
+  border: none; /* Removed the red border */
   border-radius: 8px; /* Added rounded corners */
 }
 
@@ -79,6 +79,7 @@
 .about-content {
   flex: 1;
   min-width: 300px;
+  text-align: justify; /* Changed from center to left-justified */
 }
 
 .about-content h2 {
@@ -118,15 +119,16 @@
 
 .about-image {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px; /* Increased maximum width for better visuals */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   object-fit: cover;
+  border: none; /* Removed the red border */
 }
 
 .main-image {
-  border: 3px solid #DA0037; /* Changed from #F05454 */
+  border: none;
 }
 
 .secondary-image {
@@ -140,7 +142,7 @@
   left: -20px;
   width: 100%;
   height: 100%;
-  border: 3px solid #DA0037; /* Changed from #F05454 */
+  border: none; /* Removed the red border */
   z-index: -1;
   border-radius: 8px;
 }

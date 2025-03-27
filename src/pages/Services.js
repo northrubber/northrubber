@@ -7,7 +7,6 @@ function Services() {
   return (
     <div className="services">
       <Helmet>
-        <title>Our Services - Metal Fabrication Services</title>
         <meta name="description" content="Explore our comprehensive metal fabrication services including welding, cutting, assembly, and finishing." />
         <meta name="keywords" content="metal fabrication services, welding, cutting, assembly, finishing" />
         <link rel="canonical" href="https://aaxi.ca/services" />

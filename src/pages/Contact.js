@@ -10,21 +10,39 @@ function Contact() {
     phone: '',
     message: '',
   });
+  const [result, setResult] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formState);
+    setResult("Sending...");
+    const formData = new FormData(e.target);
+
+    formData.append("access_key", "ffc44817-519f-48c0-a9d8-289544ac6825");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      e.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
 
   return (
     <section id="contact" className="contact-page">
       <Helmet>
-        <title>Contact Us - AAXI</title>
         <meta name="description" content="Contact AAXI for custom metal fabrication services." />
       </Helmet>
       <h1 className="contact-title">Contact Us</h1>
@@ -39,9 +57,6 @@ function Contact() {
             <a href="mailto:info@aaxi.ca">
               <i className="fas fa-envelope"></i> Shoot us an email
             </a>
-            {/* <a href="https://twitter.com/aaxi" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i> Message us on Twitter
-            </a> */}
           </div>
           <h2 className="form-title">Send us a message now!</h2>
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -85,6 +100,7 @@ function Contact() {
             ></textarea>
             <button type="submit">Send Message</button>
           </form>
+          <span>{result}</span>
         </div>
         <div className="map-container">
           <iframe

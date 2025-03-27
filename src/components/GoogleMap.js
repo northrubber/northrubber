@@ -5,22 +5,8 @@ const GoogleMap = ({ apiKey, style }) => {
   const mapInstanceRef = useRef(null);
 
   useEffect(() => {
-    // Load Google Maps script
-    const loadGoogleMapsScript = () => {
-      if (window.google?.maps) {
-        initMap();
-        return;
-      }
-      
-      const googleMapsScript = document.createElement('script');
-      googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
-      googleMapsScript.async = true;
-      googleMapsScript.defer = true;
-      window.document.body.appendChild(googleMapsScript);
-    };
-    
-    // Initialize map
-    window.initMap = () => {
+    // Initialize map function
+    const initMap = () => {
       if (mapRef.current && !mapInstanceRef.current) {
         const position = { lat: 43.718156, lng: -79.518136 }; // Toronto coordinates
         
@@ -154,9 +140,24 @@ const GoogleMap = ({ apiKey, style }) => {
         mapInstanceRef.current = map;
       }
     };
-    
+
+    // Load Google Maps script
+    const loadGoogleMapsScript = () => {
+      if (window.google?.maps) {
+        initMap();
+        return;
+      }
+      
+      const googleMapsScript = document.createElement('script');
+      googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+      googleMapsScript.async = true;
+      googleMapsScript.defer = true;
+      window.initMap = initMap; // Assign initMap to the global scope
+      window.document.body.appendChild(googleMapsScript);
+    };
+
     loadGoogleMapsScript();
-    
+
     return () => {
       // Clean up
       window.initMap = null;

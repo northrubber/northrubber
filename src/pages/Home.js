@@ -8,7 +8,6 @@ function Home() {
   return (
     <div className="home">
       <Helmet>
-        <title>aaxi - Metal Fabrication & Manufacturing Services</title>
         <meta name="description" content="Your trusted partner in metal fabrication, manufacturing and engineering services with over 20 years of industry experience." />
         <meta name="keywords" content="metal fabrication, manufacturing, welding, cutting, engineering services" />
         <link rel="canonical" href="https://aaxi.ca" />

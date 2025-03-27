@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: #171717; /* Changed from #EDEDED */
-  color: #EDEDED; /* Changed from #171717 */
+  background-color: #EDEDED; /* Changed from #EDEDED */
+  color: #171717; /* Changed from #171717 */
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
 
 .header.scrolled {
   padding: 10px 40px;
-  background-color: rgba(23, 23, 23, 0.95); /* Changed from rgba(237, 237, 237, 0.95) */
+  background-color:  #EDEDED; /* Changed from rgba(237, 237, 237, 0.95) */
   backdrop-filter: blur(10px);
 }
 
@@ -38,8 +38,7 @@
   color: #EDEDED; /* Changed from #171717 */
   margin-left: 10px;
   letter-spacing: -1px;
-  text-transform: lowercase;
-  background: linear-gradient(45deg, #EDEDED, #999999); /* Changed gradient colors for visibility */
+  background: linear-gradient(45deg, #171717, #999999); /* Changed gradient colors for visibility */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -55,10 +54,9 @@
 }
 
 .logo-image {
-  height: 60px;
+  height: 50px;
   width: auto;
   transition: all 0.3s ease;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5)); /* Increased shadow opacity */
 }
 
 .scrolled .logo-image {
@@ -80,7 +78,7 @@
 .nav-links li a {
   text-decoration: none;
   font-weight: 600;
-  color: #bbbbbb; /* Lightened from #444444 for better visibility */
+  color: #171717; /* Lightened from #444444 for better visibility */
   text-transform: uppercase;
   transition: all 0.3s;
   font-size: 0.9rem;
