@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import ErrorBoundary from './ErrorBoundaries';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ErrorBoundary>
-      <BrowserRouter basename="/aaxi">
-        <App />
-      </BrowserRouter>
-    </ErrorBoundary>
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );

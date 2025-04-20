@@ -1,117 +1,157 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Header.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/zenith-logo.png'; // Make sure this path is correct
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
-
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('Industrial Rubber Sheet'); // Default active category
+  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const location = useLocation();
+  
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      // Handle scroll events to determine active section
-      const sections = ['home', 'about', 'services', 'featured-projects', 'projects', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            // Special handling for projects sections
-            if (section === 'featured-projects' || section === 'projects') {
-              setActiveSection('projects');
-            } else {
-              setActiveSection(section);
-            }
-            break;
-          }
-        }
-      }
-      
-      // Add box shadow to header when scrolled
       if (window.scrollY > 50) {
-        setScrolled(true);
+        setIsScrolled(true);
       } else {
-        setScrolled(false);
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setIsProductsDropdownOpen(false);
+  }, [location]);
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsProductsDropdownOpen(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
-
+  
+  // Toggle mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Prevent body scrolling when menu is open
-    if (!isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+  };
+  
+  // Handle category selection
+  const handleCategorySelect = (category) => {
+    setActiveCategory(category);
   };
 
-  // Close menu when clicking a link
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    document.body.style.overflow = 'auto';
+  // Toggle dropdown visibility
+  const toggleProductsDropdown = (e) => {
+    e.preventDefault();
+    setIsProductsDropdownOpen(!isProductsDropdownOpen);
   };
-
+  
   return (
-    <motion.header
-      className={`header ${scrolled ? 'scrolled' : ''}`}
-      role="banner"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="logo">
-        <a href="#home" aria-label="Home" onClick={closeMenu}>
-          <img src={logo} alt="AAXI Logo" className="logo-image" width="60" height="60" />
-          <span className="logo-text">AAXI</span>
-        </a>
-      </div>
-      
-      <button
-        className={`hamburger ${isMenuOpen ? 'open' : ''}`}
-        onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
-        aria-expanded={isMenuOpen}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`} role="navigation">
-        <ul className="nav-links">
-          {[
-            { label: 'Home', href: '#home' },
-            { label: 'About', href: '#about' },
-            { label: 'Services', href: '#services' },
-            { label: 'Projects', href: '#featured-projects' },
-            { label: 'Contact', href: '#contact' },
-          ].map((item, index) => (
-            <motion.li
-              key={index}
-              whileHover={{ x: 5 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="container header-container">
+        <Link to="/" className="logo">
+          <img src={logo} alt="Zenith Rubber Logo" />
+        </Link>
+        <div className={`mobile-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
+          {isMenuOpen && (
+            <button className="close-menu" onClick={toggleMenu}>
+              <i className="fas fa-times"></i>
+            </button>
+          )}
+          
+          <ul className="nav-list">
+            <motion.li 
+              whileHover={{ y: -3 }}
+              whileTap={{ y: 0 }}
+              className={location.pathname === '/' ? 'active' : ''}
+            >
+              <Link to="/">Home</Link>
+            </motion.li>
+            <motion.li 
+              whileHover={{ y: -3 }}
+              whileTap={{ y: 0 }}
+              className={location.pathname === '/about' ? 'active' : ''}
+            >
+              <Link to="/about">About Us</Link>
+            </motion.li>
+            <motion.li 
+              whileHover={{ y: -3 }}
+              whileTap={{ y: 0 }}
+              className={`dropdown ${isProductsDropdownOpen ? 'dropdown-open' : ''}`}
+              ref={dropdownRef}
             >
               <a 
-                href={item.href} 
-                aria-label={item.label} 
-                onClick={closeMenu}
-                className={activeSection === item.href.substring(1) || 
-                  (item.href === '#featured-projects' && activeSection === 'projects') ? 'active' : ''}
+                href="#" 
+                onClick={toggleProductsDropdown}
+                className={activeCategory === 'Products' ? 'active' : ''}
               >
-                {item.label}
+                Products
               </a>
+              <div 
+                className={`dropdown-menu ${isProductsDropdownOpen ? 'active' : ''}`}
+              >
+                <div className="main-categories">
+                  <a 
+                    href="#"
+                    className={activeCategory === 'Industrial Rubber Sheet' ? 'active' : ''}
+                    onClick={(e) => { e.preventDefault(); handleCategorySelect('Industrial Rubber Sheet'); }}
+                  >
+                    Industrial Rubber Sheet
+                  </a>
+                  {/* ... other categories ... */}
+                </div>
+                <div className={`subcategories ${activeCategory === 'Industrial Rubber Sheet' ? 'active' : ''}`}>
+                  <h4>Industrial Rubber Sheet</h4>
+                  <ul>
+                    <li><Link to="/industrial-rubber-sheet/natural-rubber-sbr">Natural Rubber / SBR</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/butyl-rubber">Butyl Rubber</Link></li>
+                    {/* ... other subcategories ... */}
+                  </ul>
+                </div>
+                {/* ... other subcategories sections ... */}
+              </div>
             </motion.li>
-          ))}
-        </ul>
-      </nav>
-    </motion.header>
+            <motion.li 
+              whileHover={{ y: -3 }}
+              whileTap={{ y: 0 }}
+              className={location.pathname === '/services' ? 'active' : ''}
+            >
+              <Link to="/services">Services</Link>
+            </motion.li>
+            <motion.li 
+              whileHover={{ y: -3 }}
+              whileTap={{ y: 0 }}
+              className={location.pathname === '/contact' ? 'active' : ''}
+            >
+              <Link to="/contact">Contact</Link>
+            </motion.li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 }
 

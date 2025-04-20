@@ -119,7 +119,7 @@ const GoogleMap = ({ apiKey, style }) => {
         // Add info window with company info
         const infoContent = `
           <div class="map-info-window">
-            <h3>AAXI Headquarters</h3>
+            <h3>Zenith rubber Headquarters</h3>
             <p>123 Metal Way, Toronto, ON</p>
             <p>M1M 1M1, Canada</p>
           </div>

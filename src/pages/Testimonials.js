@@ -15,12 +15,12 @@ function Testimonials() {
       <div className="testimonial-slider">
         {[
           { 
-            text: "aaxi delivered exceptional quality and precision for our industrial equipment project. Their team's expertise and attention to detail exceeded our expectations.", 
+            text: "Zenith delivered exceptional quality and precision for our industrial equipment project. Their team's expertise and attention to detail exceeded our expectations.", 
             author: "John Smith", 
             company: "Construction Ltd." 
           },
           { 
-            text: "We've been working with aaxi for over 5 years now, and they consistently provide high-quality metal fabrication services with quick turnaround times.", 
+            text: "We've been working with Zenith for over 5 years now, and they consistently provide high-quality metal fabrication services with quick turnaround times.", 
             author: "Sarah Johnson", 
             company: "Industrial Solutions Inc." 
           }

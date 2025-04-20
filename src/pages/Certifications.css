@@ -1,0 +1,113 @@
+/* Updated styles for Certifications */
+.certifications {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--gray-100);
+  text-align: center;
+}
+
+.certifications h1 {
+  font-size: var(--font-3xl);
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--space-xs);
+}
+
+.certifications h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+}
+
+.certifications p {
+  font-size: var(--font-md);
+  color: var(--text-main);
+  line-height: var(--line-normal);
+  margin-bottom: var(--space-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.certifications-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.certification-item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.certifications li {
+  font-size: var(--font-md);
+  color: var(--text-light);
+  padding: var(--space-md);
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  min-width: 180px;
+  margin-bottom: var(--space-md);
+  transition: all var(--transition-normal);
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  outline: none;
+}
+
+.certifications li:hover,
+.certifications li:focus {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .certifications h1 {
+    font-size: var(--font-2xl);
+  }
+  
+  .certifications li {
+    min-width: 140px;
+    padding: var(--space-sm);
+  }
+}
+
+@media (max-width: 576px) {
+  .certifications ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  
+  .certifications li {
+    width: 100%;
+    max-width: 280px;
+  }
+}
