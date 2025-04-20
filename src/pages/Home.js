@@ -71,24 +71,25 @@ function Home() {
           <div className="section-header">
             <h2>At the forefront of manufacturing Industrial Rubber Products since 1965</h2>
           </div>
-          <div className="content">
+          <div className="company-intro-flex">
+            <div className="company-intro-video">
+              <a
+                href="https://www.youtube.com/watch?v=37YSjoyydD0"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch Zenith Rubber on YouTube"
+              >
+                <img
+                  src="https://img.youtube.com/vi/37YSjoyydD0/hqdefault.jpg"
+                  alt="Zenith Rubber YouTube Video"
+                  className="youtube-thumbnail"
+                />
+                <span className="youtube-play-btn" />
+              </a>
+            </div>
             <div className="text-column">
               <p>Zenith Industrial Rubber Products Private Limited, has been a leading manufacturer and exporter of high-quality industrial rubber sheeting products since its establishment in 1965. Over the years, Zenith has achieved remarkable success in the global market and has become recognized as a trusted supplier.</p>
               <p>With a strong focus on delivering excellence, Zenith offers a diverse range of products including wear-resistant rubber sheets, antiskid flooring, waterproofing membranes, coated fabrics, rubber inflatables, rubber moulded and extruded profiles. These offerings showcase the company's expertise and commitment to providing solutions that meet the varied needs of customers.</p>
-              <div className="stats-highlight">
-                <div className="stat">
-                  <div className="number">60+</div>
-                  <div className="label">Years of Excellence</div>
-                </div>
-                <div className="stat">
-                  <div className="number">70+</div>
-                  <div className="label">Countries Served</div>
-                </div>
-                <div className="stat">
-                  <div className="number">3000+</div>
-                  <div className="label">Product Grades</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

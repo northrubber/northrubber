@@ -8,11 +8,11 @@
 
 /* Hero section */
 .home .hero {
-  height: 600px;
+  min-height: 890px; /* Change from height to min-height */
   position: relative;
   display: flex;
   align-items: center;/* Align content more towards the top */
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   color: var(--white);
   margin-top: 80px; /* Account for fixed header */
@@ -21,9 +21,8 @@
 
 .home .hero-content {
   max-width: 800px;
-  padding: 0 var(--space-md) var(--space-xl); /* Add bottom padding */
-  position: relative;
-  z-index: 1;
+  padding: 0 var(--space-md) var(--space-3xl); /* Increased bottom padding further */
+  margin-top: 120px; /* or try var(--space-4xl) for a CSS variable-based approach */
 }
 
 .home .hero h1 {
@@ -802,9 +801,9 @@
 }
 
 .company-intro .section-header h2 {
-  padding-left: var(--space-lg);
+  padding-left: 0;
   font-size: var(--font-2xl);
-  color: var(--text-main);
+  color: var(--primary);
   margin-bottom: var(--space-md);
   position: relative;
   display: inline-block;
@@ -812,7 +811,7 @@
 }
 
 .company-intro .section-header h2:after {
-  padding-left: var(--space-lg);
+  padding-left: 0;
   content: '';
   position: absolute;
   width: 60px;
@@ -825,55 +824,60 @@
 
 /* Company Intro Section - Enhanced */
 .company-intro {
-  padding: var(--space-3xl) var(--space-md);
-  background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(248,248,248,0.95));
+  padding: var(--space-xl) var(--space-md);
+  background: linear-gradient(to right, rgba(255,255,255,0.98), rgba(248,248,248,0.98));
   position: relative;
   overflow: hidden;
+  margin: var(--space-xl) auto;
+  max-width: 1280px;
 }
 
+/* Remove the vertical red line */
 .company-intro::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 5px;
-  height: 100%;
-  background-color: var(--primary);
+  display: none;
 }
 
 .company-intro .container {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  box-shadow: none !important;
+  padding: var(--space-xl);
+  position: relative;
+}
+
+.company-intro .container * {
+  box-shadow: none !important;
 }
 
 .company-intro .section-header {
   margin-bottom: var(--space-xl);
-  text-align: left;
-  padding-left: var(--space-md);
-  border-left: 4px solid var(--primary);
+  text-align: center;
+  border-bottom: none; /* Remove the gray underline for a cleaner look */
+  padding-bottom: var(--space-md);
+  position: relative;
+}
+
+/* Remove the red underline below the heading */
+.company-intro .section-header::after {
+  display: none;
 }
 
 .company-intro .section-header h2 {
-  font-size: var(--font-3xl);
-  color: var(--text-main);
+  font-size: var(--font-2xl);
+  color: var(--primary);
   margin-bottom: var(--space-sm);
-  position: relative;
-  display: inline-block;
   font-weight: 700;
   padding: 0;
   line-height: 1.2;
 }
 
-.company-intro .section-header h2:after {
-  display: none; /* Remove the old underline */
-}
-
 .company-intro .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  align-items: center;
-  padding: 0 var(--space-md);
+  display: block;
+  width: 100%;
+  padding: var(--space-md) 0;
 }
 
 .company-intro p {
@@ -881,10 +885,10 @@
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--text-main);
-}
-
-.company-intro p:last-child {
-  margin-bottom: 0;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .company-intro .stats-highlight {
@@ -893,10 +897,19 @@
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
   border-top: 1px solid var(--gray-300);
+  background-color: var(--gray-100);
+  border-radius: var (--radius-md);
+  padding: var(--space-md);
 }
 
 .company-intro .stat {
   text-align: center;
+  padding: var(--space-sm);
+  transition: all var(--transition-normal);
+}
+
+.company-intro .stat:hover {
+  transform: translateY(-5px);
 }
 
 .company-intro .stat .number {
@@ -910,6 +923,197 @@
   font-size: var(--font-sm);
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.company-intro-flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  justify-content: center;
+}
+
+.company-intro-video {
+  flex: 0 0 340px;
+  max-width: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  max-width: 340px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: block;
+}
+
+.youtube-thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+
+.youtube-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.youtube-play-btn::after {
+  content: '';
+  display: block;
+  margin-left: 8px;
+  border-style: solid;
+  border-width: 16px 0 16px 28px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.company-intro-flex .text-column {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Company Intro Section - Clean version */
+.company-intro {
+  padding: var(--space-xl) var(--space-md);
+  background: linear-gradient(to right, rgba(255,255,255,0.98), rgba(248,248,248,0.98));
+  position: relative;
+  overflow: hidden;
+  margin: var(--space-xl) auto;
+  max-width: 1280px;
+}
+
+.company-intro .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none !important;
+  padding: 0;
+  position: static;
+}
+
+.company-intro .section-header {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: var(--space-md);
+  position: relative;
+}
+
+.company-intro .section-header::after {
+  display: none;
+}
+
+.company-intro .section-header h2 {
+  font-size: var(--font-2xl);
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.company-intro .content {
+  display: block;
+  width: 100%;
+  padding: var(--space-md) 0;
+}
+
+.company-intro p {
+  font-size: var(--font-md);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  color: var(--text-main);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.company-intro-flex {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  justify-content: center;
+}
+
+.company-intro-video {
+  flex: 0 0 340px;
+  max-width: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  max-width: 340px;
+  border-radius: var(--radius-md);
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: block;
+}
+
+.youtube-thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: none !important;
+}
+
+.youtube-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.youtube-play-btn::after {
+  content: '';
+  display: block;
+  margin-left: 8px;
+  border-style: solid;
+  border-width: 16px 0 16px 28px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.company-intro-flex .text-column {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .company-intro-flex {
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: stretch;
+  }
+  .company-intro-video {
+    margin-bottom: var(--space-md);
+    max-width: 100%;
+  }
 }
 
 /* Responsive adjustments */
