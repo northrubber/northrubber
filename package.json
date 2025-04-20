@@ -2,7 +2,7 @@
   "name": "zenithrubber",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://parekhmeet.github.io/zenithrubber",
+  "homepage": "https://zenithindustry.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
