@@ -61,7 +61,7 @@ function Contact() {
       <Helmet>
         <meta name="description" content="Contact Zenith Industrial Rubber Products for high-quality industrial rubber solutions. Request quotes, information or technical assistance." />
         <meta name="keywords" content="rubber manufacturer contact, industrial rubber contact, rubber products quote, rubber manufacturing inquiry" />
-        <link rel="canonical" href="https://zenithrubber.com/contact" />
+        <link rel="canonical" href="https://zenithindustry.github.io/zenithindustries/contact" />
       </Helmet>
       
       <div className="contact-header">

@@ -10,7 +10,7 @@ function About() {
       <Helmet>
         <meta name="description" content="Learn about Zenith Industrial Rubber Products, a leading manufacturer of industrial rubber products since 1965." />
         <meta name="keywords" content="rubber manufacturer, industrial rubber, company history, rubber production" />
-        <link rel="canonical" href="https://zenithrubber.com/about" />
+        <link rel="canonical" href="https://zenithindustry.github.io/zenithindustries/about" />
       </Helmet>
       
       <div className="about-header">
