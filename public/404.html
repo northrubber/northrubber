@@ -4,14 +4,9 @@
   <meta charset="utf-8">
   <title>Zenith Rubber</title>
   <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // MIT License
-    // https://github.com/rafgraph/spa-github-pages
-    // This script takes the current URL and converts the path and query
-    // string into just a query string, and then redirects the browser
-    // to the new URL with only a query string and hash fragment
-    var pathSegmentsToKeep = 0;
-
+    // Make sure this doesn't contain any hardcoded zenithrubber.com references
+    var pathSegmentsToKeep = 1; // Changed from 0 to 1 for GitHub Pages projects
+    
     var l = window.location;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
