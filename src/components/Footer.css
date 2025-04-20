@@ -21,6 +21,7 @@
 }
 
 .footer-section {
+  padding-left: var(--space-lg);
   margin-bottom: var(--space-sm);
 }
 

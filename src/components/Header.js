@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Header.css';
-import logo from '../assets/images/zenith-logo.png'; // Make sure this path is correct
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,7 +67,7 @@ function Header() {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container header-container">
         <Link to="/" className="logo">
-          <img src={logo} alt="Zenith Rubber Logo" />
+          Zenith Industries
         </Link>
         <div className={`mobile-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>

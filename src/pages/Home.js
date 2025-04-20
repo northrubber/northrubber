@@ -32,7 +32,7 @@ function Home() {
       <Helmet>
         <meta name="description" content="Zenith Rubber - Your trusted partner in industrial rubber manufacturing with over 50 years of industry experience." />
         <meta name="keywords" content="rubber manufacturing, industrial rubber, rubber products, rubber sheets, rubber flooring" />
-        <link rel="canonical" href="https://zenithindustries.com" />
+        <link rel="canonical" href="https://zenithindustries.ca" />
       </Helmet>
       
       {/* Hero Section */}
@@ -67,12 +67,30 @@ function Home() {
 
       {/* Company Introduction */}
       <section className="company-intro">
-        <div className="content">
+        <div className="container">
           <div className="section-header">
             <h2>At the forefront of manufacturing Industrial Rubber Products since 1965</h2>
           </div>
-          <p>Zenith Industrial Rubber Products Private Limited, has been a leading manufacturer and exporter of high-quality industrial rubber sheeting products since its establishment in 1965. Over the years, Zenith has achieved remarkable success in the global market and has become recognized as a trusted supplier.</p>
-          <p>With a strong focus on delivering excellence, Zenith offers a diverse range of products including wear-resistant rubber sheets, antiskid flooring, waterproofing membranes, coated fabrics, rubber inflatables, rubber moulded and extruded profiles. These offerings showcase the company's expertise and commitment to providing solutions that meet the varied needs of customers.</p>
+          <div className="content">
+            <div className="text-column">
+              <p>Zenith Industrial Rubber Products Private Limited, has been a leading manufacturer and exporter of high-quality industrial rubber sheeting products since its establishment in 1965. Over the years, Zenith has achieved remarkable success in the global market and has become recognized as a trusted supplier.</p>
+              <p>With a strong focus on delivering excellence, Zenith offers a diverse range of products including wear-resistant rubber sheets, antiskid flooring, waterproofing membranes, coated fabrics, rubber inflatables, rubber moulded and extruded profiles. These offerings showcase the company's expertise and commitment to providing solutions that meet the varied needs of customers.</p>
+              <div className="stats-highlight">
+                <div className="stat">
+                  <div className="number">60+</div>
+                  <div className="label">Years of Excellence</div>
+                </div>
+                <div className="stat">
+                  <div className="number">70+</div>
+                  <div className="label">Countries Served</div>
+                </div>
+                <div className="stat">
+                  <div className="number">3000+</div>
+                  <div className="label">Product Grades</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

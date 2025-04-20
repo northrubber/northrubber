@@ -27,18 +27,8 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 48px;
-  transition: height var(--transition-normal);
-  vertical-align: middle;
-}
-
-.header.scrolled .logo img {
-  height: 40px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .nav-list {
