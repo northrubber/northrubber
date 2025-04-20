@@ -103,24 +103,22 @@ function Header() {
               className={`dropdown ${isProductsDropdownOpen ? 'dropdown-open' : ''}`}
               ref={dropdownRef}
             >
-              <a 
-                href="#" 
+              <button 
+                className={`nav-button ${activeCategory === 'Products' ? 'active' : ''}`}
                 onClick={toggleProductsDropdown}
-                className={activeCategory === 'Products' ? 'active' : ''}
               >
                 Products
-              </a>
+              </button>
               <div 
                 className={`dropdown-menu ${isProductsDropdownOpen ? 'active' : ''}`}
               >
                 <div className="main-categories">
-                  <a 
-                    href="#"
-                    className={activeCategory === 'Industrial Rubber Sheet' ? 'active' : ''}
-                    onClick={(e) => { e.preventDefault(); handleCategorySelect('Industrial Rubber Sheet'); }}
+                  <button 
+                    className={`category-button ${activeCategory === 'Industrial Rubber Sheet' ? 'active' : ''}`}
+                    onClick={() => handleCategorySelect('Industrial Rubber Sheet')}
                   >
                     Industrial Rubber Sheet
-                  </a>
+                  </button>
                   {/* ... other categories ... */}
                 </div>
                 <div className={`subcategories ${activeCategory === 'Industrial Rubber Sheet' ? 'active' : ''}`}>

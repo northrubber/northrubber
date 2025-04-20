@@ -386,3 +386,79 @@
     padding: var(--space-lg) var(--space-sm) var(--space-sm);
   }
 }
+
+/* Styling for buttons that look like links */
+.nav-button,
+.category-button {
+  background: none;
+  border: none;
+  font-family: var(--font-main);
+  font-size: var(--font-sm);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-main);
+  padding: var(--space-xs) 0;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-button:hover,
+.category-button:hover,
+.nav-button.active,
+.category-button.active {
+  color: var(--primary);
+}
+
+.main-categories .category-button {
+  color: var(--white);
+  padding: var(--space-xs) var(--space-md);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+
+.main-categories .category-button:last-child {
+  border-bottom: none;
+}
+
+.main-categories .category-button::after {
+  content: "›";
+  position: absolute;
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.main-categories .category-button:hover,
+.main-categories .category-button.active {
+  background-color: var(--primary-dark);
+}
+
+.main-categories .category-button:hover::after,
+.main-categories .category-button.active::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(3px);
+}
+
+/* Media query adjustments */
+@media (max-width: 992px) {
+  .main-categories .category-button {
+    color: var(--text-main);
+    border-bottom: none;
+    padding: var(--space-xs) var(--space-sm);
+    font-weight: 500;
+  }
+  
+  .main-categories .category-button:hover,
+  .main-categories .category-button.active {
+    background: none;
+    color: var(--primary);
+  }
+}
