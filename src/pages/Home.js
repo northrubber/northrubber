@@ -141,21 +141,15 @@ function Home() {
       <section className="certifications">
         <h2>Product Certifications</h2>
         <p>Our products conform to the highest International Quality Standards. We follow manufacturing practices which are environment-friendly and promote green living.</p>
-        <div className="certifications-grid" style={{ 
-          display: 'flex', 
-          flexDirection: 'row', 
-          flexWrap: 'wrap', 
-          justifyContent: 'center', 
-          gap: '20px',
-          padding: '20px 0'
-        }}>
-          <img src={require('../assets/images/c1.webp')} alt="Certification 1" style={{ maxWidth: '150px', height: 'auto' }} />
-          <img src={require('../assets/images/c2.webp')} alt="Certification 2" style={{ maxWidth: '150px', height: 'auto' }} />
-          <img src={require('../assets/images/c3.webp')} alt="Certification 3" style={{ maxWidth: '150px', height: 'auto' }} />
-          <img src={require('../assets/images/c4.webp')} alt="Certification 4" style={{ maxWidth: '150px', height: 'auto' }} />
-          <img src={require('../assets/images/c5.webp')} alt="Certification 5" style={{ maxWidth: '150px', height: 'auto' }} />
-          <img src={require('../assets/images/c6.webp')} alt="Certification 6" style={{ maxWidth: '150px', height: 'auto' }} />
-          <img src={require('../assets/images/fras.webp')} alt="FRAS Certification" style={{ maxWidth: '150px', height: 'auto' }} />
+        <div className="certifications-grid">
+          {/* Keep existing images */}
+          <img src={require('../assets/images/c1.webp')} alt="Certification 1" />
+          <img src={require('../assets/images/c2.webp')} alt="Certification 2" />
+          <img src={require('../assets/images/c3.webp')} alt="Certification 3" />
+          <img src={require('../assets/images/c4.webp')} alt="Certification 4" />
+          <img src={require('../assets/images/c5.webp')} alt="Certification 5" />
+          <img src={require('../assets/images/c6.webp')} alt="Certification 6" />
+          <img src={require('../assets/images/fras.webp')} alt="FRAS Certification" />
         </div>
       </section>
 

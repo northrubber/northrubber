@@ -9,20 +9,17 @@
 /* Hero section */
 .hero {
   position: relative;
-  height: 600px;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Align content more towards the top */
   justify-content: center;
   text-align: center;
   color: var(--white);
   margin-top: 80px; /* Account for fixed header */
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../assets/images/hero-bg.jpg') center/cover no-repeat;
-  transition: background 0.3s;
 }
 
 .hero-content {
   max-width: 800px;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-md) var(--space-xl); /* Add bottom padding */
   position: relative;
   z-index: 1;
 }
@@ -30,7 +27,6 @@
 .hero h1 {
   font-size: var(--font-5xl);
   font-weight: 700;
-  margin-bottom: var(--space-md);
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--white);
@@ -39,7 +35,6 @@
 
 .hero p {
   font-size: var(--font-xl);
-  margin-bottom: var(--space-lg);
   line-height: var(--line-relaxed);
   color: var(--white);
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
@@ -52,6 +47,16 @@
   display: flex;
   gap: var(--space-md);
   justify-content: center;
+}
+
+/* Add specific styling for the tagline at the bottom of hero */
+.hero-tagline {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  font-weight: 500;
+  font-size: var(--font-md);
+  line-height: var(--line-normal);
+  color: var(--white);
 }
 
 /* Slideshow */
@@ -338,8 +343,8 @@
 .industry-solutions {
   position: relative;
   color: var(--white);
-  overflow: hidden;
-  padding: var(--space-2xl) 0;
+  overflow: visible; /* Change from hidden to visible */
+  padding: var(--space-2xl) 0 var(--space-3xl); /* Increase bottom padding */
   background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../assets/images/bg-home-panel.jpg') center/cover no-repeat;
   text-align: center;
 }
@@ -386,6 +391,7 @@
   gap: var(--space-md);
   justify-content: center;
   align-items: stretch;
+  padding-bottom: var(--space-xl); /* Add bottom padding to the grid */
 }
 
 .solution-item {
@@ -410,18 +416,18 @@
 .solution-item i {
   font-size: var(--font-2xl);
   margin-bottom: var(--space-sm);
-  color: var(--white);
+  color: var (--white);
 }
 
 /* Parallax Section */
 .parallax-section {
-  height: 500px;
+  min-height: 500px; /* Change from height to min-height */
   background-image: url('../assets/images/bg-home-panel.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 80px 0; /* Adjust padding as needed */
+  padding: 80px 0 100px; /* Increase bottom padding */
   color: var(--white); /* Ensure text is readable */
 }
 
@@ -503,10 +509,44 @@
   transform: translateY(-3px);
 }
 
-/* Certifications Grid */
-.certifications-section {
+/* Certifications Section */
+.certifications {
   padding: var(--space-xl) var(--space-md);
-  background: var(--gray-100);
+  background-color: var(--gray-100);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.certifications h2 {
+  font-size: var(--font-3xl);
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--space-xs);
+}
+
+.certifications h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--primary); /* Red underline */
+}
+
+.certifications p {
+  font-size: var(--font-md);
+  color: var(--text-main);
+  line-height: var(--line-normal);
+  margin-bottom: var(--space-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -514,12 +554,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: var(--space-lg);
   padding: var(--space-md) 0;
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
+/* Keep existing certifications-grid img styles */
 .certifications-grid img {
   max-width: 150px;
   height: auto;
@@ -713,7 +755,7 @@
   .projects-grid,
   .solutions-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: var (--space-md);
   }
   
   .categories-grid {
