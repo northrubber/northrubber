@@ -126,7 +126,7 @@ const Footer = () => {
         <div className="address-info">
           <p>144, Free Press House, 215 Nariman Point, Mumbai 400 021.</p>
           <div className="contact-row">
-            <p>Email: info@zenithrubber.com</p>
+            <p>Email: info@zenithindustries.com</p>
             <p>Phone: +91 22 22885888</p>
           </div>
         </div>

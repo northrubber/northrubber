@@ -9,7 +9,7 @@ function Services() {
       <Helmet>
         <meta name="description" content="Explore our comprehensive metal fabrication services including welding, cutting, assembly, and finishing." />
         <meta name="keywords" content="metal fabrication services, welding, cutting, assembly, finishing" />
-        <link rel="canonical" href="https://zenithrubber.ca/services" />
+        <link rel="canonical" href="https://zenithindustries.ca/services" />
       </Helmet>
       <motion.section 
         className="services-overview"

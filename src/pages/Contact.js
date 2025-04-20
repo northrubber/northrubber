@@ -124,8 +124,8 @@ function Contact() {
               </div>
               <div className="info-content">
                 <h3>Email Address</h3>
-                <p>info@zenithrubber.com</p>
-                <p>sales@zenithrubber.com</p>
+                <p>info@zenithindustries.com</p>
+                <p>sales@zenithindustries.com</p>
               </div>
             </div>
             

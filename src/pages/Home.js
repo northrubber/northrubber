@@ -32,7 +32,7 @@ function Home() {
       <Helmet>
         <meta name="description" content="Zenith Rubber - Your trusted partner in industrial rubber manufacturing with over 50 years of industry experience." />
         <meta name="keywords" content="rubber manufacturing, industrial rubber, rubber products, rubber sheets, rubber flooring" />
-        <link rel="canonical" href="https://zenithrubber.com" />
+        <link rel="canonical" href="https://zenithindustries.com" />
       </Helmet>
       
       {/* Hero Section */}
