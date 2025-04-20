@@ -13,11 +13,11 @@ import './App.css';
 
 function App() {
   return (
-    <HelmetProvider> {/* Wrap entire app with HelmetProvider */}
+    <HelmetProvider>
       <div className="app">
         <Header />
         <div className="content">
-          <Routes>
+          <Routes basename="/my-app">
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
