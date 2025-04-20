@@ -1,28 +1,39 @@
 /* Updated styles for Manufacturing */
 .manufacturing {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-xl) 0;
   background-color: var(--gray-100);
   text-align: center;
 }
 
-.manufacturing h1 {
-  font-size: var(--font-3xl);
-  color: var(--primary);
+.manufacturing .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.manufacturing .section-header {
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.manufacturing .section-header h1 {
+  font-size: var(--font-2xl);
+  color: var(--text-main);
   margin-bottom: var(--space-md);
   position: relative;
   display: inline-block;
   padding-bottom: var(--space-xs);
 }
 
-.manufacturing h1::after {
+.manufacturing .section-header h1:after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 60px;
   height: 3px;
   background: var(--primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .manufacturing p {
