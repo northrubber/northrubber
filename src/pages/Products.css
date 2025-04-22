@@ -146,20 +146,37 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Responsive */
+/* Responsive improvements */
+@media (max-width: 992px) {
+  .products {
+    padding: var(--space-xl) var(--space-md) var(--space-lg);
+  }
+  
+  .product-filters {
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+}
+
 @media (max-width: 768px) {
   .products { 
     margin-top: 60px; 
-    padding: var(--space-lg) var(--space-sm); 
+    padding: var(--space-lg) var(--space-sm) var(--space-md); 
   }
   
   .products h1 { 
-    font-size: var(--font-2xl); 
+    font-size: var(--font-2xl);
+    margin-bottom: var(--space-md);
+  }
+  
+  .products p {
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-lg);
   }
   
   .products-grid { 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: var(--space-sm);
+    gap: var(--space-md);
   }
   
   .product-image { 
@@ -171,7 +188,7 @@
   }
   
   .product-description {
-    font-size: var(--font-xs);
+    font-size: var(--font-sm);
   }
   
   .filter-button {
@@ -181,10 +198,50 @@
 }
 
 @media (max-width: 576px) {
+  .products { 
+    padding: var(--space-md) var(--space-xs) var(--space-sm);
+  }
+  
+  .products h1 {
+    font-size: var(--font-xl);
+  }
+  
   .products-grid { 
     grid-template-columns: 1fr; 
+    gap: var(--space-sm);
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .product-image {
+    height: 200px;
+  }
+  
+  .product-details {
+    padding: var(--space-sm);
+  }
+  
+  .product-filters {
+    overflow-x: auto;
+    padding-bottom: var(--space-xs);
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    /* Enable momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .product-filters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+  }
+  
+  .filter-button {
+    white-space: nowrap;
+    flex: 0 0 auto;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

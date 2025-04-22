@@ -41,7 +41,7 @@ const Footer = () => {
           <h3>Wear Resistant Rubber Sheet</h3>
           <ul>
             <li>Overview</li>
-            <li><Link to="/natural-rubber-sbr">Natural Rubber / SBR Sheeting</Link></li>
+            <li><Link to="industrial-rubber-sheet/natural-rubber-sbr">Natural Rubber / SBR Sheeting</Link></li>
             <li>Abra-Super® Rubber Sheeting</li>
             <li>Abra-Line Rubber Sheeting</li>
             <li>Abra-Max Rubber Sheeting</li>

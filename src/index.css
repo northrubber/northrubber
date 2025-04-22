@@ -118,6 +118,7 @@ html, body {
   line-height: var(--line-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
 }
 
 *, *::before, *::after {
@@ -128,6 +129,10 @@ img, svg, video {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+a, button, input, select, textarea {
+  touch-action: manipulation; /* Improve touch performance */
 }
 
 a {
@@ -229,6 +234,7 @@ small {
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 44px; /* Minimum touch target size */
 }
 
 .btn:hover, .btn:focus {
@@ -502,6 +508,35 @@ input, select, textarea, button {
 .bg-light { background: var(--gray-100) !important; }
 .bg-white { background: var(--white) !important; }
 .bg-dark { background: var(--gray-900) !important; color: var(--white) !important; }
+.bg-overlay { background: rgba(0, 0, 0, 0.5) !important; }
+
+/* Slide caption styles */
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  color: var(--white);
+  text-align: center;
+  z-index: 5;
+}
+
+.slide-caption-title {
+  color : var(--white);
+  font-size: var(--font-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.slide-caption-text {
+  font-size: var(--font-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
 
 /* Borders & Radius */
 .rounded-xs { border-radius: var(--radius-xs) !important; }
@@ -659,6 +694,109 @@ input, select, textarea, button {
   .text-xl-left { text-align: left !important; }
   .text-xl-center { text-align: center !important; }
   .text-xl-right { text-align: right !important; }
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 767px) {
+  html { font-size: 15px; }
+  h1 { 
+    font-size: var(--font-3xl);
+    line-height: 1.3;
+  }
+  h2 { 
+    font-size: var(--font-2xl);
+    line-height: 1.3;
+  }
+  h3 { 
+    font-size: var(--font-xl);
+    line-height: 1.3;
+  }
+  
+  .container { 
+    padding-left: var(--space-sm); 
+    padding-right: var(--space-sm);
+    width: 100%;
+  }
+  
+  .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .hidden-xs { display: none !important; }
+  
+  /* Improve spacing on mobile */
+  .section {
+    padding: var(--space-xl) var(--space-sm);
+  }
+}
+
+@media (max-width: 575px) {
+  html { font-size: 14px; }
+  h1 { 
+    font-size: var(--font-2xl);
+    line-height: 1.3; 
+  }
+  h2 { 
+    font-size: var(--font-xl);
+    line-height: 1.3; 
+  }
+  h3 { 
+    font-size: var(--font-lg);
+    line-height: 1.3; 
+  }
+  
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .btn { 
+    width: 100%;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+  
+  .hidden-xxs { display: none !important; }
+  
+  /* Adjust container padding */
+  .container {
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+  }
+  
+  /* Fix section spacing */
+  .section {
+    padding: var(--space-lg) var(--space-xs);
+  }
+  
+  /* Decrease margins and paddings */
+  .mb-5 { margin-bottom: var(--space-lg) !important; }
+  .mt-5 { margin-top: var(--space-lg) !important; }
+  .py-5 { 
+    padding-top: var(--space-lg) !important;
+    padding-bottom: var(--space-lg) !important;
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 992px) {
+  a, button, .btn, input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  select, input[type="text"], input[type="email"], 
+  input[type="tel"], input[type="number"], textarea {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+    min-height: 44px;
+  }
+}
+
+/* Fix for iOS form elements */
+@supports (-webkit-touch-callout: none) {
+  select, input[type="text"], input[type="email"], 
+  input[type="tel"], input[type="number"], textarea {
+    font-size: 16px;
+  }
 }
 
 /* Mobile-first responsive adjustments */

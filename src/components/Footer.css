@@ -133,19 +133,44 @@
 @media (max-width: 992px) {
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
+    gap: var(--space-md);
+  }
+  
+  .footer-section {
+    padding-left: var(--space-sm);
   }
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 0;
+  }
+  
+  .footer .container {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
   .footer-content {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: var(--space-sm);
+    padding-bottom: var(--space-md);
+  }
+  
+  .footer-section {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: var(--space-sm);
+  }
+  
+  .footer-section:last-child {
+    border-bottom: none;
   }
   
   .footer-section h3 {
-    margin-top: var(--space-sm);
-    font-size: var(--font-sm);
+    margin-top: var(--space-xs);
+    font-size: var(--font-md);
     text-align: center;
   }
 
@@ -154,14 +179,27 @@
     transform: translateX(-50%);
   }
   
+  .footer-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xs) var (--space-sm);
+  }
+  
   .footer-section ul li {
     text-align: center;
+    margin-bottom: 0;
   }
   
   .footer-address {
     flex-direction: column;
     text-align: center;
     padding: var(--space-md) var(--space-sm);
+  }
+  
+  .address-info,
+  .copyright-info {
+    width: 100%;
   }
   
   .address-info p,
@@ -172,8 +210,9 @@
   
   .contact-row {
     justify-content: center;
-    gap: var(--space-md);
-    margin: var(--space-sm) 0;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin: var(--space-xs) 0;
   }
   
   .copyright-info {
@@ -186,11 +225,17 @@
 
 @media (max-width: 576px) {
   .footer .container {
-    padding: var(--space-md) var(--space-sm);
+    padding: var(--space-sm) var(--space-xs);
   }
   
-  .footer-section {
-    margin-bottom: var(--space-md);
+  .footer-section ul {
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+  
+  .footer-section ul li a {
+    padding: var(--space-xs) 0;
+    display: inline-block;
   }
   
   .contact-row {
@@ -200,5 +245,6 @@
   
   .contact-row p {
     margin: var(--space-2xs) 0;
+    font-size: var(--font-xs);
   }
 }

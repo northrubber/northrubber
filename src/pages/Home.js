@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './Home.css';
 import slide1 from '../assets/images/1.jpg';
@@ -27,6 +27,85 @@ function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  // Add state for animated statistics
+  const [animatedStats, setAnimatedStats] = useState({
+    years: 0,
+    productGrades: 0,
+    tons: 0,
+    customers: 0,
+    countries: 0
+  });
+  
+  const statsRef = useRef(null);
+  const animationTriggered = useRef(false);
+
+  // Function to animate counting up
+  const animateValue = (start, end, duration, onUpdate) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      onUpdate(value);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
+  // Check if element is in viewport
+  const isInViewport = (element) => {
+    if (!element) return false;
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
+
+  // Handle scroll and animation
+  useEffect(() => {
+    const handleScroll = () => {
+      if (statsRef.current && isInViewport(statsRef.current) && !animationTriggered.current) {
+        animationTriggered.current = true;
+        
+        // Animate years
+        animateValue(0, 60, 2000, (value) => {
+          setAnimatedStats(prev => ({ ...prev, years: value }));
+        });
+        
+        // Animate product grades
+        animateValue(0, 3000, 2000, (value) => {
+          setAnimatedStats(prev => ({ ...prev, productGrades: value }));
+        });
+        
+        // Animate tons
+        animateValue(0, 40000, 2000, (value) => {
+          setAnimatedStats(prev => ({ ...prev, tons: value }));
+        });
+        
+        // Animate customers
+        animateValue(0, 6500, 2000, (value) => {
+          setAnimatedStats(prev => ({ ...prev, customers: value }));
+        });
+        
+        // Animate countries
+        animateValue(0, 70, 2000, (value) => {
+          setAnimatedStats(prev => ({ ...prev, countries: value }));
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Initial check in case the element is already in viewport on load
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="home">
       <Helmet>
@@ -40,15 +119,31 @@ function Home() {
         <div className="slideshow">
           <div className={`slide ${currentSlide === 0 ? 'active' : ''}`}>
             <img src={slide1} alt="Slide 1" />
+            <div className="slide-caption">
+              <h2 className="slide-caption-title">High Quality Rubber Sheets</h2>
+              <p className="slide-caption-text">for wide range of industrial applications</p>
+            </div>
           </div>
           <div className={`slide ${currentSlide === 1 ? 'active' : ''}`}>
             <img src={slide2} alt="Slide 2" />
+            <div className="slide-caption">
+              <h2 className="slide-caption-title">Inflatable Products</h2>
+              <p className="slide-caption-text">Air Cell, Gas Holder Balloon, Inflatable Work Boats and Life Rants</p>
+            </div>
           </div>
           <div className={`slide ${currentSlide === 2 ? 'active' : ''}`}>
             <img src={slide3} alt="Slide 3" />
+            <div className="slide-caption">
+              <h2 className="slide-caption-title">Abrasion Resistant Rubber Sheets</h2>
+              <p className="slide-caption-text">for the Mining and Cement Industry</p>
+            </div>
           </div>
           <div className={`slide ${currentSlide === 3 ? 'active' : ''}`}>
             <img src={slide4} alt="Slide 4" />
+            <div className="slide-caption">
+              <h2 className="slide-caption-title">Zenith Industries</h2>
+              <p className="slide-caption-text">Offering Quality and Durable Rubber Solutions</p>
+            </div>
           </div>
           
           <button className="slide-arrow prev-arrow" onClick={prevSlide}>
@@ -57,11 +152,6 @@ function Home() {
           <button className="slide-arrow next-arrow" onClick={nextSlide}>
             <i className="fas fa-chevron-right"></i>
           </button>
-        </div>
-        <div className="hero-overlay">
-          <h1>Abrasion Resistant Rubber Sheets</h1>
-          <p>for the Mining and Cement Industry</p>
-          <button>Know More</button>
         </div>
       </section>
 
@@ -172,39 +262,34 @@ function Home() {
         </div>
       </section>
 
-      {/* Statistics */}
-      <section style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        backgroundColor: '#c0272d',
-        color: 'white',
-        padding: '40px 20px',
-        flexWrap: 'wrap',
-        textAlign: 'center',
-        marginBottom: '40px' // Added margin to create gap between statistics and footer
-      }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 20px' }}> Over
-          <div style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1, marginBottom: '5px' }}>60</div>
-          <div style={{ fontSize: '1rem', fontWeight: 400 }}>Years in countries</div>
+      {/* Statistics Section */}
+      <div ref={statsRef} className="statistics-section">
+        <div className="statistic-item">
+          <span className="statistic-prefix">Over</span>
+          <div className="statistic-value">{animatedStats.years}</div>
+          <div className="statistic-label">Years in countries</div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 20px' }}>More than
-          <div style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1, marginBottom: '5px' }}>3000</div>
-          <div style={{ fontSize: '1rem', fontWeight: 400 }}>Product Grades</div>
+        <div className="statistic-item">
+          <span className="statistic-prefix">More than</span>
+          <div className="statistic-value">{animatedStats.productGrades}</div>
+          <div className="statistic-label">Product Grades</div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 20px' }}>Production Capacity
-          <div style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1, marginBottom: '5px' }}>40000</div>
-          <div style={{ fontSize: '1rem', fontWeight: 400 }}>Tons</div>
+        <div className="statistic-item">
+          <span className="statistic-prefix">Production Capacity</span>
+          <div className="statistic-value">{animatedStats.tons}</div>
+          <div className="statistic-label">Tons</div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 20px' }}>Servicing over
-          <div style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1, marginBottom: '5px' }}>6500</div>
-          <div style={{ fontSize: '1rem', fontWeight: 400 }}>Customers</div>
+        <div className="statistic-item">
+          <span className="statistic-prefix">Servicing over</span>
+          <div className="statistic-value">{animatedStats.customers}</div>
+          <div className="statistic-label">Customers</div>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px 20px' }}>Exports to
-          <div style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1, marginBottom: '5px' }}>70</div>
-          <div style={{ fontSize: '1rem', fontWeight: 400 }}>Countries</div>
+        <div className="statistic-item">
+          <span className="statistic-prefix">Exports to</span>
+          <div className="statistic-value">{animatedStats.countries}</div>
+          <div className="statistic-label">Countries</div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

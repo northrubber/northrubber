@@ -231,7 +231,7 @@
 @media (max-width: 992px) {
   .contact-container { 
     grid-template-columns: 1fr; 
-    gap: var(--space-md);
+    gap: var(--space-lg);
   }
   
   .contact-info { order: 2; }
@@ -247,13 +247,31 @@
 }
 
 @media (max-width: 768px) {
-  .contact-page { padding-top: 60px; }
+  .contact-page { 
+    padding-top: 60px; 
+  }
   
-  .contact-header { padding: var(--space-lg) 0; }
-  .contact-header h1 { font-size: var(--font-3xl); }
-  .contact-header p { font-size: var(--font-md); }
+  .contact-header { 
+    padding: var(--space-lg) var(--space-sm); 
+  }
   
-  .contact-section { padding: var(--space-lg) 0; }
+  .contact-header h1 { 
+    font-size: var(--font-2xl);
+    margin-bottom: var(--space-sm); 
+  }
+  
+  .contact-header p { 
+    font-size: var(--font-sm);
+    max-width: 100%; 
+  }
+  
+  .contact-section { 
+    padding: var(--space-lg) var(--space-sm); 
+  }
+  
+  .contact-container {
+    gap: var(--space-md);
+  }
   
   .form-row { 
     grid-template-columns: 1fr; 
@@ -262,7 +280,7 @@
   
   .contact-info h2, 
   .contact-form-container h2 { 
-    font-size: var(--font-xl);
+    font-size: var(--font-lg);
     margin-bottom: var(--space-md);
     text-align: center;
   }
@@ -275,39 +293,79 @@
 
   .contact-info p {
     text-align: center;
+    font-size: var(--font-sm);
+  }
+  
+  .info-item {
+    align-items: flex-start;
+  }
+  
+  .form-group {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .form-group label {
+    margin-bottom: var(--space-2xs);
   }
   
   .map-section { 
     height: 350px; 
-    margin-top: var(--space-lg);
+    margin-top: var(--space-md);
   }
 }
 
 @media (max-width: 576px) {
-  .contact-header h1 { font-size: var(--font-2xl); }
-  
-  .info-icon { 
-    width: 40px; 
-    height: 40px; 
-    font-size: var(--font-md);
+  .contact-header { 
+    padding: var(--space-md) var(--space-xs);
   }
   
-  .contact-form { padding: var(--space-md); }
+  .contact-header h1 { 
+    font-size: var(--font-xl);
+  }
+  
+  .contact-section {
+    padding: var(--space-md) var(--space-xs);
+  }
+  
+  .contact-container {
+    padding: 0 var(--space-xs);
+  }
+  
+  .info-icon { 
+    width: 36px; 
+    height: 36px; 
+    font-size: var(--font-sm);
+    margin-right: var(--space-xs);
+    margin-top: var(--space-2xs);
+  }
+  
+  .info-content h3 {
+    font-size: var(--font-sm);
+  }
+  
+  .info-content p {
+    font-size: var(--font-xs);
+  }
+  
+  .contact-form { 
+    padding: var(--space-sm);
+    background-color: var(--gray-100);
+    box-shadow: var(--shadow-sm);
+  }
   
   .form-group label {
     font-size: var(--font-xs);
   }
   
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: var(--font-sm);
-    padding: var(--space-xs);
+  .map-section { 
+    height: 250px;
+    margin-top: var (--space-sm);
   }
-  
-  .map-section { height: 300px; }
   
   .contact-form .btn-primary {
     width: 100%;
+    min-width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-sm);
   }
 }

@@ -268,26 +268,32 @@
 
 @media (max-width: 768px) {
   .about-page { padding-top: 60px; }
-  .about-header { padding: var(--space-lg) var(--space-md) var(--space-md); }
+  .about-header { padding: var(--space-lg) var(--space-sm) var(--space-md); }
   .about-header h1 { font-size: var(--font-2xl); }
   .about-company, .about-history, .about-values { padding: var(--space-lg) var(--space-sm); }
   .about-grid { flex-direction: column; gap: var(--space-md); }
-  .about-image-container { margin-bottom: var(--space-md); max-width: 100%; }
+  .about-image-container { margin-bottom: var(--space-md); max-width: 100%; order: -1; }
+  .about-content { min-width: 100%; }
   .about-content h2 { font-size: var(--font-xl); text-align: center; }
   .about-content h2:after { left: 50%; transform: translateX(-50%); }
   .about-content p { font-size: var(--font-sm); text-align: center; }
   .history-content h2 { font-size: var(--font-xl); }
   .history-text p { font-size: var(--font-sm); }
-  .values-grid { grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+  .values-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
   .value-item { padding: var(--space-sm); }
   .value-item h3 { font-size: var(--font-md); }
   .value-item p { font-size: var(--font-xs); }
 }
 
 @media (max-width: 576px) {
+  .about-header { padding: var(--space-md) var(--space-xs); }
+  .about-header h1 { font-size: var(--font-xl); }
+  .about-company, .about-history, .about-values { padding: var(--space-md) var(--space-xs); }
   .values-grid { grid-template-columns: 1fr; gap: var(--space-md); }
-  .about h1, .about-header h1 { font-size: var(--font-xl); }
+  .value-item { padding: var(--space-md); }
+  .value-icon { margin-bottom: var(--space-sm); }
   .about-content h2, .history-content h2 { font-size: var(--font-lg); }
   .about-content p:first-of-type { font-size: var(--font-md); }
   .history-text p:first-child { font-size: var(--font-md); }
+  .about-image { max-height: 300px; object-fit: cover; }
 }
