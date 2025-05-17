@@ -62,6 +62,23 @@ function Header() {
     e.preventDefault();
     setIsProductsDropdownOpen(!isProductsDropdownOpen);
   };
+
+  // Handle subcategory link click - enhance to be more forceful
+  const handleSubcategoryLinkClick = (e) => {
+    // Set state to close the dropdown
+    setIsProductsDropdownOpen(false);
+    
+    // Also manually add the 'clicked' class for immediate visual effect
+    const dropdownMenu = dropdownRef.current?.querySelector('.dropdown-menu');
+    if (dropdownMenu) {
+      dropdownMenu.classList.add('clicked');
+      
+      // Remove the class after navigation completes
+      setTimeout(() => {
+        dropdownMenu.classList.remove('clicked');
+      }, 300);
+    }
+  };
   
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -172,20 +189,20 @@ function Header() {
                 <div className={`subcategories ${activeCategory === 'Industrial Rubber Sheet' ? 'active' : ''}`}>
                   <h4>Industrial Rubber Sheet</h4>
                   <ul>
-                    <li><Link to="/industrial-rubber-sheet/overview">Overview</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/natural-rubber-sbr">Natural Rubber / SBR Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/butyl-rubber">Butyl Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/chloroprene">Chloroprene Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/diaphragm">Diaphragm Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/epdm">EPDM Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/flouro-elastomer">Flouro Elastomer Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/hypalon">Hypalon Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/nitrile">Nitrile Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/hnbr">HNBR Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/food-grade">Food Grade Rubber Sheet</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/electrical-insulation">Electrical Insulation Rubber Matting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/potable-water">Potable Water Rubber Sheeting</Link></li>
-                    <li><Link to="/industrial-rubber-sheet/silicone">Silicone Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/overview" onClick={handleSubcategoryLinkClick}>Overview</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/natural-rubber-sbr" onClick={handleSubcategoryLinkClick}>Natural Rubber / SBR Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/butyl-rubber" onClick={handleSubcategoryLinkClick}>Butyl Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/chloroprene" onClick={handleSubcategoryLinkClick}>Chloroprene Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/diaphragm" onClick={handleSubcategoryLinkClick}>Diaphragm Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/epdm" onClick={handleSubcategoryLinkClick}>EPDM Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/flouro-elastomer" onClick={handleSubcategoryLinkClick}>Flouro Elastomer Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/hypalon" onClick={handleSubcategoryLinkClick}>Hypalon Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/nitrile" onClick={handleSubcategoryLinkClick}>Nitrile Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/hnbr" onClick={handleSubcategoryLinkClick}>HNBR Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/food-grade" onClick={handleSubcategoryLinkClick}>Food Grade Rubber Sheet</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/electrical-insulation" onClick={handleSubcategoryLinkClick}>Electrical Insulation Rubber Matting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/potable-water" onClick={handleSubcategoryLinkClick}>Potable Water Rubber Sheeting</Link></li>
+                    <li><Link to="/industrial-rubber-sheet/silicone" onClick={handleSubcategoryLinkClick}>Silicone Rubber Sheeting</Link></li>
                   </ul>
                 </div>
                 
@@ -193,13 +210,13 @@ function Header() {
                 <div className={`subcategories ${activeCategory === 'Wear Resistant Rubber Sheet' ? 'active' : ''}`}>
                   <h4>Wear Resistant Rubber Sheet</h4>
                   <ul>
-                    <li><Link to="/wear-resistant-rubber-sheet/overview">Overview</Link></li>
-                    <li><Link to="/wear-resistant-rubber-sheet/abra-super">Abra-Super® Rubber Sheeting</Link></li>
-                    <li><Link to="/wear-resistant-rubber-sheet/abra-line">Abra-Line Rubber Sheeting</Link></li>
-                    <li><Link to="/wear-resistant-rubber-sheet/abra-max">Abra-Max Rubber Sheeting</Link></li>
-                    <li><Link to="/wear-resistant-rubber-sheet/abra-tuff">Abra-Tuff Rubber Sheeting</Link></li>
-                    <li><Link to="/wear-resistant-rubber-sheet/abra-wear">Abra-Wear Rubber Sheeting</Link></li>
-                    <li><Link to="/wear-resistant-rubber-sheet/abra-eco">Abra-Eco Rubber Sheeting</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/overview" onClick={handleSubcategoryLinkClick}>Overview</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/abra-super" onClick={handleSubcategoryLinkClick}>Abra-Super® Rubber Sheeting</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/abra-line" onClick={handleSubcategoryLinkClick}>Abra-Line Rubber Sheeting</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/abra-max" onClick={handleSubcategoryLinkClick}>Abra-Max Rubber Sheeting</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/abra-tuff" onClick={handleSubcategoryLinkClick}>Abra-Tuff Rubber Sheeting</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/abra-wear" onClick={handleSubcategoryLinkClick}>Abra-Wear Rubber Sheeting</Link></li>
+                    <li><Link to="/wear-resistant-rubber-sheet/abra-eco" onClick={handleSubcategoryLinkClick}>Abra-Eco Rubber Sheeting</Link></li>
                   </ul>
                 </div>
                 
@@ -207,44 +224,37 @@ function Header() {
                 <div className={`subcategories ${activeCategory === 'Specialised Abrasion Resistance' ? 'active' : ''}`}>
                   <h4>Specialised Abrasion Resistance</h4>
                   <ul>
-                    <li><Link to="/specialised-abrasion/abra-prene">Abra-Prene FR Sheeting</Link></li>
-                    <li><Link to="/specialised-abrasion/abra-super-oz">Abra-Super OZ Sheeting</Link></li>
-                    <li><Link to="/specialised-abrasion/abra-super-fg">Abra-Super FG Sheeting</Link></li>
-                    <li><Link to="/specialised-abrasion/abra-trile">Abra-Trile Sheeting</Link></li>
-                    <li><Link to="/specialised-abrasion/abra-fras">Abra-FRAS Sheeting</Link></li>
+                    <li><Link to="/specialised-abrasion/abra-prene" onClick={handleSubcategoryLinkClick}>Abra-Prene FR Sheeting</Link></li>
+                    <li><Link to="/specialised-abrasion/abra-super-oz" onClick={handleSubcategoryLinkClick}>Abra-Super OZ Sheeting</Link></li>
+                    <li><Link to="/specialised-abrasion/abra-super-fg" onClick={handleSubcategoryLinkClick}>Abra-Super FG Sheeting</Link></li>
+                    <li><Link to="/specialised-abrasion/abra-trile" onClick={handleSubcategoryLinkClick}>Abra-Trile Sheeting</Link></li>
+                    <li><Link to="/specialised-abrasion/abra-fras" onClick={handleSubcategoryLinkClick}>Abra-FRAS Sheeting</Link></li>
                   </ul>
                 </div>
                 
                 <div className={`subcategories ${activeCategory === 'Transit Rubber Flooring' ? 'active' : ''}`}>
                   <h4>Transit Rubber Flooring</h4>
                   <ul>
-                    <li><Link to="/transit-rubber-flooring/overview">Overview</Link></li>
-                    <li><Link to="/transit-rubber-flooring/duraflor-multipurpose">DuraFlor Multipurpose Floor Covering</Link></li>
-                    <li><Link to="/transit-rubber-flooring/dura-tranz">Dura-Tranz Fire Retardant Floor Covering</Link></li>
-                    <li><Link to="/transit-rubber-flooring/one-piece-floor">One Piece Floor</Link></li>
-                    <li><Link to="/transit-rubber-flooring/step-treads">Step Treads</Link></li>
+                    <li><Link to="/transit-rubber-flooring/overview" onClick={handleSubcategoryLinkClick}>Overview</Link></li>
+                    <li><Link to="/transit-rubber-flooring/duraflor-multipurpose" onClick={handleSubcategoryLinkClick}>DuraFlor Multipurpose Floor Covering</Link></li>
+                    <li><Link to="/transit-rubber-flooring/dura-tranz" onClick={handleSubcategoryLinkClick}>Dura-Tranz Fire Retardant Floor Covering</Link></li>
+                    <li><Link to="/transit-rubber-flooring/one-piece-floor" onClick={handleSubcategoryLinkClick}>One Piece Floor</Link></li>
+                    <li><Link to="/transit-rubber-flooring/step-treads" onClick={handleSubcategoryLinkClick}>Step Treads</Link></li>
                   </ul>
                 </div>
                 
                 <div className={`subcategories ${activeCategory === 'EPDM Water Proofing' ? 'active' : ''}`}>
                   <h4>EPDM Water Proofing Solutions</h4>
                   <ul>
-                    <li><Link to="/epdm-waterproofing/zena-seal">ZENA-SEAL EPDM Water roofing membrane</Link></li>
-                    <li><Link to="/epdm-waterproofing/zep-1000">ZEP - 1000 (Contact Adhesive)</Link></li>
-                    <li><Link to="/epdm-waterproofing/zafix">ZAFIX (Overlap sealant)</Link></li>
-                    <li><Link to="/epdm-waterproofing/zebtape">ZEBTAPE (High performance butyl sealing tape)</Link></li>
+                    <li><Link to="/epdm-waterproofing/zena-seal" onClick={handleSubcategoryLinkClick}>ZENA-SEAL EPDM Water roofing membrane</Link></li>
+                    <li><Link to="/epdm-waterproofing/zep-1000" onClick={handleSubcategoryLinkClick}>ZEP - 1000 (Contact Adhesive)</Link></li>
+                    <li><Link to="/epdm-waterproofing/zafix" onClick={handleSubcategoryLinkClick}>ZAFIX (Overlap sealant)</Link></li>
+                    <li><Link to="/epdm-waterproofing/zebtape" onClick={handleSubcategoryLinkClick}>ZEBTAPE (High performance butyl sealing tape)</Link></li>
                   </ul>
                 </div>
                 
                 {/* Additional subcategories would follow the same pattern */}
               </div>
-            </motion.li>
-            <motion.li 
-              whileHover={{ y: -3 }}
-              whileTap={{ y: 0 }}
-              className={location.pathname === '/services' ? 'active' : ''}
-            >
-              <Link to="/services">Services</Link>
             </motion.li>
             <motion.li 
               whileHover={{ y: -3 }}

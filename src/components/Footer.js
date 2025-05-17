@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="copyright-info">
-          <p>© 2025. Zenith Rubber. All Rights Reserved. Site Created by Designscape</p>
+          <p>© 2025. Zenith Industries. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
