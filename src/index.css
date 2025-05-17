@@ -820,3 +820,34 @@ input, select, textarea, button {
   .btn { width: 100%; }
   .hidden-xxs { display: none !important; }
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: var(--font-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-xl);
+  }
+
+  .container {
+    padding: var(--space-sm);
+  }
+
+  .btn {
+    width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .section {
+    padding: var(--space-lg) var(--space-sm);
+  }
+}

@@ -75,7 +75,7 @@
 
 .contact-info p {
   margin-bottom: var(--space-lg);
-  color: var(--text-main);
+  color: var (--text-main);
   font-size: var(--font-md);
   line-height: var(--line-relaxed);
 }
@@ -271,6 +271,8 @@
   
   .contact-container {
     gap: var(--space-md);
+    grid-template-columns: 1fr;
+    padding: var(--space-sm);
   }
   
   .form-row { 
@@ -283,6 +285,7 @@
     font-size: var(--font-lg);
     margin-bottom: var(--space-md);
     text-align: center;
+    font-size: var(--font-xl);
   }
   
   .contact-info h2:after,
@@ -311,6 +314,13 @@
   .map-section { 
     height: 350px; 
     margin-top: var(--space-md);
+    height: 300px;
+  }
+
+  .contact-form .btn-primary {
+    width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-sm);
   }
 }
 
