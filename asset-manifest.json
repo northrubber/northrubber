@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9bf3dd2e.css",
-    "main.js": "/static/js/main.cee2519c.js",
+    "main.css": "/static/css/main.0ae0603b.css",
+    "main.js": "/static/js/main.8dc43d5d.js",
     "static/media/products-img5.jpg": "/static/media/products-img5.0d4d7fc3d41cdf2f6372.jpg",
     "static/media/factory-bg.jpg": "/static/media/factory-bg.0aa16a1a562dc0eb14b9.jpg",
     "static/media/1.jpg": "/static/media/1.c9018cad5daaddc61c0a.jpg",
@@ -9,7 +9,6 @@
     "static/media/nr-sbr-sheeting.png": "/static/media/nr-sbr-sheeting.a60112be697c4899cd89.png",
     "static/media/2.jpg": "/static/media/2.cfc05cfa1d335a0492bb.jpg",
     "static/media/bg-home-panel.jpg": "/static/media/bg-home-panel.6543ac85feca2ba8ed4a.jpg",
-    "static/media/hero-bg.jpg": "/static/media/hero-bg.6543ac85feca2ba8ed4a.jpg",
     "static/media/3.jpg": "/static/media/3.c3b116e3a3c70e8bfed9.jpg",
     "static/media/products-img2.jpg": "/static/media/products-img2.f4d08d7546f5b50ba59b.jpg",
     "static/media/products-img1.jpg": "/static/media/products-img1.5b9e27214ab408643699.jpg",
@@ -21,7 +20,6 @@
     "static/media/products-img7.jpg": "/static/media/products-img7.29fe2cd772c63d1c4334.jpg",
     "static/media/products-img3.jpg": "/static/media/products-img3.bc983be5058773096aa3.jpg",
     "static/media/c5.webp": "/static/media/c5.06fd841b8b7a5121667e.webp",
-    "static/media/zenith-logo.png": "/static/media/zenith-logo.f9a60110925820d13226.png",
     "static/media/c4.webp": "/static/media/c4.2150217c26d6c7e4e8d4.webp",
     "static/media/c3.webp": "/static/media/c3.b5f7c314f4b7a620f4c7.webp",
     "static/media/c6.webp": "/static/media/c6.a0c44c61d44162d4c3bd.webp",
@@ -29,11 +27,11 @@
     "index.html": "/index.html",
     "static/media/c2.webp": "/static/media/c2.227e8dcd58aebc0eb228.webp",
     "static/media/fras.webp": "/static/media/fras.2adf737832ca903cc622.webp",
-    "main.9bf3dd2e.css.map": "/static/css/main.9bf3dd2e.css.map",
-    "main.cee2519c.js.map": "/static/js/main.cee2519c.js.map"
+    "main.0ae0603b.css.map": "/static/css/main.0ae0603b.css.map",
+    "main.8dc43d5d.js.map": "/static/js/main.8dc43d5d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bf3dd2e.css",
-    "static/js/main.cee2519c.js"
+    "static/css/main.0ae0603b.css",
+    "static/js/main.8dc43d5d.js"
   ]
 }
