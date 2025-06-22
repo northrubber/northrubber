@@ -8,19 +8,15 @@ function About() {
   return (
     <div className="about-page">
       <Helmet>
-        <meta name="description" content="Learn about Zenith Industrial Rubber Products, a leading manufacturer of industrial rubber products since 1965." />
+        <meta name="description" content="Learn about North Rubber Products, a leading manufacturer of industrial rubber products since 1965." />
         <meta name="keywords" content="rubber manufacturer, industrial rubber, company history, rubber production" />
         <link rel="canonical" href="https://zenithindustry.github.io/zenithindustries/about" />
       </Helmet>
       
       <div className="about-header">
         <div className="container">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            About Zenith Rubber
+          <motion.h1>
+            About North Rubber
           </motion.h1>
         </div>
       </div>

@@ -109,47 +109,50 @@ function Home() {
   return (
     <div className="home">
       <Helmet>
-        <meta name="description" content="Zenith Rubber - Your trusted partner in industrial rubber manufacturing with over 50 years of industry experience." />
-        <meta name="keywords" content="rubber manufacturing, industrial rubber, rubber products, rubber sheets, rubber flooring" />
+        <meta name="description" content="North Rubber - Leading manufacturer of industrial rubber products since 1965. Quality rubber sheets, flooring, inflatables & more." />
+        <meta name="keywords" content="industrial rubber, rubber sheets, rubber flooring, rubber products, manufacturing, zenith industries" />
         <link rel="canonical" href="https://zenithindustries.ca" />
+        <meta property="og:title" content="North Rubber - Premium Industrial Rubber Products" />
+        <meta property="og:description" content="Manufacturing excellence in industrial rubber products for over 55 years. Trusted global supplier." />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       {/* Hero Section */}
       <section className="hero">
         <div className="slideshow">
           <div className={`slide ${currentSlide === 0 ? 'active' : ''}`}>
-            <img src={slide1} alt="Slide 1" />
+            <img src={slide1} alt="High Quality Industrial Rubber Sheets" />
             <div className="slide-caption">
-              <h2 className="slide-caption-title">High Quality Rubber Sheets</h2>
-              <p className="slide-caption-text">for wide range of industrial applications</p>
+              <h2 className="slide-caption-title">Premium Rubber Solutions</h2>
+              <p className="slide-caption-text">Engineering excellence for industrial applications worldwide</p>
             </div>
           </div>
           <div className={`slide ${currentSlide === 1 ? 'active' : ''}`}>
-            <img src={slide2} alt="Slide 2" />
+            <img src={slide2} alt="Advanced Inflatable Products" />
             <div className="slide-caption">
-              <h2 className="slide-caption-title">Inflatable Products</h2>
-              <p className="slide-caption-text">Air Cell, Gas Holder Balloon, Inflatable Work Boats and Life Rants</p>
+              <h2 className="slide-caption-title">Advanced Inflatables</h2>
+              <p className="slide-caption-text">Precision-engineered solutions for marine and industrial applications</p>
             </div>
           </div>
           <div className={`slide ${currentSlide === 2 ? 'active' : ''}`}>
-            <img src={slide3} alt="Slide 3" />
+            <img src={slide3} alt="Abrasion Resistant Rubber Technology" />
             <div className="slide-caption">
-              <h2 className="slide-caption-title">Abrasion Resistant Rubber Sheets</h2>
-              <p className="slide-caption-text">for the Mining and Cement Industry</p>
+              <h2 className="slide-caption-title">Superior Wear Resistance</h2>
+              <p className="slide-caption-text">Advanced rubber technology for mining and heavy industry</p>
             </div>
           </div>
           <div className={`slide ${currentSlide === 3 ? 'active' : ''}`}>
-            <img src={slide4} alt="Slide 4" />
+            <img src={slide4} alt="Zenith Industries Manufacturing Excellence" />
             <div className="slide-caption">
-              <h2 className="slide-caption-title">Zenith Industries</h2>
-              <p className="slide-caption-text">Offering Quality and Durable Rubber Solutions</p>
+              <h2 className="slide-caption-title">Manufacturing Excellence</h2>
+              <p className="slide-caption-text">Over 55 years of innovation in industrial rubber solutions</p>
             </div>
           </div>
           
-          <button className="slide-arrow prev-arrow" onClick={prevSlide}>
+          <button className="slide-arrow prev-arrow" onClick={prevSlide} aria-label="Previous slide">
             <i className="fas fa-chevron-left"></i>
           </button>
-          <button className="slide-arrow next-arrow" onClick={nextSlide}>
+          <button className="slide-arrow next-arrow" onClick={nextSlide} aria-label="Next slide">
             <i className="fas fa-chevron-right"></i>
           </button>
         </div>
@@ -159,7 +162,7 @@ function Home() {
       <section className="company-intro">
         <div className="container">
           <div className="section-header">
-            <h2>At the forefront of manufacturing Industrial Rubber Products since 1965</h2>
+            <h2>Leading Industrial Rubber Innovation Since 1965</h2>
           </div>
           <div className="company-intro-flex">
             <div className="company-intro-video">
@@ -167,45 +170,46 @@ function Home() {
                 href="https://www.youtube.com/watch?v=37YSjoyydD0"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Watch Zenith Rubber on YouTube"
+                aria-label="Watch North Rubber Manufacturing Process"
               >
                 <img
-                  src="https://img.youtube.com/vi/37YSjoyydD0/hqdefault.jpg"
-                  alt="Zenith Rubber YouTube Video"
+                  src="https://img.youtube.com/vi/37YSjoyydD0/maxresdefault.jpg"
+                  alt="North Rubber Manufacturing Process Video"
                   className="youtube-thumbnail"
                 />
                 <span className="youtube-play-btn" />
               </a>
             </div>
             <div className="text-column">
-              <p>Zenith Industrial Rubber Products Private Limited, has been a leading manufacturer and exporter of high-quality industrial rubber sheeting products since its establishment in 1965. Over the years, Zenith has achieved remarkable success in the global market and has become recognized as a trusted supplier.</p>
-              <p>With a strong focus on delivering excellence, Zenith offers a diverse range of products including wear-resistant rubber sheets, antiskid flooring, waterproofing membranes, coated fabrics, rubber inflatables, rubber moulded and extruded profiles. These offerings showcase the company's expertise and commitment to providing solutions that meet the varied needs of customers.</p>
+              <p>
+                North Rubber Products LLC stands as a pioneering force in industrial rubber manufacturing, delivering exceptional quality and innovation since 1965.
+              </p>
+              <p>Our comprehensive portfolio includes wear-resistant rubber sheets, premium flooring systems, waterproofing membranes, coated fabrics, and precision inflatables. With state-of-the-art manufacturing facilities and rigorous quality standards, we serve diverse industries across 70+ countries, ensuring reliability and performance in every product.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Industry Solutions */}
-      <section className="industry-solutions parallax-section">
+      <section className="industry-solutions">
         <div className="container">
-          <h2 style={{ color: 'white' }}>Quality Rubber Solutions for every Industry</h2>
-          <p style={{ color: 'white' }}>Zenith is a leading global brand offering a wide range of high quality industrial rubber products for every application;
-          we specialize in developing customized rubber products as per the specific needs of our clients for their specific end use.</p>
+          <h2>Comprehensive Industrial Solutions</h2>
+          <p>Delivering specialized rubber products across industries with customized engineering solutions that meet the most demanding applications and environments.</p>
           <div className="solutions-grid">
             {[
-              { icon: 'fas fa-oil-can fa-2x', text: 'Oil & Gas' },
-              { icon: 'fas fa-industry fa-2x', text: 'Manufacturing' },
-              { icon: 'fas fa-hard-hat fa-2x', text: 'Mining' },
-              { icon: 'fas fa-cogs fa-2x', text: 'Engineering' },
-              { icon: 'fas fa-building fa-2x', text: 'Cement' },
-              { icon: 'fas fa-truck fa-2x', text: 'Transportation' },
-              { icon: 'fas fa-anchor fa-2x', text: 'Defense and Marine' },
-              { icon: 'fas fa-train fa-2x', text: 'Railways & Airports' },
-              { icon: 'fas fa-car fa-2x', text: 'Automotive' },
-              { icon: 'fas fa-tools fa-2x', text: 'Construction' },
+              { icon: 'fas fa-oil-can', text: 'Oil & Gas', desc: 'High-performance solutions' },
+              { icon: 'fas fa-industry', text: 'Manufacturing', desc: 'Industrial applications' },
+              { icon: 'fas fa-hard-hat', text: 'Mining', desc: 'Heavy-duty solutions' },
+              { icon: 'fas fa-cogs', text: 'Engineering', desc: 'Precision components' },
+              { icon: 'fas fa-building', text: 'Construction', desc: 'Building materials' },
+              { icon: 'fas fa-truck', text: 'Transportation', desc: 'Mobility solutions' },
+              { icon: 'fas fa-anchor', text: 'Marine & Defense', desc: 'Specialized applications' },
+              { icon: 'fas fa-train', text: 'Infrastructure', desc: 'Critical systems' },
+              { icon: 'fas fa-car', text: 'Automotive', desc: 'Performance parts' },
+              { icon: 'fas fa-tools', text: 'General Industrial', desc: 'Versatile solutions' },
             ].map((solution, index) => (
               <div key={index} className="solution-item">
-                <i className={solution.icon}></i>
+                <i className={`${solution.icon} fa-2x`}></i>
                 <span>{solution.text}</span>
               </div>
             ))}
@@ -215,77 +219,89 @@ function Home() {
 
       {/* Product Categories */}
       <section className="product-categories">
-        <h2>The most comprehensive range of Rubber Products</h2>
-        <div className="categories-container">
-          <div className="main-image">
-            <img src={require('../assets/images/products-img1.jpg')} alt="Default Category" id="category-image" />
-          </div>
-          <div className="categories-grid">
-            {[
-              { name: 'Industrial Rubber Sheet', image: require('../assets/images/products-img1.jpg') },
-              { name: 'Wear Resistant Rubber Sheet', image: require('../assets/images/products-img2.jpg') },
-              { name: 'Rubber Flooring', image: require('../assets/images/products-img3.jpg') },
-              { name: 'Transit Rubber Flooring', image: require('../assets/images/products-img4.jpg') },
-              { name: 'Anti-Skid Flooring', image: require('../assets/images/products-img5.jpg') },
-              { name: 'Coated Fabric', image: require('../assets/images/products-img6.jpg') },
-              { name: 'Inflatables', image: require('../assets/images/products-img7.jpg') },
-              { name: 'Water Proofing Membrane', image: require('../assets/images/products-img8.jpg') },
-              { name: 'Rubber Moulded & Extrusion', image: require('../assets/images/products-img9.jpg') },
-            ].map((category, index) => (
-              <div
-                key={index}
-                className="category-block"
-                onMouseEnter={() => {
-                  document.getElementById('category-image').src = category.image;
-                }}
-              >
-                {category.name}
-              </div>
-            ))}
+        <div className="container">
+          <h2>Comprehensive Product Portfolio</h2>
+          <div className="categories-container">
+            <div className="main-image">
+              <img src={require('../assets/images/products-img1.jpg')} alt="Featured Product Category" id="category-image" />
+            </div>
+            <div className="categories-grid">
+              {[
+                { name: 'Industrial Rubber Sheets', image: require('../assets/images/products-img1.jpg') },
+                { name: 'Wear Resistant Solutions', image: require('../assets/images/products-img2.jpg') },
+                { name: 'Premium Flooring Systems', image: require('../assets/images/products-img3.jpg') },
+                { name: 'Transit Flooring', image: require('../assets/images/products-img4.jpg') },
+                { name: 'Anti-Slip Solutions', image: require('../assets/images/products-img5.jpg') },
+                { name: 'Technical Fabrics', image: require('../assets/images/products-img6.jpg') },
+                { name: 'Inflatable Products', image: require('../assets/images/products-img7.jpg') },
+                { name: 'Waterproofing Systems', image: require('../assets/images/products-img8.jpg') },
+                { name: 'Custom Molded Parts', image: require('../assets/images/products-img9.jpg') },
+              ].map((category, index) => (
+                <div
+                  key={index}
+                  className="category-block"
+                  onMouseEnter={() => {
+                    const img = document.getElementById('category-image');
+                    if (img) img.src = category.image;
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      const img = document.getElementById('category-image');
+                      if (img) img.src = category.image;
+                    }
+                  }}
+                >
+                  {category.name}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Product Certifications */}
       <section className="certifications">
-        <h2>Product Certifications</h2>
-        <p>Our products conform to the highest International Quality Standards. We follow manufacturing practices which are environment-friendly and promote green living.</p>
-        <div className="certifications-grid">
-          {/* Keep existing images */}
-          <img src={require('../assets/images/c1.webp')} alt="Certification 1" />
-          <img src={require('../assets/images/c2.webp')} alt="Certification 2" />
-          <img src={require('../assets/images/c3.webp')} alt="Certification 3" />
-          <img src={require('../assets/images/c4.webp')} alt="Certification 4" />
-          <img src={require('../assets/images/c5.webp')} alt="Certification 5" />
-          <img src={require('../assets/images/c6.webp')} alt="Certification 6" />
-          <img src={require('../assets/images/fras.webp')} alt="FRAS Certification" />
+        <div className="container">
+          <h2>Quality Certifications & Standards</h2>
+          <p>Our commitment to excellence is validated through internationally recognized certifications and adherence to the highest quality standards in manufacturing.</p>
+          <div className="certifications-grid">
+            <img src={require('../assets/images/c1.webp')} alt="ISO Quality Certification" />
+            <img src={require('../assets/images/c2.webp')} alt="Environmental Management Certification" />
+            <img src={require('../assets/images/c3.webp')} alt="Safety Standards Certification" />
+            <img src={require('../assets/images/c4.webp')} alt="Industry Standards Certification" />
+            <img src={require('../assets/images/c5.webp')} alt="Export Quality Certification" />
+            <img src={require('../assets/images/c6.webp')} alt="Manufacturing Excellence Certification" />
+            <img src={require('../assets/images/fras.webp')} alt="FRAS Fire Resistant Certification" />
+          </div>
         </div>
       </section>
 
       {/* Statistics Section */}
       <div ref={statsRef} className="statistics-section">
         <div className="statistic-item">
+          <span className="statistic-prefix">Excellence Since</span>
+          <div className="statistic-value">1965</div>
+          <div className="statistic-label">Years of Innovation</div>
+        </div>
+        <div className="statistic-item">
           <span className="statistic-prefix">Over</span>
-          <div className="statistic-value">{animatedStats.years}</div>
-          <div className="statistic-label">Years in countries</div>
-        </div>
-        <div className="statistic-item">
-          <span className="statistic-prefix">More than</span>
           <div className="statistic-value">{animatedStats.productGrades}</div>
-          <div className="statistic-label">Product Grades</div>
+          <div className="statistic-label">Product Variants</div>
         </div>
         <div className="statistic-item">
-          <span className="statistic-prefix">Production Capacity</span>
+          <span className="statistic-prefix">Annual Capacity</span>
           <div className="statistic-value">{animatedStats.tons}</div>
-          <div className="statistic-label">Tons</div>
+          <div className="statistic-label">Metric Tons</div>
         </div>
         <div className="statistic-item">
-          <span className="statistic-prefix">Servicing over</span>
+          <span className="statistic-prefix">Serving</span>
           <div className="statistic-value">{animatedStats.customers}</div>
-          <div className="statistic-label">Customers</div>
+          <div className="statistic-label">Global Customers</div>
         </div>
         <div className="statistic-item">
-          <span className="statistic-prefix">Exports to</span>
+          <span className="statistic-prefix">Presence in</span>
           <div className="statistic-value">{animatedStats.countries}</div>
           <div className="statistic-label">Countries</div>
         </div>

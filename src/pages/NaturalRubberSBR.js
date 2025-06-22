@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import './NaturalRubberSBR.css';
 import nrSbrImage from '../assets/images/nr-sbr-sheeting.png';
 
@@ -7,19 +8,33 @@ function NaturalRubberSBR() {
   return (
     <div className="natural-rubber-sbr-page">
       <Helmet>
-        <title>Natural Rubber / SBR Sheeting - Zenith Rubber</title>
+        <title>Natural Rubber / SBR Sheeting - North Rubber</title>
         <meta
           name="description"
-          content="Explore Zenith Rubber's high-quality Natural Rubber / SBR Sheeting products. Versatile and cost-effective solutions for various industries."
+          content="Explore North Rubber's high-quality Natural Rubber / SBR Sheeting products. Versatile and cost-effective solutions for various industries."
         />
       </Helmet>
 
-      <div className="container">
-        <section className="hero">
-          <h1>Natural Rubber / SBR Sheeting</h1>
-        </section>
+      <div className="about-header">
+        <div className="container">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Natural Rubber / SBR Sheeting
+          </motion.h1>
+        </div>
+      </div>
 
-        <section className="product-overview">
+      <div className="container">
+        <motion.section 
+          className="product-overview"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="product-image">
             <img src={nrSbrImage} alt="Natural Rubber / SBR Sheeting" />
           </div>
@@ -27,7 +42,7 @@ function NaturalRubberSBR() {
             <p>NR/SBR is commonly used in various industries due to its versatile properties and cost-effectiveness. The blend provides superior resilience, tensile, elongation, good low temperature flexibility and excellent adhesion to fabric and metals.</p>
             <p>NR/SBR is widely used in general purpose seals & gaskets, washers, packing material, vibration dampeners, shot blasting curtains and for industrial purpose application in contact with water and oil free surfaces and in various sectors like Automotive, Construction, Industrial Belts, Machinery, Sports & Recreation etc.</p>
           </div>
-        </section>
+        </motion.section>
 
         <section className="product-dimension">
           <h2>ZENA-FLEX NR/SBR RUBBER SHEETS</h2>
@@ -37,10 +52,10 @@ function NaturalRubberSBR() {
                 <tr>
                   <th>Code</th>
                   <th>Colour</th>
-                  <th>Specific Gravity Gm/cm³</th>
-                  <th>Hardness (±5) SHORE A</th>
-                  <th>Tensile Strength Kg/cm2(min)</th>
-                  <th>Elongation % (min)</th>
+                  <th>Specific Gravity<br/>Gm/cm³</th>
+                  <th>Hardness (±5)<br/>SHORE A</th>
+                  <th>Tensile Strength<br/>Kg/cm²(min)</th>
+                  <th>Elongation %<br/>(min)</th>
                   <th>Finish Type</th>
                   <th>TDS</th>
                 </tr>
@@ -151,8 +166,8 @@ function NaturalRubberSBR() {
           </div>
         </section>
 
-        <h2>SHOT BLASTING RUBBER SHEET</h2>
         <section className="product-dimension">
+          <h2>SHOT BLASTING RUBBER SHEET</h2>
           <h3>Zena Blast ECO</h3>
           <div className="table-container">
             <table>
@@ -160,10 +175,10 @@ function NaturalRubberSBR() {
                 <tr>
                   <th>Code</th>
                   <th>Colour</th>
-                  <th>Specific Gravity</th>
-                  <th>Hardness (±5) SHORE A</th>
-                  <th>Tensile Strength Kg/cm2(min)</th>
-                  <th>Elongation % (min)</th>
+                  <th>Specific<br/>Gravity</th>
+                  <th>Hardness (±5)<br/>SHORE A</th>
+                  <th>Tensile Strength<br/>Kg/cm²(min)</th>
+                  <th>Elongation %<br/>(min)</th>
                   <th>Finish Type</th>
                   <th>TDS</th>
                 </tr>

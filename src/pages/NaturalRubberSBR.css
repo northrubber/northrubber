@@ -1,158 +1,191 @@
 .natural-rubber-sbr-page {
-  font-family: var(--font-main);
-  color: var(--text-main);
-  background-color: var(--white);
-  overflow: hidden;
-  padding-top: 80px;
+  font-family: 'WF Visual Sans Text', Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  padding-top: 0;
+  line-height: 1.6;
 }
 
 .natural-rubber-sbr-page .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-lg);
+  padding: 0 20px;
 }
 
-.natural-rubber-sbr-page .hero {
+/* About header section - copied from About.css */
+.about-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: var(--space-20) 0;
   text-align: center;
-  background-color: var(--white);
-  padding: var(--space-md) 0;
-  margin-bottom: var(--space-lg);
-}
-
-.natural-rubber-sbr-page .hero h1 {
-  font-size: var(--font-3xl);
-  color: var(--primary);
-  margin-bottom: var(--space-md);
   position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 600;
+  overflow: hidden;
 }
 
-.natural-rubber-sbr-page .hero h1:after {
+.about-header::before {
   content: '';
   position: absolute;
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-  bottom: -10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23FFFFFF" fill-opacity="0.1" points="0,0 1000,200 1000,1000 0,800"/></svg>');
+  pointer-events: none;
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.about-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #d40f14;
+  border-radius: 2px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Product overview section */
 .natural-rubber-sbr-page .product-overview {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  padding: var(--space-lg) 0;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 60px 0 40px 0;
+  align-items: start;
+  margin-bottom: 40px;
 }
 
 .natural-rubber-sbr-page .product-image {
-  flex: 1 1 400px;
   text-align: center;
 }
 
 .natural-rubber-sbr-page .product-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-normal);
-}
-
-.natural-rubber-sbr-page .product-image img:hover {
-  transform: scale(1.03);
-  box-shadow: var(--shadow-lg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .natural-rubber-sbr-page .product-description {
-  flex: 1 1 400px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .natural-rubber-sbr-page .product-description p {
-  font-size: var(--font-md);
-  line-height: var(--line-relaxed);
-  margin-bottom: var(--space-md);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555;
   text-align: justify;
-  color: var(--text-light);
 }
 
 /* Section headings */
 .natural-rubber-sbr-page .product-dimension {
-  padding: var(--space-md) 0;
+  margin: 60px 0 40px 0;
+}
+
+.natural-rubber-sbr-page .product-dimension h2 {
+  font-size: 1.8rem;
+  color: #d40f14;
+  margin-bottom: 30px;
   text-align: center;
-}
-
-.natural-rubber-sbr-page .product-dimension h2,
-.natural-rubber-sbr-page .product-dimension h3 {
-  font-size: var(--font-xl);
-  color: var(--primary);
-  margin-bottom: var(--space-md);
-  position: relative;
-  display: inline-block;
-  padding-bottom: var(--space-xs);
+  font-weight: 700;
   text-transform: uppercase;
-  font-weight: 600;
   letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-.natural-rubber-sbr-page .product-dimension h2:after,
-.natural-rubber-sbr-page .product-dimension h3:after {
+.natural-rubber-sbr-page .product-dimension h2:after {
   content: '';
   position: absolute;
-  width: 40px;
-  height: 2px;
-  background: var(--primary);
+  width: 60px;
+  height: 3px;
+  background: #d40f14;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .natural-rubber-sbr-page .product-dimension h3 {
-  font-size: var(--font-lg);
-  margin-top: var(--space-lg);
+  font-size: 1.4rem;
+  color: #d40f14;
+  margin: 40px 0 20px 0;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Tables */
 .natural-rubber-sbr-page .table-container {
   overflow-x: auto;
-  margin: var(--space-md) 0 var(--space-lg);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  margin: 20px 0 40px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
 .natural-rubber-sbr-page table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 0;
-  border: none;
-  min-width: 800px;
-  font-size: var(--font-sm);
+  margin: 0;
+  min-width: 900px;
+  font-size: 14px;
 }
 
 .natural-rubber-sbr-page th {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #d40f14;
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  padding: var(--space-xs) var(--space-sm);
+  padding: 15px 12px;
+  text-align: center;
   letter-spacing: 0.5px;
+  font-size: 13px;
+  border: none;
 }
 
 .natural-rubber-sbr-page td {
-  border: 1px solid var(--gray-300);
-  padding: var(--space-xs) var(--space-sm);
+  padding: 12px;
   text-align: center;
   vertical-align: middle;
-  font-size: var(--font-sm);
-  color: var(--text-main);
+  font-size: 13px;
+  color: #333;
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
 }
 
-.natural-rubber-sbr-page tr:nth-child(even) {
-  background-color: var(--gray-100);
+.natural-rubber-sbr-page td:last-child {
+  border-right: none;
+}
+
+.natural-rubber-sbr-page tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
 }
 
 .natural-rubber-sbr-page tbody tr:hover {
@@ -162,175 +195,204 @@
 /* Standard sizes and notes sections */
 .natural-rubber-sbr-page .standard-sizes,
 .natural-rubber-sbr-page .notes {
-  padding: var(--space-md) 0;
-  text-align: left;
+  margin: 60px 0 40px 0;
 }
 
 .natural-rubber-sbr-page .standard-sizes h2,
 .natural-rubber-sbr-page .notes h2 {
-  font-size: var(--font-xl);
-  color: var(--primary);
-  margin-bottom: var(--space-md);
-  position: relative;
-  display: inline-block;
-  padding-bottom: var(--space-xs);
+  font-size: 1.8rem;
+  color: #d40f14;
+  margin-bottom: 30px;
+  font-weight: 700;
   text-transform: uppercase;
-  font-weight: 600;
   letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
 .natural-rubber-sbr-page .standard-sizes h2:after,
 .natural-rubber-sbr-page .notes h2:after {
   content: '';
   position: absolute;
-  width: 40px;
-  height: 2px;
-  background: var(--primary);
+  width: 60px;
+  height: 3px;
+  background: #d40f14;
   bottom: 0;
   left: 0;
-  transform: none;
 }
 
 .natural-rubber-sbr-page .standard-sizes p {
-  font-size: var(--font-md);
-  line-height: var(--line-relaxed);
-  margin-bottom: var(--space-xs);
-  text-align: left;
-  color: var(--text-main);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555;
 }
 
-.natural-rubber-sbr-page .notes p {
-  font-size: var(--font-md);
-  line-height: var(--line-relaxed);
-  margin-bottom: var(--space-sm);
-  text-align: left;
-  color: var(--text-main);
+.natural-rubber-sbr-page .standard-sizes p b {
+  color: #333;
+  font-weight: 600;
 }
 
 .natural-rubber-sbr-page .notes ol {
-  padding-left: var(--space-lg);
-  margin-top: var(--space-sm);
+  padding-left: 30px;
+  margin-top: 20px;
   list-style-type: decimal;
 }
 
 .natural-rubber-sbr-page .notes li {
-  margin-bottom: var(--space-xs);
-  line-height: var(--line-normal);
-  font-size: var(--font-md);
-  color: var(--text-main);
-}
-
-/* Download button */
-.natural-rubber-sbr-page .download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  background-color: var(--primary);
-  color: white;
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  font-weight: 500;
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-sm);
-}
-
-.natural-rubber-sbr-page .download-btn:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .natural-rubber-sbr-page {
-    padding-top: 60px;
-  }
-  
-  .natural-rubber-sbr-page .container {
-    padding: var(--space-md);
-  }
-  
-  .natural-rubber-sbr-page .hero h1 { 
-    font-size: var(--font-2xl); 
-  }
-  
-  .natural-rubber-sbr-page .product-overview { 
-    flex-direction: column; 
-    gap: var(--space-md);
-  }
-  
-  .natural-rubber-sbr-page .product-image { 
-    margin-bottom: var(--space-md); 
-  }
-  
-  .natural-rubber-sbr-page .product-description { 
-    text-align: left; 
-  }
-  
-  .natural-rubber-sbr-page .product-dimension h2,
-  .natural-rubber-sbr-page .standard-sizes h2,
-  .natural-rubber-sbr-page .notes h2 { 
-    font-size: var(--font-lg); 
-  }
-  
-  .natural-rubber-sbr-page .product-description p,
-  .natural-rubber-sbr-page .standard-sizes p,
-  .natural-rubber-sbr-page .notes p { 
-    font-size: var(--font-sm); 
-    line-height: var(--line-normal);
-  }
-  
-  .natural-rubber-sbr-page table { 
-    font-size: var(--font-xs); 
-  }
-  
-  .natural-rubber-sbr-page th,
-  .natural-rubber-sbr-page td { 
-    padding: 6px; 
-  }
-}
-
-@media (max-width: 576px) {
-  .natural-rubber-sbr-page .hero h1 { 
-    font-size: var(--font-xl); 
-  }
-  
-  .natural-rubber-sbr-page .product-dimension h2,
-  .natural-rubber-sbr-page .standard-sizes h2,
-  .natural-rubber-sbr-page .notes h2 { 
-    font-size: var(--font-md); 
-    text-align: center;
-  }
-  
-  .natural-rubber-sbr-page .standard-sizes h2:after,
-  .natural-rubber-sbr-page .notes h2:after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .natural-rubber-sbr-page .notes ol {
-    padding-left: var(--space-md);
-  }
-  
-  .natural-rubber-sbr-page .notes li {
-    font-size: var(--font-sm);
-  }
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #555;
 }
 
 /* TDS button */
 .tds-btn {
-  background-color: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  padding: var(--space-xs) var(--space-xs);
-  border-radius: var(--radius-sm);
+  background-color: #d40f14;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: var(--font-xs);
-  transition: all var(--transition-normal);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 .tds-btn:hover {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #b30d11;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-header {
+    padding: 100px 0;
+  }
+  
+  .about-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .natural-rubber-sbr-page .product-overview {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .natural-rubber-sbr-page .product-image {
+    order: -1;
+  }
+  
+  .natural-rubber-sbr-page table {
+    min-width: 800px;
+  }
+  
+  .natural-rubber-sbr-page th,
+  .natural-rubber-sbr-page td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    padding: 80px 0;
+  }
+  
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .natural-rubber-sbr-page .product-overview {
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+  
+  .natural-rubber-sbr-page .product-description p {
+    font-size: 15px;
+    text-align: left;
+  }
+  
+  .natural-rubber-sbr-page .product-dimension {
+    margin: 40px 0 30px 0;
+  }
+  
+  .natural-rubber-sbr-page .product-dimension h2 {
+    font-size: 1.5rem;
+  }
+  
+  .natural-rubber-sbr-page .product-dimension h3 {
+    font-size: 1.2rem;
+  }
+  
+  .natural-rubber-sbr-page .standard-sizes,
+  .natural-rubber-sbr-page .notes {
+    margin: 40px 0 30px 0;
+  }
+  
+  .natural-rubber-sbr-page .standard-sizes h2,
+  .natural-rubber-sbr-page .notes h2 {
+    font-size: 1.5rem;
+  }
+  
+  .natural-rubber-sbr-page .standard-sizes p,
+  .natural-rubber-sbr-page .notes li {
+    font-size: 15px;
+  }
+  
+  .natural-rubber-sbr-page table {
+    min-width: 700px;
+    font-size: 11px;
+  }
+  
+  .natural-rubber-sbr-page th,
+  .natural-rubber-sbr-page td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-header {
+    padding: 60px 0;
+  }
+  
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-header h1::after {
+    width: 80px;
+    height: 3px;
+    bottom: -15px;
+  }
+  
+  .natural-rubber-sbr-page .product-dimension h2,
+  .natural-rubber-sbr-page .standard-sizes h2,
+  .natural-rubber-sbr-page .notes h2 {
+    font-size: 1.3rem;
+  }
+  
+  .natural-rubber-sbr-page .product-description p,
+  .natural-rubber-sbr-page .standard-sizes p,
+  .natural-rubber-sbr-page .notes li {
+    font-size: 14px;
+  }
+  
+  .natural-rubber-sbr-page table {
+    min-width: 600px;
+    font-size: 10px;
+  }
+  
+  .natural-rubber-sbr-page th,
+  .natural-rubber-sbr-page td {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+  
+  .natural-rubber-sbr-page .notes ol {
+    padding-left: 20px;
+  }
 }

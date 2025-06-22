@@ -1,122 +1,101 @@
-/* Mobile Touch Optimizations */
+/* Mobile-specific optimizations */
 
-/* Fix for 100vh issue on mobile browsers */
+/* iOS viewport height fix */
 :root {
-  --app-height: 100%;
+  --app-height: 100vh;
 }
 
-@supports (height: 100dvh) {
-  :root {
-    --app-height: 100dvh;
+@supports (-webkit-touch-callout: none) {
+  .app {
+    min-height: var(--app-height);
   }
 }
 
-/* Apply to elements that need full viewport height */
-.fullheight {
-  height: var(--app-height);
-}
-
-/* Prevent pull-to-refresh on mobile */
-html,
-body {
-  overscroll-behavior-y: none;
-}
-
-/* Improve scrolling performance */
-body {
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Prevent text size adjustment on orientation change */
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-/* Improve tap targets */
-a, button, input[type="button"], input[type="submit"], 
-.btn, .nav-link, .card-link, .dropdown-item {
-  padding: 0.5rem;
-  margin: 0;
-}
-
-/* Better form fields on mobile */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="number"],
-select,
-textarea {
-  appearance: none;
-  -webkit-appearance: none;
-  border-radius: 0;
-  font-size: 16px; /* Prevents zoom on iOS */
-}
-
-/* Disable annoying tap highlight color */
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-/* Improve handling of fixed elements */
-.fixed-element {
-  position: fixed;
-  will-change: transform;
-  transform: translateZ(0);
-}
-
-/* Optimize image loading for mobile */
-img {
-  content-visibility: auto;
-}
-
-/* Fix for iOS form element styling */
-@supports (-webkit-touch-callout: none) {
-  input, textarea, select {
-    font-size: 16px !important;
+/* Touch optimizations */
+@media (pointer: coarse) {
+  /* Larger touch targets */
+  button,
+  a,
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
   }
   
-  /* Fix for iOS shifting viewport on keyboard appear */
-  .ios-fixed-element {
-    position: absolute;
+  /* Remove hover states on touch devices */
+  .nav-link:hover,
+  .btn:hover,
+  .card:hover {
+    transform: none;
   }
 }
 
-/* Fix for sticky hover states on mobile */
-@media (hover: hover) {
-  /* Only apply hover styles when hovering is supported */
-  a:hover, button:hover, .btn:hover {
-    /* Hover styles */
+/* Enhanced touch targets for mobile navigation */
+@media (max-width: 768px) {
+  .filter-button,
+  .nav-link,
+  .dropdown-toggle {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improved scrolling for filter buttons */
+  .products-filters {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .filter-button {
+    scroll-snap-align: start;
   }
 }
 
-/* Use passive event listeners for touch events */
-/* Note: This needs to be added via JavaScript:
-   element.addEventListener('touchstart', handler, { passive: true }); */
-
-/* Enhance scroll performance */
-.scroll-container {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+/* Keyboard appearance fix for iOS */
+.has-keyboard {
+  height: var(--app-height);
+  overflow: hidden;
 }
 
-.scroll-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari/Edge */
-}
-
-/* Fix bottom nav issues with keyboard */
-.has-keyboard .fixed-bottom {
-  position: absolute;
-}
-
-/* Add margin to bottom when keyboard is present */
 .keyboard-active {
-  margin-bottom: 300px;
+  position: relative;
+  z-index: 9999;
 }
 
-/* Fix double-tap issue on iOS */
-.prevent-double-tap {
-  touch-action: manipulation;
+/* Smooth scrolling performance */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent zoom on input focus */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+/* Fix for sticky elements on mobile */
+@supports (position: -webkit-sticky) or (position: sticky) {
+  .header {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+/* Prevent text selection on touch */
+.filter-button,
+.nav-link,
+.dropdown-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

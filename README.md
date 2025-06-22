@@ -1,4 +1,4 @@
-# Zenith Rubber Website
+# North Rubber Website
 
 This project is a React-based website for Zenith Industrial Rubber Products, showcasing their products and services.
 

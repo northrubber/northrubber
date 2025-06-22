@@ -126,12 +126,12 @@ const Footer = () => {
         <div className="address-info">
           <p>144, Free Press House, 215 Nariman Point, Mumbai 400 021.</p>
           <div className="contact-row">
-            <p>Email: info@zenithindustries.ca</p>
+            <p>Email: info@northrubber.com</p>
             <p>Phone: +91 22 22885888</p>
           </div>
         </div>
         <div className="copyright-info">
-          <p>© 2025. Zenith Industries. All Rights Reserved.</p>
+          <p>© 2025 North Rubber. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

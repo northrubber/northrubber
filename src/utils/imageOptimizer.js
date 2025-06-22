@@ -7,7 +7,6 @@
  * Lazy loads all images on the page using Intersection Observer
  */
 export const setupLazyLoading = () => {
-  // Check for IntersectionObserver support
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -18,11 +17,12 @@ export const setupLazyLoading = () => {
           if (src) {
             img.src = src;
             img.removeAttribute('data-src');
+            img.classList.add('loaded');
           }
           
-          // Also handle source elements for picture tags
-          const sources = img.parentElement.querySelectorAll('source[data-srcset]');
-          sources.forEach(source => {
+          // Handle source elements for picture tags
+          const sources = img.parentElement?.querySelectorAll('source[data-srcset]');
+          sources?.forEach(source => {
             source.srcset = source.getAttribute('data-srcset');
             source.removeAttribute('data-srcset');
           });
@@ -30,6 +30,8 @@ export const setupLazyLoading = () => {
           observer.unobserve(img);
         }
       });
+    }, {
+      rootMargin: '50px'
     });
     
     // Target all images that have a data-src attribute
@@ -42,24 +44,13 @@ export const setupLazyLoading = () => {
     document.querySelectorAll('img[data-src]').forEach(img => {
       img.src = img.getAttribute('data-src');
       img.removeAttribute('data-src');
-    });
-    
-    document.querySelectorAll('source[data-srcset]').forEach(source => {
-      source.srcset = source.getAttribute('data-srcset');
-      source.removeAttribute('data-srcset');
+      img.classList.add('loaded');
     });
   }
 };
 
 /**
- * Generate a responsive image tag with proper srcset attributes
- * 
- * @param {string} base - Base image path without file extension
- * @param {string} ext - File extension
- * @param {Array} sizes - Array of size objects {width, height}
- * @param {string} alt - Alt text for the image
- * @param {string} className - Optional CSS class
- * @returns {string} - HTML for responsive image
+ * Generate responsive image HTML
  */
 export const responsiveImageHtml = (base, ext, sizes, alt = "", className = "") => {
   const srcset = sizes.map(size => `${base}-${size.width}w.${ext} ${size.width}w`).join(', ');
@@ -77,46 +68,7 @@ export const responsiveImageHtml = (base, ext, sizes, alt = "", className = "") 
   `;
 };
 
-/**
- * Check if images are properly sized for their containers
- * Logs warnings to console for oversized images
- */
-export const checkImageSizing = () => {
-  const images = document.querySelectorAll('img:not([data-skip-check])');
-  
-  images.forEach(img => {
-    // Wait for image to load
-    if (img.complete) {
-      checkImageDimensions(img);
-    } else {
-      img.addEventListener('load', function() {
-        checkImageDimensions(img);
-      });
-    }
-  });
-};
-
-function checkImageDimensions(img) {
-  const containerWidth = img.parentElement.offsetWidth;
-  const containerHeight = img.parentElement.offsetHeight;
-  
-  // Allow for some scaling (2x for high DPI displays)
-  const maxRecommendedWidth = containerWidth * 2;
-  const maxRecommendedHeight = containerHeight * 2;
-  
-  if (img.naturalWidth > maxRecommendedWidth * 1.5) {
-    console.warn(`Image too large: ${img.src} - Natural width (${img.naturalWidth}px) is much larger than container (${containerWidth}px)`);
-  }
-  
-  if (img.naturalHeight > maxRecommendedHeight * 1.5) {
-    console.warn(`Image too tall: ${img.src} - Natural height (${img.naturalHeight}px) is much larger than container (${containerHeight}px)`);
-  }
+// Auto-setup when imported
+if (typeof window !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', setupLazyLoading);
 }
-
-// Setup lazy loading when imported
-document.addEventListener('DOMContentLoaded', () => {
-  setupLazyLoading();
-  
-  // Wait for everything to load before checking image sizing
-  window.addEventListener('load', checkImageSizing);
-});
