@@ -1,6 +1,6 @@
 {
-  "short_name": "zenith",
-  "name": "Zenith Rubber",
+  "short_name": "northrubber",
+  "name": "North Rubber",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#DA0037",
-  "background_color": "#171717"
+  "theme_color": "#FF6500",
+  "background_color": "#0B192C"
 }
