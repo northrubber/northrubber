@@ -8,7 +8,7 @@ function About() {
   return (
     <div className="about-page">
       <Helmet>
-        <meta name="description" content="Learn about North Rubber Products, a leading manufacturer of industrial rubber products since 1965." />
+        <meta name="description" content="Learn about North Rubber Products, an innovative manufacturer specializing in premium natural rubber sheets and industrial solutions." />
         <meta name="keywords" content="rubber manufacturer, industrial rubber, company history, rubber production" />
         <link rel="canonical" href="https://zenithindustry.github.io/zenithindustries/about" />
       </Helmet>
@@ -33,32 +33,32 @@ function About() {
             <div className="about-content">
               <h2>Corporate Profile</h2>
               <p>
-                Zenith Rubber has been at the forefront of manufacturing industrial rubber products since 1965.
+                Zenith Rubber is an innovative manufacturer revolutionizing the manufacturing of industrial rubber products with fresh perspectives and modern approaches.
               </p>
               <p>
-                Zenith Industrial Rubber Products Private Limited, has been a leading manufacturer and exporter of high-quality 
-                industrial rubber sheeting products since its establishment in 1965. Over the years, Zenith has achieved 
-                remarkable success in the global market and has become recognized as a trusted supplier.
+                Zenith Industrial Rubber Products Private Limited, is an emerging manufacturer and exporter of high-quality 
+                industrial rubber sheeting products, founded with a vision to transform the rubber industry. Our modern approach 
+                combines traditional rubber manufacturing expertise with innovative technologies and sustainable practices.
               </p>
               <p>
                 With a strong focus on delivering excellence, Zenith offers a diverse range of products including wear-resistant 
                 rubber sheets, antiskid flooring, waterproofing membranes, coated fabrics, rubber inflatables, rubber moulded 
-                and extruded profiles. These offerings showcase the company's expertise and commitment to providing solutions 
-                that meet the varied needs of customers.
+                and extruded profiles. These offerings showcase our commitment to innovation and providing solutions 
+                that meet the evolving needs of modern industries.
               </p>
               <p>
-                Zenith's dedication to quality and compliance is evident through its status as a government-recognized export house. 
-                This recognition highlights the company's commitment to upholding industry standards and ensuring customer satisfaction.
+                Zenith's dedication to quality and compliance is evident through our pursuit of government recognition as an export house. 
+                This goal highlights our commitment to upholding industry standards and ensuring customer satisfaction from day one.
               </p>
               <p>
-                Supported by advanced infrastructure, Zenith boasts an impressive production capacity with 4 Intermix, 4 calendar, 
-                30 Rotocure lines and 8 press lines. This infrastructure investment allows the company to meet the demands of 
-                the market effectively and efficiently.
+                Supported by state-of-the-art infrastructure, Zenith boasts modern production capabilities with 4 Intermix, 4 calendar, 
+                30 Rotocure lines and 8 press lines. This infrastructure investment allows us to meet market demands effectively 
+                and efficiently while maintaining our operational agility.
               </p>
               <p>
-                With an installed capacity of 90 tons of rubber compound per day, Zenith continues to strengthen its position in 
-                both domestic and international markets. Through its extensive experience, leadership, and dedication to quality, 
-                Zenith has earned a reputation as a reliable and trusted provider in the industrial rubber sheet manufacturing industry.
+                With an installed capacity of 90 tons of rubber compound per day, Zenith is rapidly establishing its position in 
+                both domestic and international markets. Through our innovative approach, modern leadership, and dedication to quality, 
+                Zenith is building a reputation as a reliable and trusted newcomer in the industrial rubber sheet manufacturing industry.
               </p>
             </div>
             <div className="about-image-container">

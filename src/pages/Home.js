@@ -109,11 +109,11 @@ function Home() {
   return (
     <div className="home">
       <Helmet>
-        <meta name="description" content="North Rubber - Leading manufacturer of industrial rubber products since 1965. Quality rubber sheets, flooring, inflatables & more." />
+        <meta name="description" content="North Rubber - Innovative manufacturer specializing in premium natural rubber sheets and industrial rubber products. Quality solutions for modern industries." />
         <meta name="keywords" content="industrial rubber, rubber sheets, rubber flooring, rubber products, manufacturing, zenith industries" />
         <link rel="canonical" href="https://zenithindustries.ca" />
         <meta property="og:title" content="North Rubber - Premium Industrial Rubber Products" />
-        <meta property="og:description" content="Manufacturing excellence in industrial rubber products for over 55 years. Trusted global supplier." />
+        <meta property="og:description" content="Innovative rubber solutions from a modern manufacturer focused on quality and customer satisfaction. Trusted emerging supplier." />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -145,7 +145,7 @@ function Home() {
             <img src={slide4} alt="Zenith Industries Manufacturing Excellence" />
             <div className="slide-caption">
               <h2 className="slide-caption-title">Manufacturing Excellence</h2>
-              <p className="slide-caption-text">Over 55 years of innovation in industrial rubber solutions</p>
+              <p className="slide-caption-text">Innovative company bringing fresh perspectives to industrial rubber solutions</p>
             </div>
           </div>
           
@@ -162,30 +162,13 @@ function Home() {
       <section className="company-intro">
         <div className="container">
           <div className="section-header">
-            <h2>Leading Industrial Rubber Innovation Since 1965</h2>
+            <h2>Innovative Natural Rubber Solutions for Modern Industry</h2>
           </div>
-          <div className="company-intro-flex">
-            <div className="company-intro-video">
-              <a
-                href="https://www.youtube.com/watch?v=37YSjoyydD0"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Watch North Rubber Manufacturing Process"
-              >
-                <img
-                  src="https://img.youtube.com/vi/37YSjoyydD0/maxresdefault.jpg"
-                  alt="North Rubber Manufacturing Process Video"
-                  className="youtube-thumbnail"
-                />
-                <span className="youtube-play-btn" />
-              </a>
-            </div>
-            <div className="text-column">
-              <p>
-                North Rubber Products LLC stands as a pioneering force in industrial rubber manufacturing, delivering exceptional quality and innovation since 1965.
-              </p>
-              <p>Our comprehensive portfolio includes wear-resistant rubber sheets, premium flooring systems, waterproofing membranes, coated fabrics, and precision inflatables. With state-of-the-art manufacturing facilities and rigorous quality standards, we serve diverse industries across 70+ countries, ensuring reliability and performance in every product.</p>
-            </div>
+          <div className="text-column">
+            <p>
+              North Rubber Products LLC stands as an innovative manufacturer in industrial rubber manufacturing, delivering exceptional quality and cutting-edge solutions with a fresh approach to traditional industries.
+            </p>
+            <p>Our comprehensive portfolio includes wear-resistant rubber sheets, premium flooring systems, waterproofing membranes, coated fabrics, and precision inflatables. With state-of-the-art manufacturing facilities and rigorous quality standards, we serve diverse industries across 70+ countries, ensuring reliability and performance in every product.</p>
           </div>
         </div>
       </section>
@@ -281,9 +264,9 @@ function Home() {
       {/* Statistics Section */}
       <div ref={statsRef} className="statistics-section">
         <div className="statistic-item">
-          <span className="statistic-prefix">Excellence Since</span>
-          <div className="statistic-value">1965</div>
-          <div className="statistic-label">Years of Innovation</div>
+          <span className="statistic-prefix">Founded</span>
+          <div className="statistic-value">2024</div>
+          <div className="statistic-label">Innovation Focused</div>
         </div>
         <div className="statistic-item">
           <span className="statistic-prefix">Over</span>

@@ -26,19 +26,20 @@ body {
 /* CSS Custom Properties */
 :root {
   /* Colors */
-  --primary: #1a1a2e;
-  --primary-light: #2c3e50;
-  --primary-dark: #16213e;
-  --secondary: #0f3460;
-  --accent: #e94560;
-  --accent-light: #f16d7e;
-  --white: #ffffff;
-  --bg-primary: #fafafa;
-  --bg-secondary: #f5f7fa;
-  --text-primary: #2d3436;
-  --text-secondary: #636e72;
-  --text-muted: #95a5a6;
-  --border-color: #e8eaed;
+  --primary: #03346E;
+  --primary-light: #6EACDA;
+  --primary-dark: #021526;
+  --secondary: #6EACDA;
+  --accent: #6EACDA;
+  --accent-light: #E2E2B6;
+  --accent-dark: #03346E;
+  --white: #FFFFFF;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #E2E2B6;
+  --text-primary: #021526;
+  --text-secondary: #FFFFFF;
+  --text-muted: #03346E;
+  --border-color: #E2E2B6;
   
   /* Z-index */
   --z-dropdown: 1000;
@@ -235,7 +236,7 @@ p {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.3);
+  box-shadow: 0 8px 25px rgba(102, 252, 241, 0.3);
 }
 
 .button:active {
@@ -249,13 +250,13 @@ p {
 }
 
 .button-outline::before {
-  background: linear-gradient(90deg, transparent, rgba(233, 69, 96, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(102, 252, 241, 0.1), transparent);
 }
 
 .button-outline:hover {
   background: var(--accent);
   color: var(--white);
-  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.2);
+  box-shadow: 0 8px 25px rgba(102, 252, 241, 0.2);
 }
 
 /* Container */

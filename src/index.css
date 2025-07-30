@@ -1,47 +1,47 @@
 /* === Modern Design System === */
 :root {
-  /* Professional Color Palette */
-  --primary: #141619;
-  --primary-light: #2C2E3A;
-  --primary-dark: #0B0D0F;
-  --secondary: #0A21C0;
-  --secondary-light: #1E3DCF;
-  --secondary-dark: #061A99;
+  /* New Color Palette */
+  --primary: #03346E;
+  --primary-light: #6EACDA;
+  --primary-dark: #021526;
+  --secondary: #6EACDA;
+  --secondary-light: #E2E2B6;
+  --secondary-dark: #03346E;
   
   /* Accent Colors */
-  --accent: #E94560;
-  --accent-light: #F16D7E;
-  --accent-dark: #D1354B;
+  --accent: #6EACDA;
+  --accent-light: #E2E2B6;
+  --accent-dark: #03346E;
   
   /* Status Colors */
-  --success: #27ae60;
-  --warning: #f39c12;
-  --danger: #e74c3c;
-  --info: #3498db;
+  --success: #6EACDA;
+  --warning: #E2E2B6;
+  --danger: #021526;
+  --info: #6EACDA;
 
   /* Neutral Colors */
   --white: #FFFFFF;
-  --black: #000000;
-  --gray-50: #FAFAFA;
-  --gray-100: #F5F5F5;
-  --gray-200: #E5E5E5;
-  --gray-300: #D4D4D4;
-  --gray-400: #B3B4BD;
-  --gray-500: #737373;
-  --gray-600: #525252;
-  --gray-700: #404040;
-  --gray-800: #2C2E3A;
-  --gray-900: #141619;
+  --black: #021526;
+  --gray-50: #F8F9FA;
+  --gray-100: #E9ECEF;
+  --gray-200: #DEE2E6;
+  --gray-300: #CED4DA;
+  --gray-400: #E2E2B6;
+  --gray-500: #6EACDA;
+  --gray-600: #03346E;
+  --gray-700: #03346E;
+  --gray-800: #03346E;
+  --gray-900: #021526;
 
   /* Semantic Colors */
-  --text-primary: #141619;
-  --text-secondary: #525252;
-  --text-muted: #B3B4BD;
+  --text-primary: #021526;
+  --text-secondary: #FFFFFF;
+  --text-muted: #03346E;
   --text-inverse: #FFFFFF;
   --bg-primary: #FFFFFF;
-  --bg-secondary: #FAFAFA;
-  --bg-dark: #141619;
-  --border-color: #E5E5E5;
+  --bg-secondary: #E2E2B6;
+  --bg-dark: #021526;
+  --border-color: #E2E2B6;
 
   /* Consistent Spacing Scale */
   --space-1: 0.25rem;

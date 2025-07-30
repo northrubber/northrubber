@@ -49,7 +49,7 @@
 
 .button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+  box-shadow: 0 0 0 3px rgba(102, 252, 241, 0.2);
 }
 
 .button:active {
