@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.232aa33d.css",
-    "main.js": "/static/js/main.f8aec546.js",
+    "main.css": "/static/css/main.b9adbdd5.css",
+    "main.js": "/static/js/main.3e1836d1.js",
     "static/media/industrial-rubber-sheet.jpg": "/static/media/industrial-rubber-sheet.3a9ef8fc6657821f1741.jpg",
     "static/media/rubber-flooring.jpg": "/static/media/rubber-flooring.5734dacf78a2cd6994fa.jpg",
+    "static/media/products-img2.jpg": "/static/media/products-img2.172da47445ca8efa17eb.jpg",
     "static/media/anti-skid-flooring.jpg": "/static/media/anti-skid-flooring.cb01fd60025217456276.jpg",
     "static/media/products-img5.jpg": "/static/media/products-img5.0d4d7fc3d41cdf2f6372.jpg",
     "static/media/1.jpg": "/static/media/1.c9018cad5daaddc61c0a.jpg",
     "static/media/transit-flooring.jpg": "/static/media/transit-flooring.98f6cdde42185ec01a53.jpg",
     "static/media/4.jpg": "/static/media/4.c77babac85d721fbd189.jpg",
-    "static/media/nr-sbr-sheeting.png": "/static/media/nr-sbr-sheeting.a60112be697c4899cd89.png",
+    "static/media/products-img1.jpg": "/static/media/products-img1.08274febdb93606ffb26.jpg",
     "static/media/2.jpg": "/static/media/2.cfc05cfa1d335a0492bb.jpg",
     "static/media/wear-resistant-sheet.jpg": "/static/media/wear-resistant-sheet.1b30571bb8581966998a.jpg",
     "static/media/3.jpg": "/static/media/3.c3b116e3a3c70e8bfed9.jpg",
-    "static/media/products-img2.jpg": "/static/media/products-img2.f4d08d7546f5b50ba59b.jpg",
-    "static/media/products-img1.jpg": "/static/media/products-img1.5b9e27214ab408643699.jpg",
+    "static/media/nr-sbr-sheeting.png": "/static/media/nr-sbr-sheeting.283b21b85c7a43bf9794.png",
     "static/media/about-intro-pic.jpg": "/static/media/about-intro-pic.cce1dd75eabc3debe3da.jpg",
     "static/media/products-img6.jpg": "/static/media/products-img6.0220ee0f4b7679fbc1e4.jpg",
     "static/media/products-img4.jpg": "/static/media/products-img4.ae60fecd9d4a874a7231.jpg",
@@ -31,11 +31,11 @@
     "index.html": "/index.html",
     "static/media/c2.webp": "/static/media/c2.227e8dcd58aebc0eb228.webp",
     "static/media/fras.webp": "/static/media/fras.2adf737832ca903cc622.webp",
-    "main.232aa33d.css.map": "/static/css/main.232aa33d.css.map",
-    "main.f8aec546.js.map": "/static/js/main.f8aec546.js.map"
+    "main.b9adbdd5.css.map": "/static/css/main.b9adbdd5.css.map",
+    "main.3e1836d1.js.map": "/static/js/main.3e1836d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.232aa33d.css",
-    "static/js/main.f8aec546.js"
+    "static/css/main.b9adbdd5.css",
+    "static/js/main.3e1836d1.js"
   ]
 }
