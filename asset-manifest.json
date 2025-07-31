@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7127c6c8.css",
-    "main.js": "/static/js/main.c3429686.js",
+    "main.css": "/static/css/main.35b5c1aa.css",
+    "main.js": "/static/js/main.037ea0c0.js",
     "static/media/about-image.png": "/static/media/about-image.078b6b39865c174310a8.png",
     "static/media/about-intro-pic.jpg": "/static/media/about-intro-pic.836de3cd61b873f5915e.jpg",
     "static/media/1.jpg": "/static/media/1.557739da10a3d96c300f.jpg",
@@ -9,6 +9,7 @@
     "static/media/products-img5.jpg": "/static/media/products-img5.3be271c57105d4695a93.jpg",
     "static/media/products-img2.jpg": "/static/media/products-img2.172da47445ca8efa17eb.jpg",
     "static/media/4.jpg": "/static/media/4.c77babac85d721fbd189.jpg",
+    "static/media/logo.png": "/static/media/logo.67225fc79024c3a1a130.png",
     "static/media/products-img4.jpg": "/static/media/products-img4.d8fa7cc4fc9944493434.jpg",
     "static/media/parralax-hero.jpg": "/static/media/parralax-hero.6543ac85feca2ba8ed4a.jpg",
     "static/media/3.jpg": "/static/media/3.c3b116e3a3c70e8bfed9.jpg",
@@ -21,11 +22,11 @@
     "index.html": "/index.html",
     "static/media/c2.webp": "/static/media/c2.227e8dcd58aebc0eb228.webp",
     "static/media/fras.webp": "/static/media/fras.2adf737832ca903cc622.webp",
-    "main.7127c6c8.css.map": "/static/css/main.7127c6c8.css.map",
-    "main.c3429686.js.map": "/static/js/main.c3429686.js.map"
+    "main.35b5c1aa.css.map": "/static/css/main.35b5c1aa.css.map",
+    "main.037ea0c0.js.map": "/static/js/main.037ea0c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.7127c6c8.css",
-    "static/js/main.c3429686.js"
+    "static/css/main.35b5c1aa.css",
+    "static/js/main.037ea0c0.js"
   ]
 }
