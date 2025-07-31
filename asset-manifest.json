@@ -1,28 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9adbdd5.css",
-    "main.js": "/static/js/main.3e1836d1.js",
-    "static/media/industrial-rubber-sheet.jpg": "/static/media/industrial-rubber-sheet.3a9ef8fc6657821f1741.jpg",
-    "static/media/rubber-flooring.jpg": "/static/media/rubber-flooring.5734dacf78a2cd6994fa.jpg",
+    "main.css": "/static/css/main.4cc81ece.css",
+    "main.js": "/static/js/main.38808f3f.js",
+    "static/media/about-image.png": "/static/media/about-image.078b6b39865c174310a8.png",
+    "static/media/about-intro-pic.jpg": "/static/media/about-intro-pic.836de3cd61b873f5915e.jpg",
+    "static/media/1.jpg": "/static/media/1.557739da10a3d96c300f.jpg",
+    "static/media/products-img1.jpg": "/static/media/products-img1.dea07e0124f42dd0f312.jpg",
+    "static/media/products-img5.jpg": "/static/media/products-img5.3be271c57105d4695a93.jpg",
     "static/media/products-img2.jpg": "/static/media/products-img2.172da47445ca8efa17eb.jpg",
-    "static/media/anti-skid-flooring.jpg": "/static/media/anti-skid-flooring.cb01fd60025217456276.jpg",
-    "static/media/products-img5.jpg": "/static/media/products-img5.0d4d7fc3d41cdf2f6372.jpg",
-    "static/media/1.jpg": "/static/media/1.c9018cad5daaddc61c0a.jpg",
-    "static/media/transit-flooring.jpg": "/static/media/transit-flooring.98f6cdde42185ec01a53.jpg",
     "static/media/4.jpg": "/static/media/4.c77babac85d721fbd189.jpg",
-    "static/media/products-img1.jpg": "/static/media/products-img1.08274febdb93606ffb26.jpg",
-    "static/media/2.jpg": "/static/media/2.cfc05cfa1d335a0492bb.jpg",
-    "static/media/wear-resistant-sheet.jpg": "/static/media/wear-resistant-sheet.1b30571bb8581966998a.jpg",
+    "static/media/products-img4.jpg": "/static/media/products-img4.d8fa7cc4fc9944493434.jpg",
+    "static/media/parralax-hero.jpg": "/static/media/parralax-hero.6543ac85feca2ba8ed4a.jpg",
     "static/media/3.jpg": "/static/media/3.c3b116e3a3c70e8bfed9.jpg",
     "static/media/nr-sbr-sheeting.png": "/static/media/nr-sbr-sheeting.283b21b85c7a43bf9794.png",
-    "static/media/about-intro-pic.jpg": "/static/media/about-intro-pic.cce1dd75eabc3debe3da.jpg",
-    "static/media/products-img6.jpg": "/static/media/products-img6.0220ee0f4b7679fbc1e4.jpg",
-    "static/media/products-img4.jpg": "/static/media/products-img4.ae60fecd9d4a874a7231.jpg",
-    "static/media/products-img8.jpg": "/static/media/products-img8.17461bd1aacf79727e7a.jpg",
-    "static/media/products-img9.jpg": "/static/media/products-img9.faaf7d8734a5b0bbeeb5.jpg",
-    "static/media/coated-fabric.jpg": "/static/media/coated-fabric.92ab8b08d9eb6dee8cd6.jpg",
-    "static/media/products-img7.jpg": "/static/media/products-img7.29fe2cd772c63d1c4334.jpg",
-    "static/media/products-img3.jpg": "/static/media/products-img3.bc983be5058773096aa3.jpg",
     "static/media/c5.webp": "/static/media/c5.06fd841b8b7a5121667e.webp",
     "static/media/c4.webp": "/static/media/c4.2150217c26d6c7e4e8d4.webp",
     "static/media/c3.webp": "/static/media/c3.b5f7c314f4b7a620f4c7.webp",
@@ -31,11 +21,11 @@
     "index.html": "/index.html",
     "static/media/c2.webp": "/static/media/c2.227e8dcd58aebc0eb228.webp",
     "static/media/fras.webp": "/static/media/fras.2adf737832ca903cc622.webp",
-    "main.b9adbdd5.css.map": "/static/css/main.b9adbdd5.css.map",
-    "main.3e1836d1.js.map": "/static/js/main.3e1836d1.js.map"
+    "main.4cc81ece.css.map": "/static/css/main.4cc81ece.css.map",
+    "main.38808f3f.js.map": "/static/js/main.38808f3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9adbdd5.css",
-    "static/js/main.3e1836d1.js"
+    "static/css/main.4cc81ece.css",
+    "static/js/main.38808f3f.js"
   ]
 }
