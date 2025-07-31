@@ -27,22 +27,31 @@ function Header() {
   const calculateDropdownPosition = useCallback(() => {
     if (isMobile || !headerRef.current || !dropdownRef.current) return;
 
-    const headerRect = headerRef.current.getBoundingClientRect();
-    const dropdownRect = dropdownRef.current.getBoundingClientRect();
+    const dropdownElement = dropdownRef.current;
+    const navItem = dropdownElement.closest('.nav-item');
+    if (!navItem) return;
+    
+    const navItemRect = navItem.getBoundingClientRect();
+    const dropdownWidth = 800; // min(85vw, 800px) from CSS
     const viewportWidth = window.innerWidth;
     
-    let align = 'right';
+    // Calculate the center position of the dropdown relative to the nav item
+    const dropdownCenterX = navItemRect.left + (navItemRect.width / 2);
+    const dropdownLeft = dropdownCenterX - (dropdownWidth / 2);
+    const dropdownRight = dropdownCenterX + (dropdownWidth / 2);
+    
+    let align = 'center';
     let offset = 0;
 
-    // If dropdown would overflow right side
-    if (headerRect.right + dropdownRect.width > viewportWidth - 20) {
+    // Check if dropdown would overflow the right side
+    if (dropdownRight > viewportWidth - 20) {
       align = 'right';
-      offset = Math.min(20, viewportWidth - headerRect.right);
+      offset = 0;
     }
-    // If dropdown would overflow left side
-    else if (headerRect.left - dropdownRect.width < 20) {
+    // Check if dropdown would overflow the left side
+    else if (dropdownLeft < 20) {
       align = 'left';
-      offset = Math.max(20, headerRect.left);
+      offset = 0;
     }
 
     setDropdownPosition({ align, offset });
@@ -387,10 +396,7 @@ function Header() {
                 </button>
                 <div 
                   ref={dropdownRef}
-                  className={`dropdown-menu products-dropdown ${dropdownPosition.align}`}
-                  style={{
-                    '--dropdown-offset': `${dropdownPosition.offset}px`
-                  }}
+                  className={`dropdown-menu products-dropdown ${dropdownPosition.align === 'center' ? '' : dropdownPosition.align}`}
                   onMouseEnter={() => {
                     if (dropdownTimeoutRef.current) {
                       clearTimeout(dropdownTimeoutRef.current);
