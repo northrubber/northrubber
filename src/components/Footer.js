@@ -123,10 +123,10 @@ const Footer = () => {
       </div>
       <div className="footer-address">
         <div className="address-info">
-          <p>144, Free Press House, 215 Nariman Point, Mumbai 400 021.</p>
+          <p>84 grassbourne ave, Kitchener, N2R 0S5</p>
           <div className="contact-row">
             <p>Email: info@northrubber.com</p>
-            <p>Phone: +91 22 22885888</p>
+            <p>Phone: +1 (514) 549-8173</p>
           </div>
         </div>
         <div className="copyright-info">

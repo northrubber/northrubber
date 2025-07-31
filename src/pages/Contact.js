@@ -107,7 +107,7 @@ function Contact() {
               </div>
               <div className="info-content">
                 <h3>Our Location</h3>
-                <p>Toronto, Canada</p>
+                <p>84 grassbourne ave, Kitchener, N2R 0S5</p>
               </div>
             </div>
             
@@ -117,7 +117,7 @@ function Contact() {
               </div>
               <div className="info-content">
                 <h3>Phone Number</h3>
-                <p>+1-123-12345678</p>
+                <p>+1 (514) 549-8173</p>
               </div>
             </div>
             
@@ -222,13 +222,13 @@ function Contact() {
       
       <section className="map-section">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6117592372534!2d-79.3786784!3d43.6532096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1689945412050!5m2!1sen!2sus" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.9376543210987!2d-80.4925573!3d43.4642578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf48c03ee5105%3A0x5037b28c7231b70!2s84%20Grassbourne%20Ave%2C%20Kitchener%2C%20ON%20N2R%200S5%2C%20Canada!5e0!3m2!1sen!2sus!4v1689945412050!5m2!1sen!2sus" 
           width="100%" 
           height="450" 
           style={{ border: 0 }} 
           allowFullScreen="" 
           loading="lazy"
-          title="Zenith Rubber Location"
+          title="North Rubber Location"
         ></iframe>
       </section>
     </div>
