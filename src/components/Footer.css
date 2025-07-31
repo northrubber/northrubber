@@ -55,6 +55,9 @@
   color: var(--text-inverse);
   opacity: 0.8;
   transition: all var(--transition-fast);
+}
+
+.footer-section ul li:has(a) {
   cursor: pointer;
 }
 
@@ -68,7 +71,7 @@
   width: 100%;
 }
 
-.footer-section ul li:hover,
+.footer-section ul li:has(a):hover,
 .footer-section ul li a:hover {
   color: var(--accent-light);
   opacity: 1;

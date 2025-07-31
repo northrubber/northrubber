@@ -334,6 +334,20 @@
   outline: none;
 }
 
+.product-link.disabled {
+  cursor: default;
+}
+
+.product-link.disabled:hover,
+.product-link.disabled:focus {
+  background: var(--white);
+  color: var(--text-primary);
+  transform: none;
+  border-color: var(--border-color);
+  box-shadow: none;
+  cursor: default;
+}
+
 /* Responsive Design */
 
 /* Large Desktop */
@@ -627,6 +641,55 @@
 }
 
 /* Print styles */
+/* Navigation subcategories styles */
+.subcategories {
+  padding: var(--space-4);
+}
+
+.subcategories h4 {
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-2);
+}
+
+.subcategories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subcategories ul li {
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.subcategories ul li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.subcategories ul li a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+.subcategories ul li span {
+  color: var(--text-secondary);
+  cursor: default;
+}
+
+.subcategories ul li:has(span):hover {
+  color: var(--text-secondary);
+  transform: none;
+}
+
 @media print {
   .header {
     position: static;

@@ -91,10 +91,10 @@ const Navigation = () => {
                 <h4>Rubber Sheets By Material</h4>
                 <ul>
                   <li><Link to="/products/natural-rubber-sbr">Natural Rubber/SBR</Link></li>
-                  <li><Link to="/products">EPDM Rubber</Link></li>
-                  <li><Link to="/products">Neoprene Rubber</Link></li>
-                  <li><Link to="/products">Nitrile Rubber</Link></li>
-                  <li><Link to="/products">Silicone Rubber</Link></li>
+                  <li><span>EPDM Rubber</span></li>
+                  <li><span>Neoprene Rubber</span></li>
+                  <li><span>Nitrile Rubber</span></li>
+                  <li><span>Silicone Rubber</span></li>
                 </ul>
               </div>
             </div>

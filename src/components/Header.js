@@ -427,17 +427,35 @@ function Header() {
                       <h3>{productCategories[activeCategory]?.title}</h3>
                     </div>
                     <div className="products-list" role="menu">
-                      {productCategories[activeCategory]?.items.map((item, index) => (
-                        <Link
-                          key={index}
-                          to={item.path}
-                          onClick={closeAllMenus}
-                          className="product-link"
-                          role="menuitem"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
+                      {productCategories[activeCategory]?.items.map((item, index) => {
+                        // Only make "Natural Rubber / SBR Sheeting" clickable
+                        const isClickable = item.name === 'Natural Rubber / SBR Sheeting';
+                        
+                        if (isClickable) {
+                          return (
+                            <Link
+                              key={index}
+                              to={item.path}
+                              onClick={closeAllMenus}
+                              className="product-link"
+                              role="menuitem"
+                            >
+                              {item.name}
+                            </Link>
+                          );
+                        } else {
+                          return (
+                            <span
+                              key={index}
+                              className="product-link disabled"
+                              role="menuitem"
+                              aria-disabled="true"
+                            >
+                              {item.name}
+                            </span>
+                          );
+                        }
+                      })}
                     </div>
                   </div>
                 </div>
