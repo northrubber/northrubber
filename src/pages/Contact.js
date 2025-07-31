@@ -9,8 +9,7 @@ function Contact() {
     email: '',
     phone: '',
     company: '',
-    message: '',
-    product: 'Industrial Rubber Sheets'
+    message: ''
   });
   
   const [formStatus, setFormStatus] = useState({
@@ -42,8 +41,7 @@ function Contact() {
       email: '',
       phone: '',
       company: '',
-      message: '',
-      product: 'Industrial Rubber Sheets'
+      message: ''
     });
     
     // After 5 seconds, reset the form status
@@ -60,8 +58,8 @@ function Contact() {
     <div className="contact-page">
       <Helmet>
         <meta name="description" content="Contact North Rubber for high-quality industrial rubber solutions. Request quotes, information or technical assistance." />
-        <meta name="keywords" content="rubber manufacturer contact, industrial rubber contact, rubber products quote, rubber manufacturing inquiry" />
-        <link rel="canonical" href="https://zenithindustry.github.io/zenithindustries/contact" />
+        <meta name="keywords" content="rubber seller contact, natural rubber contact, SBR sheets quote, rubber supplier Canada inquiry" />
+        <link rel="canonical" href="https://northrubber.com/contact" />
       </Helmet>
       
       <style jsx>{`
@@ -99,10 +97,10 @@ function Contact() {
           >
             <h2>Get In Touch</h2>
             <p>
-              Have questions about our products or need a custom solution for your industry? 
-              Our team is ready to assist you with technical information, pricing details, and tailored recommendations.
+              Have questions about our products or need a custom solution for your industry?
+            <br></br>  
+              Our team is ready to assist you with technical information, pricing details, and recommendations.
             </p>
-            
             <div className="info-item">
               <div className="info-icon">
                 <i className="fas fa-map-marker-alt"></i>
@@ -119,8 +117,7 @@ function Contact() {
               </div>
               <div className="info-content">
                 <h3>Phone Number</h3>
-                <p>+91-22-12345678</p>
-                <p>+91-22-87654321</p>
+                <p>+1-123-12345678</p>
               </div>
             </div>
             
@@ -130,19 +127,7 @@ function Contact() {
               </div>
               <div className="info-content">
                 <h3>Email Address</h3>
-                <p>info@zenithindustries.ca</p>
-                <p>sales@zenithindustries.ca</p>
-              </div>
-            </div>
-            
-            <div className="info-item">
-              <div className="info-icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <div className="info-content">
-                <h3>Working Hours</h3>
-                <p>Monday-Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                <p>sales@northrubber.com</p>
               </div>
             </div>
           </motion.div>
@@ -207,24 +192,6 @@ function Contact() {
                     value={formData.company}
                     onChange={handleChange}
                   />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="product">Product Interest</label>
-                  <select
-                    id="product"
-                    name="product"
-                    value={formData.product}
-                    onChange={handleChange}
-                  >
-                    <option value="Industrial Rubber Sheets">Industrial Rubber Sheets</option>
-                    <option value="Anti-Skid Rubber Flooring">Anti-Skid Rubber Flooring</option>
-                    <option value="Rubber Conveyor Belts">Rubber Conveyor Belts</option>
-                    <option value="EPDM Rubber Membranes">EPDM Rubber Membranes</option>
-                    <option value="Custom Rubber Gaskets">Custom Rubber Gaskets</option>
-                    <option value="Rubber Extrusions">Rubber Extrusions</option>
-                    <option value="Other">Other</option>
-                  </select>
                 </div>
                 
                 <div className="form-group">

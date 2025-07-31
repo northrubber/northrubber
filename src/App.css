@@ -1,3 +1,6 @@
+/* Import Apple-inspired Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 /* Global Reset and Base Styles */
 *,
 *::before,
@@ -16,84 +19,13 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'WF Visual Sans Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', Inter, system-ui, sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
   background: var(--bg-primary);
   overflow-x: hidden;
-}
-
-/* CSS Custom Properties */
-:root {
-  /* Colors */
-  --primary: #03346E;
-  --primary-light: #6EACDA;
-  --primary-dark: #021526;
-  --secondary: #6EACDA;
-  --accent: #6EACDA;
-  --accent-light: #E2E2B6;
-  --accent-dark: #03346E;
-  --white: #FFFFFF;
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #E2E2B6;
-  --text-primary: #021526;
-  --text-secondary: #FFFFFF;
-  --text-muted: #03346E;
-  --border-color: #E2E2B6;
-  
-  /* Z-index */
-  --z-dropdown: 1000;
-  --z-fixed: 1010;
-  --z-modal: 1020;
-  
-  /* Spacing */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-  
-  /* Typography */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-  --text-6xl: 3.75rem;
-  
-  /* Line Heights */
-  --leading-tight: 1.25;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
-  --radius-full: 9999px;
-  
-  /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 /* App-specific styles */
@@ -117,18 +49,38 @@ body {
   padding-top: 80px; /* Account for fixed header */
 }
 
-/* Page headers */
+/* Apple-Style Page Headers */
 .page-header {
   padding: var(--space-20) 0 var(--space-16);
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: var(--white);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
 }
 
 .page-header h1 {
-  font-size: var(--text-4xl);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
   margin-bottom: var(--space-4);
   color: var(--white);
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .page-header p {
@@ -136,9 +88,10 @@ body {
   color: rgba(255, 255, 255, 0.9);
   max-width: 600px;
   margin: 0 auto;
+  line-height: var(--leading-relaxed);
 }
 
-/* Section styles */
+/* Apple-Style Section Layouts */
 .section {
   padding: var(--space-20) 0;
 }
@@ -149,10 +102,13 @@ body {
 }
 
 .section-header h2 {
-  font-size: var(--text-3xl);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
   margin-bottom: var(--space-4);
   position: relative;
   display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
 }
 
 .section-header h2::after {
@@ -167,8 +123,17 @@ body {
   border-radius: var(--radius-full);
 }
 
-/* Enhanced Typography */
+.section-header p {
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+/* Apple-Style Typography */
 h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, system-ui, sans-serif;
   font-weight: 700;
   line-height: var(--leading-tight);
   letter-spacing: -0.025em;
@@ -177,12 +142,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: var(--text-5xl);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
   font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: var(--text-4xl);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
   font-weight: 700;
 }
 
@@ -195,28 +161,33 @@ p {
   margin-bottom: var(--space-4);
   line-height: var(--leading-relaxed);
   color: var(--text-secondary);
+  font-weight: 400;
 }
 
-/* Enhanced Button Styles */
+/* Apple-Style Enhanced Button System */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-3) var(--space-8);
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background: var(--accent);
   color: var(--white);
   border: none;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   font-weight: 600;
   font-size: var(--text-base);
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-family: inherit;
+  letter-spacing: -0.01em;
   cursor: pointer;
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
   min-height: 48px;
+  white-space: nowrap;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .button::before {
@@ -226,7 +197,7 @@ p {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left var(--transition-slow);
 }
 
@@ -235,8 +206,9 @@ p {
 }
 
 .button:hover {
+  background: var(--accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 252, 241, 0.3);
+  box-shadow: var(--shadow-xl);
 }
 
 .button:active {
@@ -245,24 +217,27 @@ p {
 
 .button-outline {
   background: transparent;
-  border: 2px solid var(--accent);
   color: var(--accent);
+  border: 2px solid var(--accent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .button-outline::before {
-  background: linear-gradient(90deg, transparent, rgba(102, 252, 241, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 122, 255, 0.1), transparent);
 }
 
 .button-outline:hover {
   background: var(--accent);
   color: var(--white);
-  box-shadow: 0 8px 25px rgba(102, 252, 241, 0.2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
-/* Container */
+/* Apple-Style Container System */
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-6);
 }

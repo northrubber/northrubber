@@ -57,7 +57,6 @@ function NaturalRubberSBR() {
                   <th>Tensile Strength<br/>Kg/cm²(min)</th>
                   <th>Elongation %<br/>(min)</th>
                   <th>Finish Type</th>
-                  <th>TDS</th>
                 </tr>
               </thead>
               <tbody>
@@ -69,7 +68,6 @@ function NaturalRubberSBR() {
                   <td>50</td>
                   <td>250</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                 <tr>
                   <td>NR/SBR 65135</td>
@@ -79,27 +77,24 @@ function NaturalRubberSBR() {
                   <td>50</td>
                   <td>250</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                 <tr>
-                  <td>AD70148</td>
+                  <td>NR/SBR 70148</td>
                   <td>Black</td>
                   <td>1.5</td>
                   <td>70</td>
                   <td>35</td>
                   <td>200</td>
                   <td>Smooth/Matt</td>
-                  <td>-</td>
                 </tr>
                 <tr>
-                  <td>SX70150</td>
+                  <td>NR/SBR 70150</td>
                   <td>Black</td>
                   <td>1.5</td>
                   <td>70</td>
                   <td>30</td>
                   <td>200</td>
                   <td>Smooth/Fabric</td>
-                  <td>-</td>
                 </tr>
                 <tr>
                   <td>NR/SBR 70155</td>
@@ -109,7 +104,6 @@ function NaturalRubberSBR() {
                   <td>30</td>
                   <td>200</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                  <tr>
                   <td>NR/SBR 70160</td>
@@ -119,7 +113,6 @@ function NaturalRubberSBR() {
                   <td>30</td>
                   <td>200</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                  <tr>
                   <td>NR/SBR 70161</td>
@@ -129,7 +122,6 @@ function NaturalRubberSBR() {
                   <td>30</td>
                   <td>200</td>
                   <td>with 1 ply fabric insertion</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                  <tr>
                   <td>NR/SBR 70162</td>
@@ -139,7 +131,6 @@ function NaturalRubberSBR() {
                   <td>30</td>
                   <td>200</td>
                   <td>with 2 ply Fabric Insertion</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                  <tr>
                   <td>NR/SBR 70190</td>
@@ -149,7 +140,6 @@ function NaturalRubberSBR() {
                   <td>15</td>
                   <td>130%</td>
                   <td>Fabric/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                  <tr>
                   <td>NR/SBR 75210</td>
@@ -159,7 +149,6 @@ function NaturalRubberSBR() {
                   <td>15</td>
                   <td>150</td>
                   <td>Fabric/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
               </tbody>
             </table>
@@ -180,7 +169,6 @@ function NaturalRubberSBR() {
                   <th>Tensile Strength<br/>Kg/cm²(min)</th>
                   <th>Elongation %<br/>(min)</th>
                   <th>Finish Type</th>
-                  <th>TDS</th>
                 </tr>
               </thead>
               <tbody>
@@ -192,7 +180,6 @@ function NaturalRubberSBR() {
                   <td>50</td>
                   <td>250</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
                 <tr>
                   <td>NR/SBR 55132</td>
@@ -202,7 +189,6 @@ function NaturalRubberSBR() {
                   <td>50</td>
                   <td>250</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
                 </tr>
               </tbody>
             </table>
@@ -222,7 +208,6 @@ function NaturalRubberSBR() {
                   <th>Tensile Strength Kg/cm2(min)</th>
                   <th>Elongation % (min)</th>
                   <th>Finish Type</th>
-                  <th>TDS</th>
                 </tr>
               </thead>
               <tbody>
@@ -234,8 +219,7 @@ function NaturalRubberSBR() {
                   <td>100</td>
                   <td>450%</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
-                </tr>
+                  </tr>
                 <tr>
                   <td>NR/SBR 65125</td>
                   <td>Black</td>
@@ -244,8 +228,7 @@ function NaturalRubberSBR() {
                   <td>100</td>
                   <td>350</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
-                </tr>
+                  </tr>
               </tbody>
             </table>
           </div>
@@ -264,8 +247,7 @@ function NaturalRubberSBR() {
                   <th>Tensile Strength Kg/cm2(min)</th>
                   <th>Elongation % (min)</th>
                   <th>Finish Type</th>
-                  <th>TDS</th>
-                </tr>
+                  </tr>
               </thead>
               <tbody>
                 <tr>
@@ -276,8 +258,7 @@ function NaturalRubberSBR() {
                   <td>165</td>
                   <td>600</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
-                </tr>
+                  </tr>
                 <tr>
                   <td>NR/SBR 60110</td>
                   <td>Black</td>
@@ -286,8 +267,7 @@ function NaturalRubberSBR() {
                   <td>150</td>
                   <td>500</td>
                   <td>Smooth/Fabric</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
-                </tr>
+                  </tr>
               </tbody>
             </table>
           </div>
@@ -306,20 +286,18 @@ function NaturalRubberSBR() {
                   <th>Tensile Strength Kg/cm2(min)</th>
                   <th>Elongation % (min)</th>
                   <th>Polymer content</th>
-                  <th>TDS</th>
-                </tr>
+                  </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>SB 65150 FG</td>
+                  <td>NR/SBR 65150 FG</td>
                   <td>Offwhite</td>
                   <td>1.50</td>
                   <td>65</td>
                   <td>40</td>
                   <td>250</td>
                   <td>NR/SBR</td>
-                  <td><button className="tds-btn" title="View Technical Data Sheet">TDS</button></td>
-                </tr>
+                  </tr>
               </tbody>
             </table>
           </div>

@@ -59,6 +59,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--space-6);
+  align-items: stretch;
 }
 
 .contact-info {
@@ -66,7 +67,9 @@
   padding: var(--space-12);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-lg);
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .contact-info h2 {
@@ -101,12 +104,13 @@
 .info-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: var(--space-8);
-  padding: var(--space-6);
+  margin-bottom: var(--space-10);
+  padding: var(--space-8);
   background: var(--white);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
+  flex: 1;
 }
 
 .info-item:hover {
@@ -148,7 +152,9 @@
   padding: var(--space-12);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .contact-form-container h2 {

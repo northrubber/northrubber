@@ -8,9 +8,14 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import NaturalRubberSBR from './pages/NaturalRubberSBR';
+import useAppleDesignIntegration from './hooks/useAppleDesignIntegration';
+import './utils/appleDesignSystem.js';
 import './App.css';
 
 function App() {
+  // Initialize Apple-inspired design integration
+  useAppleDesignIntegration();
+
   return (
     <HelmetProvider>
       <div className="app">

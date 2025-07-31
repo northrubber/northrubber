@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './Home.css';
+import '../utils/animations.js';
 import slide1 from '../assets/images/1.jpg';
 import slide2 from '../assets/images/2.jpg';
 import slide3 from '../assets/images/3.jpg';
@@ -109,11 +110,11 @@ function Home() {
   return (
     <div className="home">
       <Helmet>
-        <meta name="description" content="North Rubber - Innovative manufacturer specializing in premium natural rubber sheets and industrial rubber products. Quality solutions for modern industries." />
-        <meta name="keywords" content="industrial rubber, rubber sheets, rubber flooring, rubber products, manufacturing, zenith industries" />
+        <meta name="description" content="North Rubber - Seller of premium Natural Rubber/SBR Sheets. Quality rubber solutions for industries." />
+        <meta name="keywords" content="natural rubber, SBR sheets, rubber sheets, rubber products, Canada, Canadian supplier" />
         <link rel="canonical" href="https://zenithindustries.ca" />
-        <meta property="og:title" content="North Rubber - Premium Industrial Rubber Products" />
-        <meta property="og:description" content="Innovative rubber solutions from a modern manufacturer focused on quality and customer satisfaction. Trusted emerging supplier." />
+        <meta property="og:title" content="North Rubber - Natural Rubber & SBR Sheets Canada" />
+        <meta property="og:description" content="Sellers of Natural Rubber and SBR Sheets serving industries with quality solutions." />
         <meta property="og:type" content="website" />
       </Helmet>
       
@@ -142,10 +143,10 @@ function Home() {
             </div>
           </div>
           <div className={`slide ${currentSlide === 3 ? 'active' : ''}`}>
-            <img src={slide4} alt="Zenith Industries Manufacturing Excellence" />
+            <img src={slide4} alt="North Rubber Excellence" />
             <div className="slide-caption">
-              <h2 className="slide-caption-title">Manufacturing Excellence</h2>
-              <p className="slide-caption-text">Innovative company bringing fresh perspectives to industrial rubber solutions</p>
+              <h2 className="slide-caption-title">Natural Rubber / SBR Sheets</h2>
+              <p className="slide-caption-text">Bringing quality Natural Rubber and SBR Sheet solutions</p>
             </div>
           </div>
           
@@ -159,26 +160,26 @@ function Home() {
       </section>
 
       {/* Company Introduction */}
-      <section className="company-intro">
-        <div className="container">
-          <div className="section-header">
-            <h2>Innovative Natural Rubber Solutions for Modern Industry</h2>
+        <section className="company-intro">
+          <div className="container">
+            <div className="section-header animate-on-scroll fade-in-on-scroll">
+          <h2>Natural Rubber & SBR Sheet Solutions</h2>
+            </div>
+            <div className="text-column animate-on-scroll slide-in-up">
+          <p>
+            North Rubber specializes in delivering exceptional Natural Rubber and SBR (Styrene-Butadiene Rubber) Sheets with precision engineering and quality excellence.
+          </p>
+          <p>We are dedicated to providing superior rubber solutions that meet demanding specifications and performance requirements. Our focus on Natural Rubber and SBR Sheets ensures specialized expertise, reliable supply chains, and competitive value for our clients.</p>
+            </div>
           </div>
-          <div className="text-column">
-            <p>
-              North Rubber Products LLC stands as an innovative manufacturer in industrial rubber manufacturing, delivering exceptional quality and cutting-edge solutions with a fresh approach to traditional industries.
-            </p>
-            <p>Our comprehensive portfolio includes wear-resistant rubber sheets, premium flooring systems, waterproofing membranes, coated fabrics, and precision inflatables. With state-of-the-art manufacturing facilities and rigorous quality standards, we serve diverse industries across 70+ countries, ensuring reliability and performance in every product.</p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Industry Solutions */}
+        {/* Industry Solutions */}
       <section className="industry-solutions">
         <div className="container">
-          <h2>Comprehensive Industrial Solutions</h2>
-          <p>Delivering specialized rubber products across industries with customized engineering solutions that meet the most demanding applications and environments.</p>
-          <div className="solutions-grid">
+          <h2 className="animate-on-scroll fade-in-on-scroll">Comprehensive Industrial Solutions</h2>
+          <p className="animate-on-scroll fade-in-on-scroll">Delivering specialized rubber products across industries with customized engineering solutions that meet the most demanding applications and environments.</p>
+          <div className="solutions-grid animate-on-scroll scale-in-on-scroll">
             {[
               { icon: 'fas fa-oil-can', text: 'Oil & Gas', desc: 'High-performance solutions' },
               { icon: 'fas fa-industry', text: 'Manufacturing', desc: 'Industrial applications' },
@@ -191,7 +192,7 @@ function Home() {
               { icon: 'fas fa-car', text: 'Automotive', desc: 'Performance parts' },
               { icon: 'fas fa-tools', text: 'General Industrial', desc: 'Versatile solutions' },
             ].map((solution, index) => (
-              <div key={index} className="solution-item">
+              <div key={index} className="solution-item apple-hover">
                 <i className={`${solution.icon} fa-2x`}></i>
                 <span>{solution.text}</span>
               </div>
@@ -203,8 +204,8 @@ function Home() {
       {/* Product Categories */}
       <section className="product-categories">
         <div className="container">
-          <h2>Comprehensive Product Portfolio</h2>
-          <div className="categories-container">
+          <h2 className="animate-on-scroll fade-in-on-scroll">Comprehensive Product Portfolio</h2>
+          <div className="categories-container animate-on-scroll slide-in-up">
             <div className="main-image">
               <img src={require('../assets/images/products-img1.jpg')} alt="Featured Product Category" id="category-image" />
             </div>
@@ -222,7 +223,7 @@ function Home() {
               ].map((category, index) => (
                 <div
                   key={index}
-                  className="category-block"
+                  className="category-block apple-hover"
                   onMouseEnter={() => {
                     const img = document.getElementById('category-image');
                     if (img) img.src = category.image;
@@ -247,16 +248,16 @@ function Home() {
       {/* Product Certifications */}
       <section className="certifications">
         <div className="container">
-          <h2>Quality Certifications & Standards</h2>
-          <p>Our commitment to excellence is validated through internationally recognized certifications and adherence to the highest quality standards in manufacturing.</p>
+          <h2>Quality Standards & Supplier Certifications</h2>
+          <p>Our commitment to excellence is validated through careful supplier selection and adherence to the highest quality standards in the rubber industry.</p>
           <div className="certifications-grid">
-            <img src={require('../assets/images/c1.webp')} alt="ISO Quality Certification" />
-            <img src={require('../assets/images/c2.webp')} alt="Environmental Management Certification" />
-            <img src={require('../assets/images/c3.webp')} alt="Safety Standards Certification" />
-            <img src={require('../assets/images/c4.webp')} alt="Industry Standards Certification" />
-            <img src={require('../assets/images/c5.webp')} alt="Export Quality Certification" />
-            <img src={require('../assets/images/c6.webp')} alt="Manufacturing Excellence Certification" />
-            <img src={require('../assets/images/fras.webp')} alt="FRAS Fire Resistant Certification" />
+            <img src={require('../assets/images/c1.webp')} alt="ISO Quality Standards" />
+            <img src={require('../assets/images/c2.webp')} alt="Environmental Management Standards" />
+            <img src={require('../assets/images/c3.webp')} alt="Safety Standards Compliance" />
+            <img src={require('../assets/images/c4.webp')} alt="Industry Standards Compliance" />
+            <img src={require('../assets/images/c5.webp')} alt="Quality Assurance Standards" />
+            <img src={require('../assets/images/c6.webp')} alt="Supplier Excellence Standards" />
+            <img src={require('../assets/images/fras.webp')} alt="FRAS Fire Resistant Standards" />
           </div>
         </div>
       </section>

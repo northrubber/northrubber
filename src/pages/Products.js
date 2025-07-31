@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import './Products.css';
@@ -139,12 +139,7 @@ function Products() {
         </div>
       </div>
 
-      <motion.section 
-        className="products-main"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
+      <section className="products-main">
         <div className="container">
           <div className="products-filters">
             {categories.map((category) => (
@@ -164,8 +159,9 @@ function Products() {
                 key={product.id}
                 className="product-card"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
                 whileHover={{ y: -8 }}
               >
                 <div className="product-image">
@@ -185,7 +181,7 @@ function Products() {
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 }
