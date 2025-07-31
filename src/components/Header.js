@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/images/logo.png';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -362,7 +363,7 @@ function Header() {
         <div className="header-content">
           <div className="logo">
             <Link to="/" onClick={closeAllMenus}>
-              <h1>North Rubber</h1>
+              <img src={logo} alt="North Rubber" className="logo-image" />
             </Link>
           </div>
           

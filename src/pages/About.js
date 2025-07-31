@@ -10,7 +10,7 @@ function About() {
       <Helmet>
         <meta name="description" content="Learn about North Rubber Products, a new seller of Natural Rubber and SBR Sheets serving the market." />
         <meta name="keywords" content="natural rubber seller, SBR sheets, Canada, rubber supplier, new market entrant" />
-        <link rel="canonical" href="https://zenithindustry.github.io/zenithindustries/about" />
+        <link rel="canonical" href="https://northrubber.github.io/northrubber/about" />
       </Helmet>
       
       <div className="about-header">
