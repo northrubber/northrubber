@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import './Home.css';
-import '../utils/animations.js';
 import ScrollAnimations from '../utils/animations.js';
 import slide1 from '../assets/images/1.jpg';
 import slide3 from '../assets/images/3.jpg';

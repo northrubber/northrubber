@@ -187,9 +187,8 @@ h5 {
 }
 h6 { 
   font-size: var(--text-base); 
-  font-weight: 500; 
+  font-weight: 600; 
 }
-h6 { font-size: var(--text-base); font-weight: 600; }
 
 /* Apple-Inspired Typography and Links */
 p {
