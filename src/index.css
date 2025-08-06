@@ -1,51 +1,51 @@
-/* === Apple-Inspired Design System === */
+/* === Clean Three-Color Design System === */
 :root {
-  /* Sophisticated Color Palette */
-  --primary: #1d1d1f;
-  --primary-light: #424245;
+  /* Primary Color Palette - Red, White, Black */
+  --primary: #000000;
+  --primary-light: #333333;
   --primary-dark: #000000;
-  --secondary: #007aff;
-  --secondary-light: #4da6ff;
-  --secondary-dark: #0056b3;
+  --secondary: #e53e3e;
+  --secondary-light: #fc8181;
+  --secondary-dark: #c53030;
   
-  /* Accent Colors */
-  --accent: #007aff;
-  --accent-light: #4da6ff;
-  --accent-dark: #0056b3;
-  --accent-subtle: rgba(0, 122, 255, 0.1);
+  /* Accent Colors - Red Variants */
+  --accent: #e53e3e;
+  --accent-light: #fc8181;
+  --accent-dark: #c53030;
+  --accent-subtle: rgba(229, 62, 62, 0.1);
   
   /* Status Colors */
-  --success: #30d158;
-  --warning: #ff9500;
-  --danger: #ff3b30;
-  --info: #007aff;
+  --success: #e53e3e;
+  --warning: #e53e3e;
+  --danger: #e53e3e;
+  --info: #e53e3e;
 
-  /* Sophisticated Neutral Palette */
+  /* Minimal Color Palette */
   --white: #ffffff;
   --black: #000000;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f7;
-  --gray-200: #e8e8ed;
-  --gray-300: #d2d2d7;
-  --gray-400: #aeaeb2;
-  --gray-500: #8e8e93;
-  --gray-600: #636366;
-  --gray-700: #48484a;
-  --gray-800: #2c2c2e;
-  --gray-900: #1d1d1f;
+  --gray-50: #ffffff;
+  --gray-100: #ffffff;
+  --gray-200: #ffffff;
+  --gray-300: #f7f7f7;
+  --gray-400: #737373;
+  --gray-500: #525252;
+  --gray-600: #404040;
+  --gray-700: #262626;
+  --gray-800: #1a1a1a;
+  --gray-900: #000000;
 
   /* Semantic Colors */
-  --text-primary: #1d1d1f;
-  --text-secondary: #86868b;
-  --text-tertiary: #aeaeb2;
-  --text-muted: #86868b;
+  --text-primary: #000000;
+  --text-secondary: #404040;
+  --text-tertiary: #525252;
+  --text-muted: #737373;
   --text-inverse: #ffffff;
   --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f7;
-  --bg-tertiary: #fafafa;
-  --bg-dark: #1d1d1f;
-  --border-color: #d2d2d7;
-  --border-subtle: rgba(0, 0, 0, 0.1);
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ffffff;
+  --bg-dark: #000000;
+  --border-color: #f0f0f0;
+  --border-subtle: rgba(0, 0, 0, 0.08);
 
   /* Apple-Style Spacing Scale */
   --space-1: 0.25rem;    /* 4px */
@@ -244,7 +244,7 @@ a:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: rgba(255,255,255,0.1);
   transition: left var(--transition-slow);
 }
 
@@ -266,15 +266,13 @@ a:hover {
 }
 
 .btn-secondary {
-  background: rgba(var(--gray-900), 0.05);
+  background: var(--white);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .btn-secondary:hover {
-  background: rgba(var(--gray-900), 0.1);
+  background: var(--gray-200);
   border-color: var(--gray-400);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
