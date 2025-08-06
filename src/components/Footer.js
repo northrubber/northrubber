@@ -125,7 +125,7 @@ const Footer = () => {
         <div className="address-info">
           <p>84 grassbourne ave, Kitchener, N2R 0S5</p>
           <div className="contact-row">
-            <p>Email: info@northrubber.com</p>
+            <p>Email: sales@northrubber.com</p>
             <p>Phone: +1 (514) 549-8173</p>
           </div>
         </div>
