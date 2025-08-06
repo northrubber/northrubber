@@ -4,54 +4,29 @@ import { motion } from 'framer-motion';
 import './Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: ''
-  });
-  
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    success: false,
-    message: ''
-  });
+  const [result, setResult] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Thank you for your message. Our team will contact you shortly!'
+    formData.append("access_key", "3db35928-3a0a-4f5c-ae1c-e5a0d23aa11c");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
     });
-    
-    // Reset form after submission (in real app, this would be in the .then() of an API call)
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      message: ''
-    });
-    
-    // After 5 seconds, reset the form status
-    setTimeout(() => {
-      setFormStatus({
-        submitted: false,
-        success: false,
-        message: ''
-      });
-    }, 5000);
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
 
   return (
@@ -140,82 +115,72 @@ function Contact() {
           >
             <h2>Send Us A Message</h2>
             
-            {formStatus.submitted ? (
-              <div className={`form-message ${formStatus.success ? 'success' : 'error'}`}>
-                {formStatus.message}
+            {result && (
+              <div className={`form-message ${result === "Form Submitted Successfully" ? 'success' : 'error'}`}>
+                {result}
               </div>
-            ) : (
-              <form className="contact-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="name">Your Name *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="email">Email Address *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  
-                  <div className="form-group">
-                    <label htmlFor="phone">Phone Number</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="company">Company Name</label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="message">Your Message *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
-                
-                <motion.button 
-                  type="submit" 
-                  className="btn-primary"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Send Message
-                </motion.button>
-              </form>
             )}
+            
+            <form className="contact-form" onSubmit={onSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Your Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                  />
+                </div>
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="message">Your Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              
+              <motion.button 
+                type="submit" 
+                className="btn-primary"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Submit Form
+              </motion.button>
+            </form>
           </motion.div>
         </div>
       </section>
