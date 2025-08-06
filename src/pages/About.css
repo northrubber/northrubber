@@ -226,6 +226,7 @@
 }
 
 .mission-content p {
+  color: var(--text-white);
   font-size: var(--text-xl);
   line-height: var(--leading-relaxed);
   opacity: 0.95;

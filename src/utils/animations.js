@@ -40,93 +40,13 @@ export class ScrollAnimations {
   }
 
   animateElement(element) {
-    const animationType = this.getAnimationType(element);
-    
-    switch (animationType) {
-      case 'fade-in':
-        this.fadeIn(element);
-        break;
-      case 'slide-in-left':
-        this.slideInLeft(element);
-        break;
-      case 'slide-in-right':
-        this.slideInRight(element);
-        break;
-      case 'slide-in-up':
-        this.slideInUp(element);
-        break;
-      case 'scale-in':
-        this.scaleIn(element);
-        break;
-      default:
-        this.fadeIn(element);
-    }
+    // Apply CSS class for smooth animation
+    element.style.opacity = '1';
+    element.style.transform = 'none';
+    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
 
     // Stop observing this element
     this.observer.unobserve(element);
-  }
-
-  getAnimationType(element) {
-    if (element.classList.contains('slide-in-left')) return 'slide-in-left';
-    if (element.classList.contains('slide-in-right')) return 'slide-in-right';
-    if (element.classList.contains('slide-in-up')) return 'slide-in-up';
-    if (element.classList.contains('scale-in')) return 'scale-in';
-    return 'fade-in';
-  }
-
-  fadeIn(element) {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(30px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    
-    requestAnimationFrame(() => {
-      element.style.opacity = '1';
-      element.style.transform = 'translateY(0)';
-    });
-  }
-
-  slideInLeft(element) {
-    element.style.opacity = '0';
-    element.style.transform = 'translateX(-50px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    
-    requestAnimationFrame(() => {
-      element.style.opacity = '1';
-      element.style.transform = 'translateX(0)';
-    });
-  }
-
-  slideInRight(element) {
-    element.style.opacity = '0';
-    element.style.transform = 'translateX(50px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    
-    requestAnimationFrame(() => {
-      element.style.opacity = '1';
-      element.style.transform = 'translateX(0)';
-    });
-  }
-
-  slideInUp(element) {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(50px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    
-    requestAnimationFrame(() => {
-      element.style.opacity = '1';
-      element.style.transform = 'translateY(0)';
-    });
-  }
-
-  scaleIn(element) {
-    element.style.opacity = '0';
-    element.style.transform = 'scale(0.9)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    
-    requestAnimationFrame(() => {
-      element.style.opacity = '1';
-      element.style.transform = 'scale(1)';
-    });
   }
 
   initParallax() {
@@ -137,7 +57,7 @@ export class ScrollAnimations {
 
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
-      const rate = scrolled * -0.5;
+      const rate = scrolled * -0.2; // Reduced for better performance
 
       heroElements.forEach((hero) => {
         hero.style.transform = `translateY(${rate}px)`;
@@ -145,7 +65,21 @@ export class ScrollAnimations {
     };
 
     // Use passive listener for better performance
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', this.throttle(handleScroll, 16), { passive: true });
+  }
+
+  // Improved throttle function
+  throttle(func, limit) {
+    let inThrottle;
+    return function() {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
   }
 
   // Apple-style hover effects
@@ -167,31 +101,18 @@ export class ScrollAnimations {
 
   // Smooth scroll with Apple-like easing
   static smoothScrollTo(target, duration = 800) {
-    const targetElement = document.querySelector(target);
+    const targetElement = typeof target === 'string' 
+      ? document.querySelector(target) 
+      : target;
+    
     if (!targetElement) return;
 
     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
-
-    const animation = (currentTime) => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const run = this.easeInOutCubic(timeElapsed, startPosition, distance, duration);
-      window.scrollTo(0, run);
-      if (timeElapsed < duration) requestAnimationFrame(animation);
-    };
-
-    requestAnimationFrame(animation);
-  }
-
-  // Apple-style easing function
-  static easeInOutCubic(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t * t + b;
-    t -= 2;
-    return (c / 2) * (t * t * t + 2) + b;
+    
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
   }
 
   // Initialize reduced motion support

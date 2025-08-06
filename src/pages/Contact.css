@@ -37,6 +37,7 @@
 }
 
 .contact-header p {
+  color: var(--text-white);
   font-size: var(--text-xl);
   opacity: 0.9;
   max-width: 600px;

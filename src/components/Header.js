@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.webp';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

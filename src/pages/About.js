@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import './About.css';
-import aboutImage from '../assets/images/about-intro-pic.jpg';
+import aboutImage from '../assets/images/about-intro-pic.webp';
 
 function About() {
   return (
