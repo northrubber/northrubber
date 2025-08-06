@@ -25,6 +25,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/industrial-rubber-sheet/natural-rubber-sbr" element={<NaturalRubberSBR />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
         <Footer />
