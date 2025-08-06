@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.51daa674.css",
-    "main.js": "/static/js/main.3e5ba8e8.js",
-    "static/media/about-image.png": "/static/media/about-image.078b6b39865c174310a8.png",
-    "static/media/about-intro-pic.jpg": "/static/media/about-intro-pic.836de3cd61b873f5915e.jpg",
-    "static/media/1.jpg": "/static/media/1.557739da10a3d96c300f.jpg",
-    "static/media/products-img1.jpg": "/static/media/products-img1.dea07e0124f42dd0f312.jpg",
-    "static/media/products-img5.jpg": "/static/media/products-img5.3be271c57105d4695a93.jpg",
-    "static/media/products-img2.jpg": "/static/media/products-img2.172da47445ca8efa17eb.jpg",
-    "static/media/4.jpg": "/static/media/4.c77babac85d721fbd189.jpg",
-    "static/media/logo.png": "/static/media/logo.e259c7bdaa6832eb18d7.png",
-    "static/media/products-img4.jpg": "/static/media/products-img4.d8fa7cc4fc9944493434.jpg",
-    "static/media/parralax-hero.jpg": "/static/media/parralax-hero.6543ac85feca2ba8ed4a.jpg",
-    "static/media/3.jpg": "/static/media/3.c3b116e3a3c70e8bfed9.jpg",
-    "static/media/nr-sbr-sheeting.png": "/static/media/nr-sbr-sheeting.283b21b85c7a43bf9794.png",
+    "main.css": "/static/css/main.3edeb8a9.css",
+    "main.js": "/static/js/main.9cb5430a.js",
+    "static/media/about-image.webp": "/static/media/about-image.0050e4f56fa68832ca16.webp",
+    "static/media/products-img5.webp": "/static/media/products-img5.0a9a9811b64f54091d88.webp",
+    "static/media/about-intro-pic.webp": "/static/media/about-intro-pic.e519bac9149caf1056b7.webp",
+    "static/media/1.webp": "/static/media/1.71ed0feb6a0d91a244d3.webp",
+    "static/media/4.webp": "/static/media/4.08fd0256293abf3a0eac.webp",
+    "static/media/products-img1.webp": "/static/media/products-img1.e8961bd3eb084067ffdb.webp",
+    "static/media/3.webp": "/static/media/3.1387ff9899934f9031ba.webp",
+    "static/media/products-img2.webp": "/static/media/products-img2.6d8eca00bbec71831105.webp",
+    "static/media/logo.webp": "/static/media/logo.b8ed5e811482700f33a4.webp",
+    "static/media/parralax-hero.webp": "/static/media/parralax-hero.739879961ce3ba5429bc.webp",
+    "static/media/products-img4.webp": "/static/media/products-img4.5f764a38df2d6cff0228.webp",
     "static/media/c5.webp": "/static/media/c5.06fd841b8b7a5121667e.webp",
+    "static/media/nr-sbr-sheeting.webp": "/static/media/nr-sbr-sheeting.27ca935bfe00aba78eb2.webp",
     "static/media/c4.webp": "/static/media/c4.2150217c26d6c7e4e8d4.webp",
     "static/media/c3.webp": "/static/media/c3.b5f7c314f4b7a620f4c7.webp",
     "static/media/c6.webp": "/static/media/c6.a0c44c61d44162d4c3bd.webp",
@@ -22,11 +22,11 @@
     "index.html": "/index.html",
     "static/media/c2.webp": "/static/media/c2.227e8dcd58aebc0eb228.webp",
     "static/media/fras.webp": "/static/media/fras.2adf737832ca903cc622.webp",
-    "main.51daa674.css.map": "/static/css/main.51daa674.css.map",
-    "main.3e5ba8e8.js.map": "/static/js/main.3e5ba8e8.js.map"
+    "main.3edeb8a9.css.map": "/static/css/main.3edeb8a9.css.map",
+    "main.9cb5430a.js.map": "/static/js/main.9cb5430a.js.map"
   },
   "entrypoints": [
-    "static/css/main.51daa674.css",
-    "static/js/main.3e5ba8e8.js"
+    "static/css/main.3edeb8a9.css",
+    "static/js/main.9cb5430a.js"
   ]
 }
