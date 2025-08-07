@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Block access to sensitive files
+Disallow: /build/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json
+Disallow: /*.map
+
+# Allow important resources
+Allow: /static/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.webp
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+
+# Sitemap location
+Sitemap: https://northrubber.com/sitemap.xml
+
+# Crawl-delay for courtesy
+Crawl-delay: 1

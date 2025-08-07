@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.83ff511f.css",
-    "main.js": "/static/js/main.94ec47bf.js",
+    "main.css": "/static/css/main.cc9b94b6.css",
+    "main.js": "/static/js/main.edb56b9d.js",
     "static/media/about-image.webp": "/static/media/about-image.0050e4f56fa68832ca16.webp",
     "static/media/products-img5.webp": "/static/media/products-img5.0a9a9811b64f54091d88.webp",
     "static/media/about-intro-pic.webp": "/static/media/about-intro-pic.e519bac9149caf1056b7.webp",
@@ -15,18 +15,18 @@
     "static/media/products-img4.webp": "/static/media/products-img4.5f764a38df2d6cff0228.webp",
     "static/media/c5.webp": "/static/media/c5.06fd841b8b7a5121667e.webp",
     "static/media/nr-sbr-sheeting.webp": "/static/media/nr-sbr-sheeting.27ca935bfe00aba78eb2.webp",
+    "index.html": "/index.html",
     "static/media/c4.webp": "/static/media/c4.2150217c26d6c7e4e8d4.webp",
     "static/media/c3.webp": "/static/media/c3.b5f7c314f4b7a620f4c7.webp",
     "static/media/c6.webp": "/static/media/c6.a0c44c61d44162d4c3bd.webp",
     "static/media/c1.webp": "/static/media/c1.8a1e85583ec92859d1e9.webp",
-    "index.html": "/index.html",
     "static/media/c2.webp": "/static/media/c2.227e8dcd58aebc0eb228.webp",
     "static/media/fras.webp": "/static/media/fras.2adf737832ca903cc622.webp",
-    "main.83ff511f.css.map": "/static/css/main.83ff511f.css.map",
-    "main.94ec47bf.js.map": "/static/js/main.94ec47bf.js.map"
+    "main.cc9b94b6.css.map": "/static/css/main.cc9b94b6.css.map",
+    "main.edb56b9d.js.map": "/static/js/main.edb56b9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.83ff511f.css",
-    "static/js/main.94ec47bf.js"
+    "static/css/main.cc9b94b6.css",
+    "static/js/main.edb56b9d.js"
   ]
 }
