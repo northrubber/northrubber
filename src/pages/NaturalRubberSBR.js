@@ -8,11 +8,95 @@ function NaturalRubberSBR() {
   return (
     <div className="natural-rubber-sbr-page">
       <Helmet>
-        <title>Natural Rubber / SBR Sheeting - North Rubber</title>
+        <title>Natural Rubber SBR Sheets - Industrial Rubber Sheeting | North Rubber</title>
         <meta
           name="description"
-          content="Explore North Rubber's high-quality Natural Rubber / SBR Sheeting products. Versatile and cost-effective solutions for various industries."
+          content="High-quality Natural Rubber/SBR Sheets by North Rubber. ZENA-FLEX rubber sheeting for automotive, construction, industrial applications. Superior resilience, tensile strength, low temperature flexibility."
         />
+        <meta name="keywords" content="natural rubber SBR sheets, ZENA-FLEX rubber sheeting, NR SBR blend, industrial rubber sheets Canada, automotive rubber, construction rubber, vibration dampeners, shot blasting curtains, gaskets washers" />
+        <link rel="canonical" href="https://northrubber.com/industrial-rubber-sheet/natural-rubber-sbr" />
+        <meta property="og:title" content="Natural Rubber SBR Sheets - ZENA-FLEX Industrial Rubber Sheeting" />
+        <meta property="og:description" content="High-quality Natural Rubber/SBR Sheets with superior resilience, tensile strength, and low temperature flexibility for industrial applications." />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content="https://northrubber.com/industrial-rubber-sheet/natural-rubber-sbr" />
+        <meta property="og:image" content="https://northrubber.com/static/media/nr-sbr-sheeting.webp" />
+        
+        {/* Product Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Natural Rubber / SBR Sheeting",
+            "brand": {
+              "@type": "Brand",
+              "name": "ZENA-FLEX"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "North Rubber"
+            },
+            "description": "NR/SBR rubber sheets with superior resilience, tensile strength, elongation, and low temperature flexibility. Ideal for automotive, construction, and industrial applications.",
+            "category": "Industrial Rubber Sheets",
+            "material": "Natural Rubber / SBR Blend",
+            "image": "https://northrubber.com/static/media/nr-sbr-sheeting.webp",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "CAD",
+              "seller": {
+                "@type": "Organization",
+                "name": "North Rubber"
+              }
+            },
+            "applicationArea": [
+              "Automotive",
+              "Construction", 
+              "Industrial Belts",
+              "Machinery",
+              "Sports & Recreation"
+            ],
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Temperature Range",
+                "value": "Low Temperature Flexible"
+              },
+              {
+                "@type": "PropertyValue", 
+                "name": "Adhesion",
+                "value": "Excellent to fabric and metals"
+              }
+            ]
+          })}
+        </script>
+        
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://northrubber.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Industrial Rubber Sheets",
+                "item": "https://northrubber.com/industrial-rubber-sheet"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Natural Rubber / SBR Sheeting",
+                "item": "https://northrubber.com/industrial-rubber-sheet/natural-rubber-sbr"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="about-header">

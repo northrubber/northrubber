@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NaturalRubberSBR from './pages/NaturalRubberSBR';
+import NotFound from './pages/NotFound';
 import useAppleDesignIntegration from './hooks/useAppleDesignIntegration';
 import './utils/appleDesignSystem.js';
 import './App.css';
@@ -25,7 +26,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/industrial-rubber-sheet/natural-rubber-sbr" element={<NaturalRubberSBR />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

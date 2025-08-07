@@ -32,9 +32,13 @@ function Contact() {
   return (
     <div className="contact-page">
       <Helmet>
-        <meta name="description" content="Contact North Rubber for high-quality industrial rubber solutions. Request quotes, information or technical assistance." />
-        <meta name="keywords" content="rubber seller contact, natural rubber contact, SBR sheets quote, rubber supplier Canada inquiry" />
+        <title>Contact North Rubber - Get Quotes for Natural Rubber & SBR Sheets | Industrial Rubber Supplier Canada</title>
+        <meta name="description" content="Contact North Rubber for quotes on Natural Rubber & SBR Sheets. Expert consultation, competitive pricing, fast delivery across Canada. Call (514) 549-8173 or request a quote online." />
+        <meta name="keywords" content="contact north rubber, rubber quote Canada, natural rubber inquiry, SBR sheets pricing, industrial rubber consultation, rubber supplier contact Kitchener Ontario, get rubber quote" />
         <link rel="canonical" href="https://northrubber.com/contact" />
+        <meta property="og:title" content="Contact North Rubber - Get Quotes for Industrial Rubber Solutions" />
+        <meta property="og:description" content="Contact North Rubber for quotes on Natural Rubber & SBR Sheets. Expert consultation, competitive pricing, fast delivery across Canada." />
+        <meta property="og:type" content="website" />
       </Helmet>
       
       <style jsx>{`

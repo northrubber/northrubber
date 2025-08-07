@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://northrubber.com/</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://northrubber.com/static/media/1.webp</image:loc>
+      <image:title>High Quality Industrial Rubber Sheets</image:title>
+      <image:caption>Premium rubber solutions for industrial applications</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://northrubber.com/static/media/products-img1.webp</image:loc>
+      <image:title>Industrial Rubber Sheets</image:title>
+      <image:caption>Quality industrial rubber sheet products</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://northrubber.com/about</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://northrubber.com/static/media/about-intro-pic.webp</image:loc>
+      <image:title>About North Rubber</image:title>
+      <image:caption>Learn about North Rubber Products and our commitment to quality</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://northrubber.com/contact</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Natural Rubber/SBR Product Page -->
+  <url>
+    <loc>https://northrubber.com/industrial-rubber-sheet/natural-rubber-sbr</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://northrubber.com/static/media/nr-sbr-sheeting.webp</image:loc>
+      <image:title>Natural Rubber / SBR Sheeting</image:title>
+      <image:caption>High-quality Natural Rubber and SBR Sheeting products</image:caption>
+    </image:image>
+  </url>
+  
+</urlset>

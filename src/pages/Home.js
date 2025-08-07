@@ -187,12 +187,15 @@ function Home() {
   return (
     <div className="home">
       <Helmet>
-        <meta name="description" content="North Rubber - Seller of premium Natural Rubber/SBR Sheets. Quality rubber solutions for industries." />
-        <meta name="keywords" content="natural rubber, SBR sheets, rubber sheets, rubber products, Canada, Canadian supplier" />
-        <link rel="canonical" href="https://northrubber.com" />
+        <title>North Rubber - Natural Rubber & SBR Sheets Canada | Industrial Rubber Supplier</title>
+        <meta name="description" content="North Rubber - Canada's trusted supplier of Natural Rubber & SBR Sheets. Quality industrial rubber solutions for manufacturing, mining, automotive & construction industries. ISO certified, fast delivery." />
+        <meta name="keywords" content="natural rubber sheets Canada, SBR sheets supplier, industrial rubber Canada, styrene butadiene rubber, rubber sheeting Kitchener, manufacturing rubber solutions, mining rubber, automotive rubber, construction rubber materials" />
+        <link rel="canonical" href="https://northrubber.com/" />
         <meta property="og:title" content="North Rubber - Natural Rubber & SBR Sheets Canada" />
-        <meta property="og:description" content="Sellers of Natural Rubber and SBR Sheets serving industries with quality solutions." />
+        <meta property="og:description" content="Canada's trusted supplier of Natural Rubber & SBR Sheets. ISO certified quality, fast delivery, serving manufacturing, mining, automotive & construction industries." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://northrubber.com/" />
+        <meta property="og:image" content="https://northrubber.com/static/media/1.webp" />
       </Helmet>
       
       {/* Hero Section */}
@@ -226,7 +229,7 @@ function Home() {
             </div>
             <div className="company-intro-content">
               <div className="about-image-container animate-on-scroll slide-in-left">
-                <img src={aboutImage} alt="About North Rubber" className="about-image" />
+                <img src={aboutImage} alt="North Rubber industrial facility showcasing quality Natural Rubber and SBR sheet production capabilities" className="about-image" />
               </div>
               <div className="text-column animate-on-scroll slide-in-right">
                 <div className="company-intro-badge">

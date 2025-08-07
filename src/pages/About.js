@@ -8,9 +8,15 @@ function About() {
   return (
     <div className="about-page">
       <Helmet>
-        <meta name="description" content="Learn about North Rubber Products, a new seller of Natural Rubber and SBR Sheets serving the market." />
-        <meta name="keywords" content="natural rubber seller, SBR sheets, Canada, rubber supplier, new market entrant" />
-        <link rel="canonical" href="https://northrubber.github.io/northrubber/about" />
+        <title>About North Rubber - Canadian Industrial Rubber Supplier | Natural Rubber & SBR Sheets</title>
+        <meta name="description" content="Learn about North Rubber Products - Canada's specialized supplier of Natural Rubber and SBR Sheets. Quality-focused, customer-driven rubber solutions for industrial applications since 2024." />
+        <meta name="keywords" content="about north rubber, Canadian rubber supplier, natural rubber company Canada, SBR sheets manufacturer, industrial rubber specialist, rubber supplier Kitchener Ontario" />
+        <link rel="canonical" href="https://northrubber.com/about" />
+        <meta property="og:title" content="About North Rubber - Canadian Industrial Rubber Supplier" />
+        <meta property="og:description" content="Canada's specialized supplier of Natural Rubber and SBR Sheets. Quality-focused, customer-driven rubber solutions for industrial applications." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://northrubber.com/about" />
+        <meta property="og:image" content="https://northrubber.com/static/media/about-intro-pic.webp" />
       </Helmet>
       
       <div className="about-header">
